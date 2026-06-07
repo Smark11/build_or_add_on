@@ -138,7 +138,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 540; line-height: 1.04;
 .nav.scrolled { border-color: var(--line); padding-block: 10px; }
 .nav__brand { font-family: var(--mono); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; display: flex; align-items: center; gap: .7em; }
 .nav__brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pine); box-shadow: 0 0 0 3px var(--pine-wash); }
-.nav__links { display: flex; gap: 26px; }
+.nav__links { display: flex; gap: 18px; }
 .nav__links a { font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; color: var(--ink-soft); transition: color .2s; position: relative; }
 .nav__links a:hover { color: var(--pine); }
 .nav__cta { font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 8px 16px; border: 1px solid var(--ink); border-radius: 999px; transition: all .2s; }
@@ -350,6 +350,31 @@ input[type=range]::-moz-range-thumb{ width:18px; height:18px; border-radius:50%;
 .lineitem__track{ height:7px; background:var(--paper-3); border-radius:999px; overflow:hidden; margin-top:5px;}
 .lineitem__fill{ height:100%; border-radius:999px; background:linear-gradient(90deg, var(--pine), var(--pine-2)); width:0; transition:width 1s cubic-bezier(.2,.7,.2,1);}
 .lineitem__note{ font-family:var(--mono); font-size:.6rem; color:var(--muted); letter-spacing:.02em; margin-top:3px;}
+
+/* ============================ FLOOR PLANS ============================ */
+.fp-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+@media(max-width:880px){ .fp-grid{ grid-template-columns:1fr; } }
+.fp-card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; }
+.fp-card__title{ font-family:var(--mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:12px; }
+.fp{ display:grid; gap:5px; grid-auto-rows:minmax(50px,1fr); }
+.fp__room{ background:var(--paper-2); border:1px solid var(--line); border-radius:7px; padding:7px 8px; min-height:50px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; }
+.fp__room.is-new{ background:var(--pine-wash); border-color:var(--pine); }
+.fp__n{ font-size:.7rem; font-weight:600; line-height:1.12; color:var(--ink); }
+.fp__d{ font-family:var(--mono); font-size:.56rem; color:var(--muted); margin-top:2px; }
+.fp__tag{ position:absolute; top:5px; right:5px; font-family:var(--mono); font-size:.48rem; letter-spacing:.06em; background:var(--pine); color:#fff; padding:1px 4px; border-radius:3px; }
+.fp-legend{ display:flex; gap:20px; font-family:var(--mono); font-size:.64rem; letter-spacing:.04em; color:var(--ink-soft); text-transform:uppercase; margin-top:10px; }
+.fp-legend i{ width:14px; height:14px; border-radius:3px; display:inline-block; vertical-align:-3px; margin-right:6px; border:1px solid var(--line); }
+
+.optplan{ border-top:1px solid var(--line); padding-top:34px; margin-top:34px; }
+.optplan__h{ font-family:var(--serif); font-size:clamp(1.3rem,2.4vw,1.85rem); font-weight:560; }
+.optplan__note{ color:var(--ink-soft); margin-top:8px; max-width:72ch; font-size:.95rem; }
+.optplan__body{ display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:24px; align-items:start; }
+@media(max-width:880px){ .optplan__body{ grid-template-columns:1fr; } }
+.optplan__plans{ display:flex; flex-direction:column; gap:16px; }
+.optplan__renders{ display:flex; flex-direction:column; gap:16px; }
+.render{ border-radius:12px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-sm); }
+.render img{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:var(--paper-3); }
+.render__cap{ font-size:.8rem; color:var(--ink-soft); padding:10px 13px; background:var(--card); line-height:1.4; }
 
 /* ============================ CHART CARD GENERIC ============================ */
 .chartcard{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding: clamp(20px,2.4vw,30px); box-shadow:var(--shadow-sm);}

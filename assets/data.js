@@ -244,6 +244,9 @@ const DATA = {
       { key: "C", name: "Basement + rear bump-out", tag: "Value combo", get: "Finished basement plus a small rear bump-out to enlarge the kitchen/family area.", lo: 110000, hi: 185000, sqft: "+150–250 above grade + finished basement", recoup: "~45–65%", time: "4–6 mo", note: "Balanced middle path; bump-outs run high per sqft on fixed costs.", rec: false },
       { key: "E", name: "Two-story rear addition", tag: "Great room + suite", get: "Family room below, primary suite above — maximum space in one build, off the rear.", lo: 300000, hi: 500000, sqft: "+800–1,100 above grade", recoup: "16–40%", time: "8–12 mo", note: "Clear over-improvement on a ~$575K house; adds a bedroom (triggers the septic review).", rec: false },
       { key: "F", name: "Do-it-once: two-story rear + finished basement", tag: "Everything at once", get: "A two-story rear addition (great room + primary suite) plus a finished basement.", lo: 350000, hi: 550000, sqft: "+800–1,100 above grade + basement", recoup: "low overall", time: "10–14 mo", note: "Solves everything but lands far above the street ceiling — lifestyle-only.", rec: false },
+      { key: "K", name: "Finish basement + open up the kitchen", tag: "Reconfigure · keeps the garage", get: "Finish the basement (rec room / office / gym) and open the kitchen into the adjacent unused main-level room — without touching the garage, so no replacement garage is needed.", lo: 95000, hi: 160000, sqft: "~950–1,250 sq ft reclaimed", recoup: "~70–85% blended", time: "4–7 mo", note: "The most value-defensible reconfiguration: skips the costly garage build-up and replacement garage, keeps your parking, and lets the high-ROI kitchen carry the return. The kitchen wall is load-bearing — budget an engineered beam ($4–12K).", rec: false },
+      { key: "G", name: "Convert garage + finish basement + new garage", tag: "Lower-level reconfiguration", get: "The tuck-under garage becomes a heated family room/playroom, the basement is finished, and a new 2-car garage restores parking — a much bigger home with the same garage count.", lo: 120000, hi: 230000, sqft: "~1,150–1,400 sq ft gained", recoup: "~55–65% blended", time: "5–8 mo", note: "A forever-home reconfiguration that clears the ~$150K ceiling. The replacement garage (~$35–65K, build it detached) is mandatory remediation, not value-add. Biggest cost swing: building the old garage floor up to kitchen level.", rec: false },
+      { key: "H", name: "Reconfigure + expand the kitchen", tag: "Reconfig + open kitchen", get: "Everything in Plan G, plus the kitchen opens into the adjacent unused room and is remodeled into a large open kitchen with an island — dead space becomes the home's best feature.", lo: 175000, hi: 320000, sqft: "~1,400–1,750 sq ft gained/reclaimed", recoup: "~60–72% blended", time: "7–11 mo", note: "The strongest big plan on blended return (the kitchen pays back best), but firmly a forever-home spend past the ceiling. Keep the kitchen midrange ($55–90K) for the best return; upscale pushes past $300K and recoups least.", rec: false },
     ],
     lineItems: [
       { item: "Foundation / footings (42-in frost depth)", pct: 15, note: "~$16–23K · the biggest New England premium" },
@@ -261,6 +264,41 @@ const DATA = {
     ],
     softCosts: "On top of construction, budget ~15–25% for soft costs: architect/designer (5–15%), a structural engineer ($1–4K, required for any build-up), the Simsbury permit ($16.26 per $1,000 — about $1,656 on a $100K job), and a 10–20% contingency on a 30-year-old house.",
     bottomLine: "Add space, not bedrooms — and stay under ~$125K. Finish the basement first (~$50–80K): the cheapest usable square footage, the best ROI, and no septic review. If budget remains, add a rear great room + mudroom (~$110–150K), built up to the main floor and centered to clear the side yard. Avoid the two-story rear and do-it-once package as financial moves — at $300–550K they over-improve a ~$575K house and trigger the septic wildcard.",
+  },
+
+  // ---- architect-reconstructed floor plans (see research/floor-plans.json) ----
+  floorplans: {
+    disclaimer: "Illustrative schematic reconstruction from the home's known layout (tuck-under garage, kitchen raised over it, the unused room beside the kitchen, 4 beds up, unfinished basement) and typical 1992 Connecticut colonial conventions — NOT real blueprints, not to scale, and not construction drawings. New or changed spaces are highlighted in green.",
+    existing: [
+      { name: "Lower level — today", cols: 4, grid: [["GAR","GAR","BAS","BAS"],["GAR","GAR","BAS","BAS"],["STA","MEC","BAS","BAS"]],
+        rooms: { GAR:{n:"Tuck-under 2-car garage",d:"22×24"}, BAS:{n:"Unfinished basement",d:"~26×18"}, MEC:{n:"Mechanical",d:"~8×10"}, STA:{n:"Stair",d:""} } },
+      { name: "Main level — today", cols: 4, grid: [["LIV","LIV","DIN","KIT"],["LIV","LIV","DIN","KIT"],["FOY","FOY","PWD","FLX"]],
+        rooms: { LIV:{n:"Living room",d:"13×16"}, DIN:{n:"Dining room",d:"11×13"}, KIT:{n:"Kitchen (over garage)",d:"11×16"}, FOY:{n:"Foyer / stairs",d:"~6×12"}, PWD:{n:"Half bath",d:"5×6"}, FLX:{n:"Unused flex room",d:"11×12"} } },
+      { name: "Upper level — today (unchanged in every option)", cols: 4, grid: [["PRM","PRM","ENS","BD2"],["PRM","PRM","BTH","BD3"],["BD4","BD4","HAL","HAL"]],
+        rooms: { PRM:{n:"Primary bedroom",d:"13×15"}, ENS:{n:"En-suite bath",d:"6×9"}, BD2:{n:"Bedroom 2",d:"11×12"}, BTH:{n:"Hall bath",d:"5×8"}, BD3:{n:"Bedroom 3",d:"10×12"}, BD4:{n:"Bedroom 4",d:"10×11"}, HAL:{n:"Hall",d:""} } },
+    ],
+    options: [
+      { key: "REC", title: "Recommended — finish the basement + rear great room", note: "New space goes where the constraints allow: a single-story great room + mudroom built off the rear at the raised main-floor level, and the basement finished below. The garage and kitchen stay put.",
+        plans: [
+          { name: "Main level — after", cols: 4, grid: [["GRT","GRT","GRT","MUD"],["LIV","LIV","DIN","KIT"],["LIV","LIV","DIN","KIT"],["FOY","FOY","PWD","FLX"]],
+            rooms: { GRT:{n:"New rear great room",d:"18×22",new:true}, MUD:{n:"Mudroom",d:"8×12",new:true}, LIV:{n:"Living room",d:"13×16"}, DIN:{n:"Dining",d:"11×13"}, KIT:{n:"Kitchen",d:"11×16"}, FOY:{n:"Foyer / stairs",d:""}, PWD:{n:"Half bath",d:"5×6"}, FLX:{n:"Flex room (kept)",d:"11×12"} } },
+          { name: "Lower level — after", cols: 4, grid: [["GAR","GAR","PLY","PLY"],["GAR","GAR","PLY","PLY"],["STA","MEC","OFF","HBA"]],
+            rooms: { GAR:{n:"Garage (retained)",d:"22×24"}, PLY:{n:"New playroom",d:"14×22",new:true}, OFF:{n:"Flex / office",d:"11×12",new:true}, HBA:{n:"Half bath",d:"5×7",new:true}, MEC:{n:"Mechanical",d:"~10×12"}, STA:{n:"Stair",d:""} } },
+        ],
+        renderings: [ { img:"plan-rec-greatroom.jpg", cap:"The new rear great room opening into the existing kitchen" }, { img:"plan-rec-rear-ext.jpg", cap:"The single-story rear addition tied into the back of the colonial" } ] },
+      { key: "G", title: "Convert garage + finish basement + new 2-car garage", note: "The tuck-under garage becomes a lower-level family room under the kitchen, the basement is finished, and a new 2-car garage is added to restore parking. (Main and upper levels unchanged.)",
+        plans: [
+          { name: "Lower level — after", cols: 5, grid: [["NGA","FAM","FAM","REC","REC"],["NGA","FAM","FAM","REC","REC"],["NGA","MUD","STA","MEC","HBA"]],
+            rooms: { NGA:{n:"New 2-car garage",d:"24×24",new:true}, FAM:{n:"Family room (was garage)",d:"22×22",new:true}, REC:{n:"Finished basement rec/flex",d:"~16×24",new:true}, MUD:{n:"Mudroom + foyer",d:"~6×10",new:true}, STA:{n:"Stair up",d:""}, MEC:{n:"Mechanical",d:"~10×12"}, HBA:{n:"Half bath",d:"5×8",new:true} } },
+        ],
+        renderings: [ { img:"plan-g-playroom.jpg", cap:"The former tuck-under garage, now a light-filled lower-level playroom" }, { img:"plan-g-garage-ext.jpg", cap:"A new 2-car garage built to match the colonial's siding and rooflines" } ] },
+      { key: "H", title: "Reconfigure + expand the kitchen", note: "Everything in Option G, plus the kitchen opens into the adjacent unused room to become one large eat-in kitchen + family/keeping room with an island. (Lower level as in Option G.)",
+        plans: [
+          { name: "Main level — after", cols: 4, grid: [["LIV","LIV","DIN","KFK"],["LIV","LIV","DIN","KFK"],["FOY","FOY","PWD","KFK"]],
+            rooms: { KFK:{n:"Expanded eat-in kitchen + family room (island)",d:"~16×28",new:true}, LIV:{n:"Living room",d:"13×16"}, DIN:{n:"Dining",d:"11×13"}, FOY:{n:"Foyer / stairs",d:""}, PWD:{n:"Half bath",d:"5×6"} } },
+        ],
+        renderings: [ { img:"plan-h-kitchen.jpg", cap:"The expanded eat-in kitchen with a quartz island, created by removing the wall to the unused room" }, { img:"plan-h-openflow.jpg", cap:"The open kitchen-to-family-room flow, with a flush beam where the wall was" } ] },
+    ],
   },
 
   // ---- calculator defaults (the financial engine reads these) ----

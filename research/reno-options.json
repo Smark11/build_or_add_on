@@ -1,0 +1,128 @@
+{
+  "scenarios": [
+    {
+      "key": "G",
+      "name": "Convert garage + finish basement + new 2-car garage",
+      "tag": "Lower-level reconfiguration",
+      "get": "The tuck-under garage becomes a heated lower-level family room/playroom, the unfinished basement becomes finished living space, and a new 2-car garage restores parking. Net: a much bigger usable home with the same garage count.",
+      "lo": 120000,
+      "hi": 230000,
+      "sqft": "~1,150-1,400 sq ft gained (440-480 from the garage bay + 700-900 from the basement)",
+      "recoup": "~55-65% blended",
+      "time": "5-8 months",
+      "rec": false,
+      "note": "Honest take: feasible but the most expensive of these plans and it clears the ~$150K defensible ceiling comfortably. This is a forever-home / lifestyle reconfiguration, not a value play. It recoups better than a pure bump-out addition (finished lower-level space tracks ~71% in New England and garage conversions ~60-80%) because you are converting space already inside the envelope rather than building new exterior shell. BUT the new garage (~$35-65K) is mandatory remediation, not value-add: a 4BR Weatogue colonial with zero garage takes a comp hit larger than the build cost. Two cost watch-items specific to this house: (1) a structural floor build-up (joist + subfloor) to raise the old garage slab to kitchen/main-floor level, the single biggest cost swing; (2) build the new garage DETACHED, not attached, because the old bay was tuck-under so an attached replacement loses the shared-wall discount and adds a tricky colonial roof tie-in, pushing it to or above detached cost. Permits mandatory; unpermitted conversions kill resale value.",
+      "tag2": ""
+    },
+    {
+      "key": "H",
+      "name": "Reconfigure + expand kitchen",
+      "tag": "Lower-level reconfig + open kitchen",
+      "get": "Everything in Plan G (garage-to-living, finished basement, new garage) PLUS the kitchen is opened into the adjacent unused main-level room and fully remodeled into a large open kitchen with island. The home's most-used room becomes its best feature and dead space is reclaimed.",
+      "lo": 175000,
+      "hi": 320000,
+      "sqft": "~1,400-1,750 sq ft of new/reclaimed usable space (Plan G's ~1,150-1,400 + the ~250-350 sq ft unused room absorbed into the kitchen)",
+      "recoup": "~60-72% blended",
+      "time": "7-11 months",
+      "rec": true,
+      "note": "Honest take: the strongest of the big plans on a blended-return basis, but it is firmly a forever-home / lifestyle spend that far exceeds the ~$150K ceiling. Why it recoups better than Plan G or any addition: the kitchen piece is where remodel dollars are best rewarded (minor/midrange kitchens recoup ~96-107%; even a midrange gut-and-expand returns far more than a garage or basement), and opening into the adjacent dead room converts unused square footage into the primary living space buyers reward most. House-specific catch: because the kitchen sits over the tuck-under garage on a raised main floor, the kitchen-to-room dividing wall is almost certainly load-bearing, so budget a structural engineer + LVL/steel beam ($4-12K) inside the kitchen number; a flush beam costs more than a dropped beam but gives the clean open-concept ceiling line buyers expect. Keep the kitchen midrange ($55-90K) for the best return; the upscale version pushes the total well past $300K and recoups the least.",
+      "tag2": ""
+    },
+    {
+      "key": "F",
+      "name": "Finish basement + open/expand kitchen (no garage move)",
+      "tag": "Lighter variant - keeps the garage",
+      "get": "Skip touching the garage entirely: finish the unfinished basement for a rec room/office/gym AND open the kitchen into the adjacent unused room. Keeps the existing tuck-under 2-car garage, so no replacement garage is needed.",
+      "lo": 95000,
+      "hi": 160000,
+      "sqft": "~950-1,250 sq ft (700-900 finished basement + ~250-350 sq ft unused room absorbed into the kitchen)",
+      "recoup": "~70-85% blended",
+      "time": "4-7 months",
+      "rec": false,
+      "note": "Honest take: the most defensible-spend-friendly of the three because it avoids the two most expensive, lowest-return line items (the structural garage-floor build-up and the mandatory replacement garage). At the low end (~$95-110K, midrange kitchen) it sits inside or just at the edge of the ~$100-150K defensible envelope against the ~$650-700K comp ceiling, and the blended recoup is the highest here because the high-ROI kitchen carries the math while the finished basement adds expected New England lower-level space at ~71%. You keep all your garage parking. The trade-off vs. Plans G/H: you do not gain the ~440-480 sq ft of the garage bay or get the same total square-footage jump. If the goal is maximum value-per-dollar rather than maximum square footage, this is the smarter scope; reserve G/H for true forever-home intent.",
+      "tag2": ""
+    }
+  ],
+  "bottomLine": "All three of these reconfigurations beat a pure exterior addition on return because they reuse space already inside the house envelope and (in Plans H/F) lean on a kitchen, which is the single highest-recouping interior project. But the two scopes that touch the garage (G and H) carry a hidden mandatory cost: converting the only garage forces you to build a replacement (~$35-65K detached), which is remediation, not value-add, and pushes both plans well past the ~$100-150K defensible-spend ceiling for the Latimer/Weatogue pocket. Treat G and H as forever-home / lifestyle spends. If value-per-dollar matters more than raw square footage, the lighter Plan F (finish basement + open kitchen, keep the existing garage) is the most defensible: it skips the costly garage-floor build-up and the replacement garage, keeps parking, and lets the high-ROI kitchen carry the blended return. House-specific flags baked into the pricing: a structural floor build-up to raise the tuck-under slab to kitchen level (Plans G/H), a detached not attached replacement garage (the tuck-under layout kills the shared-wall discount), and a load-bearing kitchen wall requiring an engineered beam (Plans H/F).",
+  "ceilingNote": "The Latimer/Weatogue comp ceiling is ~$650-700K against a ~$575K current value, leaving roughly $75-125K of headroom before improvements stop being recoverable in resale, and a defensible all-in spend of about $100-150K. Measured against that: the lighter Plan F (~$95-160K) is the only scenario that can land at or near the ceiling and still mostly pay for itself. Plans G (~$120-230K) and H (~$175-320K) both exceed the ceiling, in H's case by a wide margin. At their high ends you would be investing $230-320K into a home whose market will not exceed ~$700K, so a large share of the spend is not recoverable and is being bought as lifestyle, not equity. The mitigating factor is mix: because these plans are weighted toward a kitchen and reused interior square footage (not new exterior shell), they recoup materially better than a bump-out addition would, but better recoup on an over-ceiling spend still means real dollars left on the table at resale.",
+  "componentCosts": [
+    {
+      "part": "Tuck-under garage conversion to living space",
+      "range": "$48,000-$95,000 (~$110-200/sq ft on 440-480 sq ft)",
+      "recoup": "~60-80% (but net-positive only if parking is restored)"
+    },
+    {
+      "part": "Finish the unfinished basement (mid-range)",
+      "range": "$35,000-$65,000 (~$50-80/sq ft on 700-900 sq ft)",
+      "recoup": "~60-71% (tracks New England lower-level norm)"
+    },
+    {
+      "part": "New 2-car garage - DETACHED (recommended)",
+      "range": "$35,000-$65,000 (~$60-115/sq ft finished, matched siding)",
+      "recoup": "~60-65% standalone; here it is mandatory remediation, not ROI"
+    },
+    {
+      "part": "New 2-car garage - ATTACHED",
+      "range": "$40,000-$80,000+ (no shared-wall discount; needs own foundation + colonial roof tie-in)",
+      "recoup": "~65-85% in strong markets, but cost premium not justified here"
+    },
+    {
+      "part": "Kitchen remodel - MIDRANGE incl. load-bearing wall removal + beam",
+      "range": "$55,000-$90,000 (~$300-450/sq ft on enlarged 250-350 sq ft)",
+      "recoup": "~70-100%+ (minor/midrange kitchens recoup best of any interior project)"
+    },
+    {
+      "part": "Kitchen remodel - UPSCALE (custom cabinets, pro appliances, flush beam)",
+      "range": "$95,000-$160,000+ (~$450-760/sq ft)",
+      "recoup": "~35-49% (major upscale recoups the least)"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cost to Build a Garage in Hartford, Connecticut (2026) - HomeBlue",
+      "url": "https://www.homeblue.com/garage/hartford-ct-cost-to-build-a-garage.htm",
+      "note": "Hartford-specific: new 2-car 24x24 garage $27,000-$40,000 builder shell; $47-$70/sq ft new construction; garage conversion to living space $92-$172/sq ft; insulation $1.70-$2.90/sq ft."
+    },
+    {
+      "title": "Cost to Finish a Basement in Hartford, Connecticut (2026) - HomeBlue",
+      "url": "https://www.homeblue.com/basement/hartford-ct-cost-to-finish-a-basement.htm",
+      "note": "Hartford basement finishing $41-$76/sq ft; 500 sq ft $21,000-$38,000; 600 sq ft $25,000-$45,000; mid-range finishes 60-70% ROI."
+    },
+    {
+      "title": "How Much Does a Kitchen Remodel Cost in Connecticut? (2026) - CT House Builders",
+      "url": "https://cthousebuilders.com/how-much-does-a-kitchen-remodel-cost-in-connecticut/",
+      "note": "CT tiers: budget $20-35K, midrange $35-65K, high-end $65-100K+; Hartford County moderate, $25-75K typical."
+    },
+    {
+      "title": "Kitchen Remodel Hartford: Costs, Tips & Local Ideas - Block Renovation",
+      "url": "https://www.blockrenovation.com/guides/hartford-ct-kitchen-renovation-costs-tips-local",
+      "note": "Hartford size-based: medium 120-200 sq ft $55-95K, large 200-350+ sq ft $95-160K+; ~$200-760/sq ft; permits $200-1,500."
+    },
+    {
+      "title": "Load-Bearing Wall Removal in Connecticut - Superior Remodelers",
+      "url": "https://www.superiorremodelers.com/load-bearing-wall-removal-in-connecticut-costs-and-structural-requirements/",
+      "note": "CT load-bearing wall removal: small opening w/ beam $3,500-$8,000, medium $8,000-$15,000; merging kitchen/dining $4,000-$12,000; requires structural engineer + permit."
+    },
+    {
+      "title": "2 Car Garage Addition Cost Guide 2026 - MB Construction, LLC",
+      "url": "https://mbconstruction.com/the-real-price-of-adding-a-two-car-garage/",
+      "note": "Attached 2-car addition $25,000-$45,000 basic to $80,000-$125,000+ premium; foundation/slab $5-$18/sq ft; garage ROI 64-85%."
+    },
+    {
+      "title": "What the 2025 Cost Vs. Value Report Says - Custom Craft DBR",
+      "url": "https://customcraftdbr.com/2025-cost-vs-value-report-remodeling/",
+      "note": "Minor kitchen (midrange) recoups 107.2%, Major midrange 49.0%, Major upscale 34.9% - kitchens are the highest-ROI interior project."
+    },
+    {
+      "title": "Garage Conversion Home Value: ROI Data for 2026 - Custom Home",
+      "url": "https://www.customhome.us/blog/does-garage-conversion-affect-home-value",
+      "note": "Garage conversions recoup ~60-80%; permitted work adds value, unpermitted work is a value-killer; finished lower levels expected in Northeast."
+    },
+    {
+      "title": "What do permits cost? - Town of Simsbury Building Department",
+      "url": "https://www.simsbury-ct.gov/building-department/faq/what-do-permits-cost",
+      "note": "Simsbury permit fee $16.26 per $1,000 of construction value; Zoning Compliance Review $25; Certificate of Occupancy $5."
+    }
+  ],
+  "ceilingNote2": ""
+}

@@ -1,0 +1,538 @@
+{
+  "disclaimer": "This package is an ILLUSTRATIVE, REPRESENTATIVE reconstruction of 2 Clover Lane, Weatogue (Simsbury), CT, prepared as schematic design studies only. No real blueprints, surveys, or as-built drawings of this home are publicly available; the existing plan was reconstructed from the listing facts (1992 two-story raised colonial, ~1,976 sf above grade, 4 bed / 2.5 bath, tuck-under 2-car garage with the kitchen raised over it, an unused room beside the kitchen, an unfinished basement, well + septic, 1.59-acre R-40 lot) combined with typical 1992 Connecticut colonial conventions. All room names, dimensions, adjacencies, beam sizes, and renderings are approximate, not to exact scale, and are for decision-making and discussion only — they are NOT construction documents. Any actual work requires field verification of as-built framing, a Connecticut-licensed structural engineer's stamped calculations, and review/permitting by the Simsbury building and health departments. The renderings are generated concept imagery representing the design intent, not photographs of the actual home.",
+  "existing": {
+    "levels": [
+      {
+        "name": "LOWER LEVEL — Tuck-Under Garage + Unfinished Basement (built into the slope)",
+        "adjacency": "Footprint ~26 ft deep x 38 ft wide (~988 sf). The lower level is set into the slope so the main floor rides a full story above the front driveway. Two overhead doors face the driveway at one END of the footprint; the TUCK-UNDER 2-CAR GARAGE occupies that end, directly UNDER the kitchen. An interior man-door at the rear of the garage passes into the UNFINISHED BASEMENT, which runs under the living/dining half of the footprint. The MECHANICAL/UTILITY zone is grouped along an interior wall, tucked under the stair. The MAIN STAIR lands here next to the garage-to-basement door, so you come in from the car and climb straight to the main-floor foyer above. No finished living space on this level.",
+        "rooms": [
+          {
+            "name": "Tuck-Under 2-Car Garage",
+            "dim": "22 ft x 24 ft (~528 sf)",
+            "isNew": false,
+            "note": "One end of the footprint, directly under the kitchen; two overhead doors face the driveway. Rear man-door to the basement; main stair to the upper floors lands just inside it. This is the defining bottom of the GARAGE->KITCHEN->Bedroom 4 vertical stack."
+          },
+          {
+            "name": "Unfinished Basement",
+            "dim": "~26 ft x 18 ft (~460 sf usable)",
+            "isNew": false,
+            "note": "Under the living/dining half of the footprint. Concrete slab, exposed framing/utilities, storage today. The volume options REC and G/H later finish."
+          },
+          {
+            "name": "Mechanical / Utility Area",
+            "dim": "~8 ft x 10 ft",
+            "isNew": false,
+            "note": "Furnace/boiler, hot-water heater, well pressure tank and treatment, electrical panel; carved from the basement under the stair against an interior wall."
+          },
+          {
+            "name": "Stair Core (lower run + landing)",
+            "dim": "~4 ft x 11 ft run",
+            "isNew": false,
+            "note": "Rises from the lower level to the main-floor foyer; lower landing sits next to the garage-to-basement door."
+          }
+        ]
+      },
+      {
+        "name": "MAIN (RAISED) LEVEL — Kitchen over the Garage + Living/Dining + Foyer",
+        "adjacency": "Carries the full ~26 ft x 38 ft box (~988 sf) a full story above the driveway. The main stair arrives at the FOYER, the circulation hub. The LIVING ROOM opens to the front/street side; the DINING ROOM sits between living room and kitchen (the classic living-dining-kitchen progression); a HALF BATH (powder room) tucks off the foyer/hall near the stair. The KITCHEN occupies the END of the floor directly OVER the tuck-under garage. Immediately beside the kitchen, sharing a wall, is the UNUSED FLEX ROOM. The upper stair continues from the same foyer core, stacked over the lower run. The two key adjacencies the options exploit are the dining-to-kitchen wall and the kitchen-to-flex-room wall.",
+        "rooms": [
+          {
+            "name": "Kitchen",
+            "dim": "11 ft x 16 ft (~176 sf)",
+            "isNew": false,
+            "note": "End of the floor, directly OVER the tuck-under garage — the raised-main-floor signature. Galley/L-shaped 1992 layout; shares one wall with the dining room and one with the unused flex room."
+          },
+          {
+            "name": "Unused Flex Room (next to kitchen)",
+            "dim": "11 ft x 12 ft (~132 sf)",
+            "isNew": false,
+            "note": "Directly beside the kitchen, also over the garage end. Originally a breakfast nook / den / first-floor office; currently UNUSED. The room Options G/H open the kitchen into."
+          },
+          {
+            "name": "Living Room",
+            "dim": "13 ft x 16 ft (~208 sf)",
+            "isNew": false,
+            "note": "Front of the house, street-facing; opens off the foyer. Typically the fireplace room in this vintage."
+          },
+          {
+            "name": "Dining Room",
+            "dim": "11 ft x 13 ft (~143 sf)",
+            "isNew": false,
+            "note": "Between the living room and kitchen, completing the colonial flow; shares a wall with the kitchen."
+          },
+          {
+            "name": "Foyer / Stair Core",
+            "dim": "~6 ft x 12 ft",
+            "isNew": false,
+            "note": "Arrival from the lower-level/garage stair and base of the upper stair; the floor's hub linking living, dining, kitchen, and powder room."
+          },
+          {
+            "name": "Half Bath (Powder Room)",
+            "dim": "5 ft x 6 ft (~30 sf)",
+            "isNew": false,
+            "note": "Off the foyer/hall near the stair core; the home's 0.5 bath."
+          }
+        ]
+      },
+      {
+        "name": "UPPER LEVEL — 4 Bedrooms + 2 Full Baths",
+        "adjacency": "Same ~26 ft x 38 ft footprint (~988 sf), reached by the upper stair to a central HALL. The PRIMARY (MASTER) BEDROOM sits at one end (front corner over the living room) with an EN-SUITE FULL BATH and closet. The three SECONDARY BEDROOMS line the hall: Bedroom 2 and Bedroom 3 along the front/rear, and Bedroom 4 (smallest) over the garage/kitchen end. The shared HALL FULL BATH serves bedrooms 2-4 centrally off the hall, with a linen closet. All four bedrooms and both full baths are on this floor.",
+        "rooms": [
+          {
+            "name": "Primary (Master) Bedroom",
+            "dim": "13 ft x 15 ft (~195 sf)",
+            "isNew": false,
+            "note": "One end, front corner over the living room; includes a closet and connects to the en-suite bath."
+          },
+          {
+            "name": "Primary En-Suite Full Bath",
+            "dim": "6 ft x 9 ft (~54 sf)",
+            "isNew": false,
+            "note": "Off the primary bedroom; tub/shower, single or double vanity (1992 standard)."
+          },
+          {
+            "name": "Bedroom 2",
+            "dim": "11 ft x 12 ft (~132 sf)",
+            "isNew": false,
+            "note": "Off the central hall; secondary bedroom."
+          },
+          {
+            "name": "Bedroom 3",
+            "dim": "10 ft x 12 ft (~120 sf)",
+            "isNew": false,
+            "note": "Off the central hall; secondary bedroom."
+          },
+          {
+            "name": "Bedroom 4",
+            "dim": "10 ft x 11 ft (~110 sf)",
+            "isNew": false,
+            "note": "Smallest bedroom, over the garage/kitchen end of the footprint — the top of the GARAGE->KITCHEN->Bedroom 4 stack."
+          },
+          {
+            "name": "Hall Full Bath",
+            "dim": "5 ft x 8 ft (~40 sf)",
+            "isNew": false,
+            "note": "Centrally off the hall; shared by bedrooms 2-4; tub/shower."
+          },
+          {
+            "name": "Upper Hall + Linen Closet",
+            "dim": "~4 ft x 14 ft hall",
+            "isNew": false,
+            "note": "Distributes from the top of the stair to all four bedrooms and the hall bath; linen closet along the hall."
+          }
+        ]
+      }
+    ]
+  },
+  "options": [
+    {
+      "key": "REC",
+      "title": "REC — Finish the Basement + Add a Single-Story Rear Great Room & Mudroom",
+      "summary": "Lowest-risk, recommended-first option. Adds living space ONLY where the constraints allow: DOWN into the existing unfinished basement, and OFF THE REAR at the raised main-floor level. The prime over-garage volume is already the kitchen, so building UP is unavailable, and the R-40 40-ft side-yard setback pushes all new above-grade space to the back. Two levels change. MAIN: a single-story rear GREAT ROOM (18x22) and MUDROOM (8x12) are built up on a new full frost-wall foundation to meet the raised main floor; the existing rear wall opens into the kitchen/dining via a flush beam. LOWER: the ~460 sf unfinished basement is finished into a PLAYROOM, FLEX/OFFICE, and HALF BATH, with mechanicals re-enclosed. The tuck-under garage is RETAINED and untouched. NO bedroom is added, so no CT septic-capacity review is triggered. Fits the ~$95-150K budget and stays under the ~$650-700K Weatogue comp ceiling.",
+      "levels": [
+        {
+          "name": "MAIN (RAISED) LEVEL — AFFECTED (rear addition + opened rear wall)",
+          "adjacency": "The main stair still arrives at the FOYER hub (living room front, dining between living and kitchen, powder room off the foyer). The KITCHEN stays in place over the garage, but its REAR exterior wall is opened with a flush beam so the kitchen/dining flow continuously into the NEW REAR GREAT ROOM. The NEW MUDROOM tucks into the rear corner off the kitchen with an exterior service door toward the yard/parking. The Unused Flex Room is kept intact in REC (it is only opened up under Option H). Upper stair unchanged.",
+          "changes": "Open the existing rear (back) exterior wall of the kitchen/dining zone with a flush structural beam (~12-16 ft opening) to merge into the new great room — the single biggest change; remove the former rear slider/window. Add an exterior service door at the new mudroom. Kitchen layout, living room, dining room, flex room, powder room, foyer, and upper stair are UNCHANGED in footprint.",
+          "rooms": [
+            {
+              "name": "New Rear Great Room",
+              "dim": "18 ft x 22 ft (~396 sf)",
+              "isNew": true,
+              "note": "Single-story addition off the back, built UP to the raised main-floor level on a new full frost-wall foundation. Vaulted/cathedral ceiling option; rear glass-door/window bank to the 1.59-acre yard. Opens to kitchen/dining via a flush LVL/steel beam — the primary living space the family lacks. Sits directly above the new lower-level playroom."
+            },
+            {
+              "name": "New Mudroom",
+              "dim": "8 ft x 12 ft (~96 sf)",
+              "isNew": true,
+              "note": "Rear corner between kitchen and the new exterior service door. Bench, cubbies, coat closet, drop zone; buffers the great room/kitchen from the back entry. Can step down a few risers to absorb the raised-floor-to-grade change."
+            },
+            {
+              "name": "Kitchen (over garage)",
+              "dim": "11 ft x 16 ft (~176 sf)",
+              "isNew": false,
+              "note": "Existing, UNCHANGED in REC except its rear wall now opens into the great room. (Opening it into the flex room is Option H.)"
+            },
+            {
+              "name": "Dining Room",
+              "dim": "11 ft x 13 ft (~143 sf)",
+              "isNew": false,
+              "note": "Existing, between kitchen and living room; now flows through to the new great room."
+            },
+            {
+              "name": "Living Room",
+              "dim": "13 ft x 16 ft (~208 sf)",
+              "isNew": false,
+              "note": "Existing, front of the main floor. Unchanged."
+            },
+            {
+              "name": "Unused Flex Room (kept as-is in REC)",
+              "dim": "11 ft x 12 ft (~132 sf)",
+              "isNew": false,
+              "note": "Existing room next to the kitchen — left intact in REC. Can serve as a den/formal dining in the interim. Opened into the kitchen only under Option H."
+            },
+            {
+              "name": "Foyer / Stair Core",
+              "dim": "~6 ft x 12 ft",
+              "isNew": false,
+              "note": "Existing hub for living, dining/kitchen, powder room, and the stair to the upper bedrooms. Unchanged."
+            },
+            {
+              "name": "Half Bath (Powder Room)",
+              "dim": "5 ft x 6 ft (~30 sf)",
+              "isNew": false,
+              "note": "Existing 0.5 bath off the foyer hall. Unchanged."
+            }
+          ]
+        },
+        {
+          "name": "LOWER LEVEL — AFFECTED (basement finished; garage retained)",
+          "adjacency": "The interior stair descends from the main-floor foyer into the center of the lower level. The TUCK-UNDER 2-CAR GARAGE is RETAINED at the driveway end (under the kitchen), with its garage-to-house vestibule and up-stair intact. The new finished area fills the former unfinished basement under the living/dining half: a NEW PLAYROOM spans the rear (directly below the new great room above), a NEW FLEX/OFFICE sits to the side, and a NEW HALF BATH tucks against the existing plumbing wall by the mechanicals for short drain runs. The MECHANICAL/UTILITY zone is re-enclosed with code clearances.",
+          "changes": "Frame, insulate (R-15 perimeter), and finish the ~460 sf unfinished basement into conditioned living space; add HVAC distribution (or a mini-split zone), sub-panel circuits, and a half-bath drain tied to the stack (or a sewage-ejector if below the septic invert). Re-enclose mechanicals in a dedicated utility room. Add radon mitigation and verify the sump. Provide a code egress window/well to the playroom (no bedroom = no bedroom-rated egress). NO bedroom is created. The tuck-under garage and its structure are UNTOUCHED.",
+          "rooms": [
+            {
+              "name": "New Playroom",
+              "dim": "14 ft x 22 ft (~308 sf)",
+              "isNew": true,
+              "note": "Largest finished space, across the rear under the living/dining — directly below the new great room. LVP/cushioned floor, egress window for light/safety. Primary indoor play space for the kids."
+            },
+            {
+              "name": "New Flex / Office",
+              "dim": "11 ft x 12 ft (~132 sf)",
+              "isNew": true,
+              "note": "Quiet room off the playroom for home office / homework / guest flex. Deliberately NOT a legal bedroom (no closet, labeled office) to avoid the septic trigger."
+            },
+            {
+              "name": "New Half Bath",
+              "dim": "5 ft x 7 ft (~35 sf)",
+              "isNew": true,
+              "note": "Lower-level powder room against the existing plumbing wall by the mechanicals for the shortest drain/vent runs; ejector pump if below the septic invert. Keeps kids off the stairs."
+            },
+            {
+              "name": "Mechanical / Utility / Storage",
+              "dim": "~10 ft x 12 ft",
+              "isNew": false,
+              "note": "CHANGED: re-enclosed into a dedicated, code-clearance utility room (furnace, water heater, well pressure tank, electrical panel). Remaining unfinished area kept as storage."
+            },
+            {
+              "name": "Tuck-Under 2-Car Garage (retained)",
+              "dim": "22 ft x 24 ft (~528 sf)",
+              "isNew": false,
+              "note": "Existing lower-level garage under the kitchen — RETAINED and untouched in REC. (Conversion is Option G/H.)"
+            },
+            {
+              "name": "Stair / Vestibule",
+              "dim": "~6 ft x 10 ft",
+              "isNew": false,
+              "note": "Existing interior stair from the main floor plus the garage-to-house vestibule. Unchanged."
+            }
+          ]
+        }
+      ],
+      "structuralNotes": [
+        "Rear-addition foundation: because the kitchen floor is raised a full story, the new single-story great room + mudroom ride on a NEW full-depth frost-wall foundation (8-in poured walls on footings below CT's ~42-in frost line), NOT a slab-on-grade — building the floor UP to the raised main-floor elevation. Expect a partial walk-out or short stem-wall buildup at the higher rear grade, creating ~280 sf of new crawl/unfinished space under the great room (shown as future-finish storage). Dowel/key the new foundation to the existing to avoid differential settlement.",
+        "Beam at the opened rear wall (load-bearing): the rear wall of the kitchen/dining zone is removed and replaced with a flush-framed structural beam carrying roof + ceiling loads (no floor above). Concept sizing for a ~12-16 ft opening: a 2-3 ply 1.75 x 11.875 in LVL or a small steel W-section on new posts to new footings/pads — engineer to verify with ~30 psf Farmington-Valley snow and tributary loads.",
+        "Roof tie-in: tie the single-story great-room roof into the existing rear roof plane BELOW the second-floor windows using a shed or low-pitch gable/hip; a low-slope tie avoids a clumsy double-ridge collision created by the raised floor plus a habitable ceiling height. Ice-and-water shield at all valleys and the wall-to-roof transition (CT ice-dam zone); step-flash the wall connection.",
+        "Lateral/connection: tie new floor and roof diaphragms back to the existing structure with ledgers, hold-downs, and a continuous load path.",
+        "Basement finish: confirm slab/footing condition and a dry foundation before framing; perimeter vapor barrier + continuous R-15 rigid foam + sealed dimple-mat/subfloor over the slab; maintain 7'-0\" minimum finished ceiling height (box out around the main carrying beam if tight). New half-bath drain ties to the existing stack above invert or a sealed sewage-ejector basin if below the septic line. Add radon sub-slab depressurization and verify a sump.",
+        "Egress & code: the finished playroom needs a code egress window/well for light and emergency exit; with NO legal bedroom, bedroom-rated egress is not triggered."
+      ],
+      "designNotes": [
+        "Constraint logic: the prime over-garage volume is already the kitchen, so building UP is unavailable; the R-40 40-ft side-yard setback pushes all new above-grade space to the REAR. Offset/center the great room on the back wall to clear side setbacks.",
+        "REC deliberately adds NO bedroom — rear great room + mudroom above, playroom + flex/office + half bath below — the core move that avoids the CT septic-capacity review (19-13-B100a) and the $25-60K+ leach-field risk. Keep the flex/office explicitly non-bedroom (no closet, labeled office).",
+        "Vertical stacking is intentional: the new great room sits directly above the new playroom, concentrating the family/kids zone at the rear and keeping short-run plumbing on the existing service wall.",
+        "REC keeps the kitchen and the unused flex room intact — that distinguishes it from Option H (opens the kitchen into the flex room) and Option G (converts the tuck-under garage).",
+        "Build sequence (recommended path): do the cheap, high-ROI basement first (interior-only, ~2-3 mo), then add the rear room when budget allows (~4-6 mo), overlapping the dry-in. Top risks: roofline collision at the raised floor (resolve with a low-slope tie early), below-grade moisture (confirm dry before finishing), and the new-foundation premium (building UP, not cheap slab — foundation/footings ~15% of the addition build).",
+        "Scope/cost fit: ~$50-80K to finish the existing basement plus ~$110-150K for the rear great room + mudroom, phased, staying under the ~$650-700K Weatogue comp ceiling."
+      ],
+      "renderings": [
+        {
+          "id": "rec-greatroom-int",
+          "space": "New rear great room (main level), opening into the existing kitchen",
+          "prompt": "Photorealistic architectural interior of a new single-story great room addition on a New England colonial home, late afternoon. Vaulted cathedral ceiling with painted white tongue-and-groove planks and exposed rough-sawn Douglas-fir beams; warm wide-plank white-oak hardwood floor. A wide flush-beam opening on the left leads into a bright existing kitchen with shaker cabinets and a quartz counter, the rooms flowing together with no dropped header. The rear wall is a bank of black-framed divided-light windows and a glass garden door looking onto a deep green 1.59-acre Connecticut backyard with mature maples; warm golden low-angle sunlight rakes across the floor casting long soft shadows. Family-friendly furnishings: a deep linen sectional, a wool area rug, a shiplap fireplace with a reclaimed-wood mantel on the right wall, built-in white bookshelves flanking it. Cozy New England farmhouse-colonial style, soft natural materials, high dynamic range, crisp focus, ultra-detailed, magazine architectural photography, 35mm lens, no people, no text, no watermark.",
+          "caption": "Concept — REC: the new single-story rear great room opening into the existing kitchen at the raised main-floor level. Illustrative imagery, not the actual home."
+        },
+        {
+          "id": "rec-rear-addition-ext",
+          "space": "Rear exterior of the colonial with the new addition",
+          "prompt": "Photorealistic exterior architectural rendering of the rear of a 1992 two-story New England colonial with a brand-new single-story rear addition, golden-hour summer light. The main house has classic Connecticut colonial details: warm Nantucket-gray clapboard siding, white trim, black shutters, divided-light double-hung windows, asphalt-shingle gable roof. The new single-story great-room addition projects off the back, clad to match with white corner boards; its low-pitch gable roof ties cleanly into the existing rear wall just below the second-floor windows with crisp flashing. The addition sits raised to the main-floor level on a fresh stone-faced foundation, with a few steps or a short walk-out at the higher rear grade; large black-framed windows and a glass garden door glow warmly from inside at dusk. A small mudroom entry with a covered service door sits at the rear corner. Lush green lawn, mature maple and oak trees, a 1.59-acre wooded Connecticut lot, soft long shadows, clear blue-to-amber sky. Architectural exterior photography, ultra-detailed, realistic materials and textures, no people, no text, no watermark.",
+          "caption": "Concept — REC: the single-story rear addition tied into the back of the colonial, built up to the raised main-floor level. Illustrative imagery, not the actual home."
+        }
+      ]
+    },
+    {
+      "key": "G",
+      "title": "G — Convert the Tuck-Under Garage to Living Space + Finish the Basement + Build a New 2-Car Garage",
+      "summary": "Converts the tuck-under 2-car garage (under the kitchen) into a finished lower-level FAMILY ROOM/PLAYROOM, finishes the remaining unfinished basement into flex/rec space plus a half bath, and restores parking with a NEW ~24x24 two-car garage. Recommendation: build the new garage as an ATTACHED slab-on-grade extension off the FRONT end where the old overhead doors faced, so the existing driveway apron is largely reused, the colonial massing stays coherent, and a mudroom links garage-to-house under cover. The single largest structural item is handling the old overhead-door header and infilling that wall with a frost-wall-supported, insulated wall + new beam. NO new bedroom, so no septic trigger. On a ~$575K house near the ~$650-700K ceiling, G is a livability/parking-preservation play rather than a strong-ROI one. The main floor is UNCHANGED in G (kitchen/flex-room renovation is Option H).",
+      "levels": [
+        {
+          "name": "LOWER LEVEL — AFTER (former garage converted; basement finished; new garage)",
+          "adjacency": "Enter from the NEW attached garage through a MUDROOM into a small LOWER FOYER/landing. From the landing: straight ahead is the converted-garage FAMILY ROOM/PLAYROOM (directly under the kitchen); to the side is the finished FLEX/REC room (under the living/dining); the half bath, mechanical/storage room, and the retained interior stair UP to the raised main floor all open off a short central hall. The stair stays in its original location near the old garage-to-house door.",
+          "changes": "ENTIRE LEVEL transformed from garage + unfinished basement to fully conditioned finished living space. Old overhead door removed; opening framed/infilled below the existing header with an insulated wall + windows/man-door. New mudroom and lower foyer at the new garage connection. Slab leveled/insulated; perimeter walls furred, insulated, finished. New egress, HVAC distribution, and circuits throughout. NEW detached-or-attached 2-car garage built to restore parking.",
+          "rooms": [
+            {
+              "name": "Family Room / Playroom (converted garage)",
+              "dim": "22 ft x 22 ft (~484 sf)",
+              "isNew": true,
+              "note": "The former tuck-under 2-car garage, directly UNDER the kitchen — the centerpiece lower-level living/play space. Old overhead-door wall infilled with a large window group + a single exterior man-door for light and egress. Ceiling ~7'6\"-8' under the kitchen floor framing; recessed lighting compensates."
+            },
+            {
+              "name": "Flex / Rec Room (finished basement)",
+              "dim": "~16 ft x 24 ft (~384 sf)",
+              "isNew": true,
+              "note": "Carved from the previously unfinished basement under the rest of the footprint. Office / media / guest-flex use. A code egress window/well is cut into the foundation wall. Not a legal bedroom (no septic trigger)."
+            },
+            {
+              "name": "Half Bath (lower level)",
+              "dim": "5 ft x 8 ft (~40 sf)",
+              "isNew": true,
+              "note": "New powder room against the existing basement plumbing wall for a short drain run; sewage-ejector pit may be required since fixtures sit below the septic invert."
+            },
+            {
+              "name": "Mudroom (garage-to-house link)",
+              "dim": "6 ft x 10 ft (~60 sf)",
+              "isNew": true,
+              "note": "Connects the NEW attached garage to the lower foyer. Bench, cubbies, durable tile floor. The weather-protected entry a detached garage cannot give."
+            },
+            {
+              "name": "Lower Foyer / Landing",
+              "dim": "6 ft x 8 ft (~48 sf)",
+              "isNew": true,
+              "note": "Distribution point between the mudroom, the family room/playroom, the flex room, and the retained stair UP to the main floor."
+            },
+            {
+              "name": "Mechanical / Storage Room",
+              "dim": "~10 ft x 12 ft",
+              "isNew": false,
+              "note": "CHANGED: reorganized and walled off (furnace/air handler, water heater, well pressure tank, electrical panel) so the rest of the level can be finished."
+            },
+            {
+              "name": "Interior Stair UP to Main Floor",
+              "dim": "~3.5 ft x 12 ft run",
+              "isNew": false,
+              "note": "RETAINED in its original location (the old garage-to-house stair). Finishes plus code handrail/guard upgrades only."
+            },
+            {
+              "name": "NEW 2-Car Garage (attached extension)",
+              "dim": "24 ft x 24 ft (~576 sf)",
+              "isNew": true,
+              "note": "Attached slab-on-grade garage off the FRONT end where the original overhead doors faced, so the driveway/apron is largely reused. Single 16-ft door (or two 8-ft) to match colonial proportions; connects via the new mudroom. Its own 42-in frost-depth foundation, kept independent of the dwelling foundation to avoid differential settlement."
+            }
+          ]
+        },
+        {
+          "name": "MAIN (RAISED) LEVEL — UNCHANGED in Option G (shown for reference)",
+          "adjacency": "Identical to existing: foyer hub, living room front, dining between living and kitchen, kitchen over the (now-converted) garage with the unused flex room beside it, powder room off the foyer. Shown to anchor the vertical stacking — the kitchen now sits directly over the new family room/playroom. The kitchen/flex-room renovation is Option H, not G.",
+          "changes": "NO CHANGE in Option G. Kitchen, unused flex room, living room, dining room, foyer, powder room, and stairs remain as-is.",
+          "rooms": [
+            {
+              "name": "Kitchen (over the converted family room)",
+              "dim": "11 ft x 16 ft (~176 sf)",
+              "isNew": false,
+              "note": "Unchanged in G. Sits directly above the new family room/playroom — the vertical stacking that defines the raised floor."
+            },
+            {
+              "name": "Unused Flex Room (next to kitchen)",
+              "dim": "11 ft x 12 ft (~132 sf)",
+              "isNew": false,
+              "note": "Unchanged in G; remains the under-used room next to the kitchen. (Opened into the kitchen only under Option H.)"
+            },
+            {
+              "name": "Living Room",
+              "dim": "13 ft x 16 ft (~208 sf)",
+              "isNew": false,
+              "note": "Unchanged."
+            },
+            {
+              "name": "Dining Room",
+              "dim": "11 ft x 13 ft (~143 sf)",
+              "isNew": false,
+              "note": "Unchanged."
+            },
+            {
+              "name": "Half Bath (Powder Room)",
+              "dim": "5 ft x 6 ft (~30 sf)",
+              "isNew": false,
+              "note": "Unchanged — this is the 0.5 of the 2.5 baths."
+            }
+          ]
+        }
+      ],
+      "structuralNotes": [
+        "Overhead-door beam: the old ~16 ft overhead-door opening was a structural opening carrying the kitchen floor and the wall above. When the door is removed and the wall infilled, an engineer must evaluate the existing header/lintel and likely supplement or replace it with a new flush/drop steel or LVL beam bearing on new posts to the foundation, so the kitchen floor load above is carried by the new insulated infill wall rather than the old garage-door framing.",
+        "Slab insulation & leveling: the garage slab was poured uninsulated, sloped to a floor drain, and typically sits below the basement finished-floor target. Build it up level with rigid foam (min R-10 under-slab equivalent) + a sleeper/subfloor or self-leveling topping over a vapor barrier, abandon/seal the floor drain, and add a slab-edge thermal break so the formerly-exterior slab performs as conditioned floor.",
+        "Foundation-wall insulation: fur out and insulate the former garage perimeter and basement foundation walls (R-15 to R-20 continuous), air-seal the rim joist, and finish — to meet CT energy code for newly-conditioned space and control condensation.",
+        "New garage foundation (frost depth): the new ~24x24 attached garage needs perimeter frost-wall footings to CT's 42-in minimum, with a thickened-edge or monolithic slab sloped to the apron. Keep its footing independent of (not bonded to) the dwelling foundation; isolate with an expansion joint where slabs meet.",
+        "Garage-to-house fire separation: the wall and ceiling between the new attached garage and the conditioned mudroom/house must carry the required gypsum fire separation (min 1/2 in; 5/8 in Type X at any ceiling with habitable space above) and a self-closing, 20-minute rated man-door.",
+        "Egress for below-grade living: occupiable below-grade rooms (flex/rec and the converted-garage family room) need code-compliant emergency egress and light/ventilation — egress windows + wells for the flex room and a large window group + man-door at the former overhead-door wall for the family room.",
+        "MEP, radon & drainage: extend/upsize HVAC or add a dedicated mini-split zone for the newly conditioned level; new circuits and a panel-capacity check; half-bath supply/drain/vent with a likely sewage-ejector pit. Converting the garage removes the vehicle slab's drainage role, so re-grade, add perimeter drainage/downspout extensions, and add a curtain drain if the lot drains toward that face. Radon test + sub-slab depressurization during slab build-up."
+      ],
+      "designNotes": [
+        "Recommendation — ATTACHED over DETACHED: build the new 2-car garage as an attached slab-on-grade extension at the front end where the old doors faced. It reuses most of the existing driveway/apron, gives a weather-protected mudroom entry a detached garage cannot, preserves the colonial's coherent street massing, and still clears the 40-ft R-40 side-yard setback when placed toward the front. Detached is the fallback if driveway geometry or setbacks force it — at higher cost (separate foundation/roof, longer driveway, no covered entry). Note the raised-floor geometry is the catch for an attached garage: it either tucks under again or sits forward at grade with a stepped connector.",
+        "Where it connects: garage to a 6x10 mudroom into a 6x8 lower foyer, putting the everyday family entry on the same level as the new playroom/flex space and keeping muddy-kid traffic off the main living floor.",
+        "Vertical stacking story: the converted family room/playroom sits directly under the kitchen — parents cooking one floor above kids playing below, a natural sightline/sound connection that makes the lower level usable daily.",
+        "Head height: the converted-garage ceiling (~7'6\"-8') is lower than the main floor; use flush-mount/recessed lighting, avoid dropped soffits except at the beam and ducts, and use light finishes to keep the room from feeling low.",
+        "No bedroom by design: G adds NO bedroom, avoiding the CT septic-capacity review (19-13-B100a); frame the flex/rec room as office/play/media/guest-flex, not a legal bedroom.",
+        "Build sequence: build the NEW garage FIRST so the household never loses parking, THEN gut and convert the old garage and finish the basement (partly overlapping). Top risks: new-garage siting vs. the raised-floor geometry and R-40 setbacks; conversion optics (avoid an obvious door-shaped wall, flatten the floor, match window proportions); and moisture/thermal in a slab/walls never designed to be heated.",
+        "ROI context: garage conversion + a new garage is a wash-to-modest return on a ~$575K house near the ceiling, and below-grade square footage only partly counts at appraisal — best understood as a livability/parking-preservation move."
+      ],
+      "renderings": [
+        {
+          "id": "g-playroom-int",
+          "space": "Converted-garage family room / playroom (lower level, under the kitchen)",
+          "prompt": "Interior architectural visualization of a converted tuck-under-garage family room and children's playroom in a 1990s Connecticut colonial, daytime. A bright, freshly finished lower-level space roughly 22 by 22 feet with a ceiling height around eight feet and warm recessed downlights. Where the old overhead garage door used to be, a wide group of white-trimmed double-hung windows and a single glazed exterior door now flood the room with soft natural light. Engineered light-oak plank flooring over an insulated slab, pale warm-white painted walls, a low wainscot detail. Furnishings read as a real family playroom: an oatmeal-linen sectional, a soft washable area rug, low open shelving with baskets of toys, a kids' craft table, a corner reading nook, a wall-mounted TV. A subtle flush beam crosses the ceiling near the old door line, finished in painted drywall. Cozy, clean, naturally lit, photoreal interior real-estate photography, 35mm, shallow depth of field, no text, no logos, no people.",
+          "caption": "Concept — G: the former tuck-under garage, now a light-filled lower-level family room/playroom directly beneath the kitchen, with windows where the overhead door used to be. Illustrative imagery, not the actual home."
+        },
+        {
+          "id": "g-new-garage-ext",
+          "space": "Exterior — new attached 2-car garage matching the 1992 colonial",
+          "prompt": "Exterior architectural visualization of a two-story 1992 Connecticut colonial with a newly built attached two-car garage, late-afternoon golden light, autumn New England setting. The main house is a classic raised colonial with light gray clapboard siding, white trim and corner boards, black shutters, a pitched asphalt-shingle roof, and a small covered front entry. To the front, a new 24 by 24 foot attached two-car garage extends from the lower level, perfectly matched to the house: same gray clapboard, same white trim, same roof pitch and shingle color, with a single sixteen-foot carriage-style overhead door in painted white with subtle window lights along the top. A fresh asphalt driveway and a clean concrete apron lead to the new garage door. Mature trees with turning leaves, tidy foundation plantings, well-kept lawn on a wooded 1.5-acre lot. The addition reads as original to the home, not a bolt-on. Photoreal exterior real-estate photography, wide angle, crisp, no text, no logos, no people, no cars in the frame.",
+          "caption": "Concept — G: the restored two-car garage, a new attached extension built to match the colonial's siding, trim, and rooflines, reusing a refreshed driveway apron. Illustrative imagery, not the actual home."
+        }
+      ]
+    },
+    {
+      "key": "H",
+      "title": "H — Option G PLUS Expand & Renovate the Kitchen into the Adjacent Unused Room",
+      "summary": "Option H is strictly ADDITIVE to Option G: it includes ALL of G's lower-level work (convert the tuck-under garage to a family room, finish the basement, build a new 2-car garage) and layers on a main-level kitchen expansion. The wall between the existing kitchen (over the garage) and the adjacent unused flex room is removed to create one ~16 ft x 28 ft eat-in kitchen + family/keeping room with a large island, opened toward the living and dining rooms so the whole main floor reads as one connected great space. The single most important move is structural: the removed wall is a load-bearing interior bearing line carrying the upper-floor (bedroom) joists, so it is replaced with a flush beam on new posts whose point loads must STACK continuously through the converted-garage family room below to a new footing. This is the most expensive of the three and the most over-improvement-prone for a ~$575K house, so it is lifestyle-driven, not value-maximizing.",
+      "levels": [
+        {
+          "name": "MAIN (RAISED) LEVEL — AFFECTED (kitchen + flex room combined into one great space)",
+          "adjacency": "The kitchen and the formerly unused flex room are now ONE room: a continuous ~16 ft x 28 ft eat-in kitchen + family/keeping room running the full depth of the kitchen-end side of the house. A central island (~4 ft x 8 ft) anchors the kitchen end (over the garage/now-family-room line); a casual dining table and a keeping-room sitting area occupy the rear end. A new wide cased opening ties the kitchen to the dining room, and a second cased opening links the living room, so the whole main floor circulates as one open great-room loop. The center foyer/stair and powder room are unchanged; the powder-room door is jogged so it is not in direct sightline of the island.",
+          "changes": "REMOVE the load-bearing partition between the Kitchen and the Unused Flex Room and replace it with a flush beam (see structural notes). WIDEN the kitchen-to-dining and living-to-kitchen connections into cased openings. Relocate the sink/dishwasher to the new island and the range/hood to an exterior or peninsula wall; extend electrical (island circuits) and run plumbing up through the floor from the lower-level family-room ceiling cavity. Run ONE continuous wood floor across the combined room to erase the old two-room seam.",
+          "rooms": [
+            {
+              "name": "Eat-In Kitchen (expanded)",
+              "dim": "16 ft x 14 ft (kitchen end of the combined room)",
+              "isNew": false,
+              "note": "CHANGED. The kitchen end of the combined space, still over the garage/family-room line. Perimeter counters on two walls plus the island; new range/hood on the rear exterior wall; pantry built into the old wall pocket. Replaces the existing 11x16 kitchen."
+            },
+            {
+              "name": "Island",
+              "dim": "4 ft x 8 ft (~32 sf)",
+              "isNew": true,
+              "note": "NEW. Seats 3-4, holds the prep sink + dishwasher; the social anchor of the open plan. Plumbing + electrical drop up through the floor into the lower-level family-room ceiling cavity (former garage)."
+            },
+            {
+              "name": "Family / Keeping Room",
+              "dim": "16 ft x 14 ft (rear end of the combined room)",
+              "isNew": true,
+              "note": "NEW (created from the unused flex room + shared volume). Sofa/casual seating + casual dining table; rear windows/slider to the yard. 'Keeping room' = the colonial term for the informal sitting room off the kitchen."
+            },
+            {
+              "name": "Combined Kitchen + Family/Keeping Room (total)",
+              "dim": "~16 ft x 28 ft (~448 sf)",
+              "isNew": true,
+              "note": "NEW open volume — the headline of Option H. Replaces the two separate ~11x16 kitchen + ~11x12 flex rooms of the baseline."
+            },
+            {
+              "name": "Living Room",
+              "dim": "13 ft x 16 ft (~208 sf)",
+              "isNew": false,
+              "note": "CHANGED connection only: a widened cased opening now ties it visually to the kitchen/family space; footprint unchanged."
+            },
+            {
+              "name": "Dining Room",
+              "dim": "11 ft x 13 ft (~143 sf)",
+              "isNew": false,
+              "note": "CHANGED connection only: the cased opening to the kitchen is widened; can stay formal or open further in a later phase."
+            },
+            {
+              "name": "Foyer / Stair Core",
+              "dim": "~6 ft x 12 ft",
+              "isNew": false,
+              "note": "Unchanged. Still carries the run up to bedrooms and down to the new lower-level family room."
+            },
+            {
+              "name": "Half Bath (Powder Room)",
+              "dim": "5 ft x 6 ft (~30 sf)",
+              "isNew": false,
+              "note": "Unchanged location; entry jogged slightly so the door isn't on direct sightline from the open island."
+            }
+          ]
+        },
+        {
+          "name": "LOWER LEVEL — AFFECTED (all of Option G, with coordinated beam-post stacking)",
+          "adjacency": "Identical scope to Option G: the former tuck-under garage becomes the FAMILY ROOM/PLAYROOM sitting directly UNDER the new eat-in kitchen; the rest of the basement is finished into FLEX/OFFICE + HALF BATH + mechanical/storage; a NEW 2-car garage is added off the lower foyer (or detached) to restore parking. The critical addition in H: the new kitchen beam's posts land on NEW footings/pads placed within this level, so the load path is continuous top-to-bottom.",
+          "changes": "All Option G lower-level work (garage conversion, finished basement, new garage). PLUS: install new column footings/pads at the post locations required by the main-level kitchen beam, so the kitchen point loads carry continuously through the former-garage family room to the foundation — coordinated as one structural design.",
+          "rooms": [
+            {
+              "name": "Family Room / Playroom (converted garage)",
+              "dim": "22 ft x 22 ft (~484 sf)",
+              "isNew": true,
+              "note": "NEW. Converted tuck-under garage, directly under the expanded kitchen. The kitchen beam's posts/footings are coordinated into this room's layout (tucked at the perimeter or wrapped as a feature)."
+            },
+            {
+              "name": "Flex / Office (finished basement)",
+              "dim": "~16 ft x 24 ft (~384 sf)",
+              "isNew": true,
+              "note": "NEW. From previously unfinished basement under the rest of the footprint. Office / media / guest-flex; not a legal bedroom (no septic trigger)."
+            },
+            {
+              "name": "Half Bath (lower level)",
+              "dim": "5 ft x 8 ft (~40 sf)",
+              "isNew": true,
+              "note": "NEW. Against the existing basement plumbing wall; ejector pit likely (below septic invert)."
+            },
+            {
+              "name": "Mudroom + Lower Foyer",
+              "dim": "6 ft x 10 ft + 6 ft x 8 ft (~108 sf)",
+              "isNew": true,
+              "note": "NEW. Weather-protected garage-to-house link on the same level as the playroom/flex space (from Option G)."
+            },
+            {
+              "name": "Mechanical / Storage Room",
+              "dim": "~10 ft x 12 ft",
+              "isNew": false,
+              "note": "CHANGED: re-enclosed utility room (furnace, water heater, well pressure tank, electrical panel)."
+            },
+            {
+              "name": "Interior Stair UP to Main Floor",
+              "dim": "~3.5 ft x 12 ft run",
+              "isNew": false,
+              "note": "RETAINED in its original location; finishes + code handrail/guard upgrades."
+            },
+            {
+              "name": "NEW 2-Car Garage",
+              "dim": "24 ft x 24 ft (~576 sf)",
+              "isNew": true,
+              "note": "NEW. Attached off the lower foyer (recommended) or detached near the driveway to restore the two parking spaces lost to the conversion; own 42-in frost-depth foundation, independent of the dwelling."
+            }
+          ]
+        }
+      ],
+      "structuralNotes": [
+        "PRIMARY MOVE — the removed kitchen/flex-room partition is LOAD-BEARING. In a 1992 two-story colonial the interior wall along the center of the kitchen-end zone carries the upper-floor (bedroom) joists at their mid-span bearing line. Removing it requires a new beam in its place; CT permitting requires stamped framing/structural drawings for any bearing-wall removal.",
+        "Beam choice: prefer a FLUSH engineered LVL or steel W-section (joists hung off it) for a clean flat ceiling and the seamless great-room effect; a dropped beam is cheaper but leaves a visible header (can be wrapped as a decorative beam). Concept sizing for a typical 12-16 ft interior opening carrying one floor + the partition above: a 2-3 ply 1.75 x 9.5 to 11.875 in LVL — engineer to verify.",
+        "CRITICAL STACKED LOAD PATH: the new beam needs bearing posts at each end (and possibly one intermediate post tucked into a cabinet end or island return). Because the room BELOW is the newly converted garage (a vehicle slab, not a foundation designed for point loads), each post's load must carry continuously DOWN through the lower-level family room to a NEW concrete footing/pad. The #1 hazard is landing the kitchen beam's point load where there is no bearing/footing below — the top and bottom beam/column lines MUST be designed together. This is the governing structural theme of Option H and the reason G and H should be executed as one coordinated project.",
+        "Floor level/seam: verify subfloor flatness across the old wall; sister/level joists if there is a step or sag before laying continuous flooring.",
+        "Plumbing for the island: run supply + drain + vent through the floor into the lower-level family-room ceiling cavity; maintain drain slope to the existing stack; an island sink needs an air-admittance valve or a loop vent. Coordinate so pipes do not conflict with the new beam/posts.",
+        "Electrical & HVAC: open-plan kitchen needs code counter + island receptacles, dedicated circuits (range/oven/microwave/dishwasher/disposal), GFCI, and revised lighting (recessed + island pendants); a sub-panel or new circuits with a panel-capacity check given the simultaneous lower-level conversion and new garage. Rebalance HVAC for the larger combined volume and reroute any supply/return stranded in the removed wall.",
+        "All Option G structural items also apply: overhead-door header handling + infill wall, garage slab leveling/insulation, foundation-wall insulation, the new garage's 42-in frost footings, garage-to-house fire separation (5/8-in Type X + 20-min self-closing door), below-grade egress, radon, and drainage."
+      ],
+      "designNotes": [
+        "H is strictly additive to G: assume ALL Option G lower-level work is included; H layers the main-level kitchen expansion on top. Execute G and H as one coordinated project to share the structural engineer, permits, and the column/footing line.",
+        "Headline deliverable: the combined ~16 ft x 28 ft eat-in kitchen + family/keeping room with an island, opened toward the living/dining so the whole main floor reads as one connected great space.",
+        "Convenient chase: because the new lower-level family room sits directly under the expanded kitchen, the island's plumbing/electrical drops conveniently into that ceiling cavity — coordinate trades so the same chase serves both levels.",
+        "Keep the powder room and center stair where they are to limit cost; the big spend is the beam (engineered + new footings), the island services, and matching one continuous floor across the old wall line.",
+        "Run ONE continuous hardwood (or LVP) across the full ~16x28 combined room and feather it into the living/dining at the cased openings so the finished room reads as one space; match/refinish the main level for uniformity.",
+        "Build sequence: engineer the stacked load path FIRST; execute G's lower-level + new garage leaving post locations/footings in place; then shore the kitchen ceiling, remove the wall, set the flush beam, reroute stranded MEP, and do the new kitchen rough-ins and finishes. Realistic ~5-7 mo combined.",
+        "Cost/value caveat: garage conversion + a NEW garage + a kitchen gut-and-expand is the most expensive option and most likely to push past the ~$650-700K Weatogue comp ceiling — a lifestyle-driven, not value-maximizing, choice. Main cost/risk drivers: the load-bearing-wall removal (engineered beam + new footings) and relocating plumbing. No bedroom is added, so no CT septic-capacity review is triggered."
+      ],
+      "renderings": [
+        {
+          "id": "h-kitchen-island-int",
+          "space": "Expanded eat-in kitchen with island (kitchen end of the combined main-level great space)",
+          "prompt": "Interior architectural photograph of a freshly renovated, expanded eat-in kitchen inside a 1990s New England colonial home, late-morning daylight. A large rectangular center island, roughly 4 by 8 feet, with a honed white quartz waterfall top and a deep navy-blue painted Shaker cabinet base, three woven rattan counter stools tucked beneath one side. Perimeter cabinetry in warm creamy-white Shaker doors with unlacquered brass cup pulls, a farmhouse apron sink under a window, and a professional-style stainless range with a plaster hood on the rear wall. Classic colonial details kept: white painted crown molding, a wide cased opening to the next room, six-over-six divided-light window over the sink, wide-plank white-oak hardwood floor in a warm natural finish. Subway tile backsplash to the ceiling behind the range, open walnut shelving on one wall, a small herb pot and wooden cutting board as styling. Layered lighting: two large blackened-brass dome pendants over the island, recessed downlights, soft daylight from the windows. Warm, inviting, high-end residential remodel, clean and uncluttered, realistic materials and reflections, shot at eye level with a slight three-quarter angle, shallow depth of field. No people, no text, no logos.",
+          "caption": "Concept — H: the expanded eat-in kitchen with a quartz-topped island, navy-and-cream colonial cabinetry, and brass fixtures, created by removing the wall to the adjacent unused room. Illustrative imagery, not the actual home."
+        },
+        {
+          "id": "h-open-flow-int",
+          "space": "Open kitchen-to-family/keeping-room flow (the combined great-room volume)",
+          "prompt": "Wide interior architectural photograph capturing the open flow from a renovated colonial kitchen through to an adjoining family / keeping room, one continuous space about 16 by 28 feet, golden-hour light pouring in from rear windows. Foreground: the edge of a white-quartz island with brass pendants above; mid-ground: a long flush ceiling beam (the structural beam left where a wall was removed) painted to match the white ceiling, signaling the former wall line; background: a comfortable family sitting area with a slipcovered linen sofa, a pair of leather club chairs, a low wooden coffee table on a vintage-style wool rug, and a casual round dining table with spindle chairs near a glass slider to the backyard. Continuous wide-plank white-oak floor running unbroken from kitchen to family room. Colonial trim throughout: white wainscoting on one wall, divided-light windows, a built-in window seat with cushions under the rear window. Warm and lived-in but tidy, neutral palette with navy and sage accents, soft natural shadows, realistic textures. Eye-level wide-angle showing the spatial connection and sightlines between cooking, eating, and lounging zones. No people, no text, no logos.",
+          "caption": "Concept — H: the open kitchen-to-family/keeping-room flow, with the new flush beam marking the removed wall and one continuous floor tying the spaces together. Illustrative imagery, not the actual home."
+        }
+      ]
+    }
+  ]
+}

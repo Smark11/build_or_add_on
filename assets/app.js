@@ -183,6 +183,51 @@
     });
   }
 
+  function fpEl(plan) {
+    const wrap = el("div", "fp");
+    wrap.style.gridTemplateColumns = `repeat(${plan.cols},1fr)`;
+    wrap.style.gridTemplateAreas = plan.grid.map(r => '"' + r.join(" ") + '"').join(" ");
+    const seen = {};
+    plan.grid.flat().forEach(code => {
+      if (seen[code]) return; seen[code] = 1;
+      const rm = plan.rooms[code]; if (!rm) return;
+      const d = el("div", "fp__room" + (rm.new ? " is-new" : ""));
+      d.style.gridArea = code;
+      d.innerHTML = `<span class="fp__n">${rm.n}</span>${rm.d ? `<span class="fp__d">${rm.d}</span>` : ""}${rm.new ? '<span class="fp__tag">NEW</span>' : ""}`;
+      wrap.appendChild(d);
+    });
+    return wrap;
+  }
+  function fpCard(plan) {
+    const c = el("div", "fp-card");
+    c.appendChild(el("div", "fp-card__title", plan.name));
+    c.appendChild(fpEl(plan));
+    return c;
+  }
+  function renderFloorplans() {
+    const F = DATA.floorplans;
+    $("#plansDisclaim").textContent = F.disclaimer;
+    const ex = $("#plansExisting");
+    F.existing.forEach(p => ex.appendChild(fpCard(p)));
+    const wrap = $("#plansOptions");
+    F.options.forEach(op => {
+      const block = el("div", "optplan r");
+      block.innerHTML = `<h3 class="optplan__h">${op.title}${op.key === "REC" ? '<span class="tag pine" style="margin-left:10px;vertical-align:middle">Recommended</span>' : ""}</h3><p class="optplan__note">${op.note}</p>`;
+      const body = el("div", "optplan__body");
+      const plansCol = el("div", "optplan__plans");
+      op.plans.forEach(p => plansCol.appendChild(fpCard(p)));
+      const rendCol = el("div", "optplan__renders");
+      op.renderings.forEach(r => {
+        const rd = el("div", "render");
+        rd.innerHTML = `<img src="images/${r.img}" alt="${r.cap}" loading="lazy" onerror="this.closest('.render').style.display='none'"><div class="render__cap">${r.cap}</div>`;
+        rendCol.appendChild(rd);
+      });
+      body.appendChild(plansCol); body.appendChild(rendCol);
+      block.appendChild(body);
+      wrap.appendChild(block);
+    });
+  }
+
   function renderVerdictExtras() {
     const checklist = [
       ["Pull the actual loan statement", "rate, balance & term — the entire ranking hinges on whether the rate is truly sub-4%"],
@@ -472,7 +517,7 @@
 
   /* ===================== INIT ===================== */
   document.addEventListener("DOMContentLoaded", () => {
-    renderProperty(); renderSchools(); renderOptions(); renderAddition(); renderExperts();
+    renderProperty(); renderSchools(); renderOptions(); renderAddition(); renderFloorplans(); renderExperts();
     renderListings(); renderForecast(); renderVerdictExtras(); renderMethodology();
     buildControls(); recompute();
     buildRateChart(); buildScatter(); buildAdditionChart(); buildMap();
