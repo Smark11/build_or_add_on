@@ -1,0 +1,187 @@
+{
+  "confidence": "High on envelope/areas/counts (assessor-verified and internally reconciled to the exact 1,976 sq ft living area); medium on interior room placement (corroborated by the archived MLS remarks + owner facts); low on individual interior room dimensions (no published room-by-room measurements exist — all interior dims are inferred from the verified envelope and marked as such).",
+  "verified": {
+    "style": "Colonial (VERIFIED — assessor card Style: Colonial)",
+    "stories": "2 (VERIFIED — assessor Stories: 2.00)",
+    "yearBuilt": "1992 (VERIFIED — assessor Year Built: 1992)",
+    "totalFinishedSqft": "1,976 sq ft above grade (VERIFIED — assessor Living Area: 1,976; reconciles exactly to 988 sq ft footprint x 2 stories)",
+    "footprintDesc": "Rectangular 2-story colonial box (24x38 main mass labeled '2S FR+') with a 2-ft full-depth strip on the right side ('2S FR-', likely chimney chase / bump-out / stair) and a 12x16 wood deck projecting off the right/rear ('1S WD-'). Overall a rectangle-plus-deck / slight-L outline. (VERIFIED — assessor footprint sketch.)",
+    "footprintDims": "Main two-story mass 24 ft wide x 38 ft deep = 912 sq ft; plus 2 ft x 38 ft strip = 76 sq ft; total main footprint 26 ft x 38 ft = 988 sq ft (VERIFIED — assessor sketch; 988 x 2 = 1,976 = stated Living Area exactly)",
+    "areasByLevel": [
+      {
+        "level": "Lower / basement",
+        "area": "912 sq ft (unfinished walkout, holds 2 tuck-under garages; Basement Finished Area = 0)",
+        "source": "VERIFIED — assessor Basement Area: 912, Basement Finished Area: 0, Basement Garages: 2; listing 'unfinished walkout lower level'"
+      },
+      {
+        "level": "Main / first floor",
+        "area": "~988 sq ft gross footprint (26 x 38)",
+        "source": "VERIFIED — derived from assessor footprint (912 main + 76 strip); 988 x 2 stories = 1,976 living area"
+      },
+      {
+        "level": "Upper / second floor",
+        "area": "~988 sq ft gross footprint (26 x 38)",
+        "source": "VERIFIED — same footprint as main per 2-story full-stack reconciliation to 1,976 living area"
+      }
+    ],
+    "garage": "2-car TUCK-UNDER / basement garage built into the 912 sq ft lower level under the main mass; doors face the downhill/driveway side (door direction not visually confirmable through tree canopy). (VERIFIED type — assessor Basement Garages: 2; CORROBORATED by owner fact that main-floor kitchen sits directly over it; door facing UNKNOWN)",
+    "deckPorch": "Wood deck, 12 ft x 16 ft = 192 sq ft, built 1992, off right/rear, accessed via French doors. No porch or patio itemized. (VERIFIED — assessor Attached Component Wood Deck Area 192; CORROBORATED — listing 'French doors lead you to the deck')",
+    "basement": "Full unfinished walkout basement, 912 sq ft, Basement Finished Area 0; contains the 2 tuck-under garage bays and the laundry/utilities. (VERIFIED — assessor; CORROBORATED — listing 'laundry in unfinished walkout lower level')",
+    "foundation": "Poured/masonry full basement foundation under the 24x38 main mass (Basement Area 912 = main block footprint); the 2-ft '2S FR-' strip has no basement under it. (VERIFIED extent from assessor; specific foundation material not stated on card — material UNKNOWN)",
+    "exterior": "Wood Frame construction, Clapboard siding, Asphalt roof. (VERIFIED — assessor Construction: Wood Frame, Siding: Clapboards, Roof Material: Asphalt). Roof SHAPE inferred gable (typical 1992 colonial form) — not visually confirmed due to tree cover.",
+    "rooms": "8 total rooms (VERIFIED — assessor Total Rooms: 8). 1 kitchen, 1 fireplace (in family room). (VERIFIED counts)",
+    "beds": "4 bedrooms, all on upper level (VERIFIED count — assessor Bedrooms: 4; CORROBORATED placement — listing: master suite + 3 additional bedrooms upstairs)",
+    "baths": "2.5 baths (2 full + 1 half). Full master bath + full hall bath upstairs; half bath on first floor. (VERIFIED count — assessor Full Baths: 2, Half Baths: 1; CORROBORATED placement — listing: first-floor half bath, master bath + full bath upstairs). Note: some aggregators display '3 baths' — listing text and assessor agree on 2.5.",
+    "yearBuilt_note": "Deck and house both built 1992 (VERIFIED)"
+  },
+  "floorplanProgram": {
+    "lower": [
+      {
+        "name": "2-car tuck-under garage",
+        "dim": "~22 ft wide x 24 ft deep (~528 sq ft)",
+        "basis": "VERIFIED type/count (assessor Basement Garages: 2; sits within the 912 sq ft / 24x38 basement); dimensions INFERRED within the verified 24x38 footprint, sized for 2 bays facing the driveway/downhill side"
+      },
+      {
+        "name": "Unfinished basement / mechanicals + laundry",
+        "dim": "~24 ft x 16 ft remaining (~384 sq ft, balance of 912 after garage)",
+        "basis": "VERIFIED unfinished + laundry present (assessor Basement Finished Area 0; listing 'laundry in unfinished walkout lower level'); subdivision/dimensions INFERRED as the non-garage remainder of the 912 sq ft walkout level"
+      }
+    ],
+    "main": [
+      {
+        "name": "Eat-in kitchen (over the tuck-under garage)",
+        "dim": "~13 ft x 16 ft (~208 sq ft)",
+        "basis": "CORROBORATED + owner-confirmed placement (owner: kitchen directly over tuck-under garage; listing: 'updated eat-in kitchen... opens to the casual family room'). Position over the garage bays VERIFIED-consistent with geometry; dimension INFERRED within the 26x38 envelope"
+      },
+      {
+        "name": "Family room with fireplace (opens off kitchen)",
+        "dim": "~14 ft x 16 ft (~224 sq ft)",
+        "basis": "CORROBORATED (listing: 'casual family room with fireplace' opening off kitchen; assessor Fireplaces: 1). Fireplace likely on the '2S FR-' strip side (chimney chase). Dimension INFERRED"
+      },
+      {
+        "name": "Unused room next to the kitchen (formal living room)",
+        "dim": "~12 ft x 14 ft (~168 sq ft)",
+        "basis": "OWNER-CONFIRMED that an unused room sits next to the kitchen; CORROBORATED by listing's separate formal 'living room'. Identity (living vs dining) and dimension INFERRED"
+      },
+      {
+        "name": "Dining room (formal, flows to living/kitchen)",
+        "dim": "~11 ft x 12 ft (~132 sq ft)",
+        "basis": "CORROBORATED (listing: 'living and dining room... each room seamlessly flows to the next'). Dimension INFERRED"
+      },
+      {
+        "name": "First-floor half bath",
+        "dim": "~5 ft x 6 ft (~30 sq ft)",
+        "basis": "VERIFIED exists (assessor Half Baths: 1) + CORROBORATED placement (listing: 'first floor half bath'). Dimension INFERRED"
+      },
+      {
+        "name": "Entry / foyer + stair to upper (and stair down to walkout/garage)",
+        "dim": "~6 ft x 12 ft (~72 sq ft)",
+        "basis": "INFERRED — required circulation for a 2-story colonial with walkout lower level; not separately itemized in any record"
+      }
+    ],
+    "upper": [
+      {
+        "name": "Primary (master) bedroom suite — front-to-back",
+        "dim": "~13 ft x 18 ft (~234 sq ft), spanning front to back",
+        "basis": "CORROBORATED (listing: 'front to back master bedroom suite'). 'Front-to-back' depth VERIFIED-consistent with the 38 ft deep envelope; exact dimension INFERRED"
+      },
+      {
+        "name": "Master bathroom (ensuite)",
+        "dim": "~7 ft x 9 ft (~63 sq ft)",
+        "basis": "VERIFIED exists (one of assessor's 2 full baths) + CORROBORATED (listing: master 'includes its own bath'). Dimension INFERRED"
+      },
+      {
+        "name": "Master walk-in closet",
+        "dim": "~5 ft x 7 ft (~35 sq ft)",
+        "basis": "CORROBORATED (listing: master '...and walk-in closet'). Dimension INFERRED"
+      },
+      {
+        "name": "Bedroom 2",
+        "dim": "~11 ft x 12 ft (~132 sq ft)",
+        "basis": "VERIFIED count (one of 4 bedrooms; listing: 'three additional bedrooms'). Dimension INFERRED"
+      },
+      {
+        "name": "Bedroom 3",
+        "dim": "~10 ft x 12 ft (~120 sq ft)",
+        "basis": "VERIFIED count (one of 4 bedrooms). Dimension INFERRED"
+      },
+      {
+        "name": "Bedroom 4",
+        "dim": "~10 ft x 11 ft (~110 sq ft)",
+        "basis": "VERIFIED count (one of 4 bedrooms). Dimension INFERRED"
+      },
+      {
+        "name": "Full hall bath (second full bath)",
+        "dim": "~5 ft x 9 ft (~45 sq ft)",
+        "basis": "VERIFIED exists (assessor Full Baths: 2) + CORROBORATED (listing: 'full bath complete the second level'). Dimension INFERRED"
+      },
+      {
+        "name": "Upper hall / stair landing",
+        "dim": "~4 ft x 14 ft (~56 sq ft)",
+        "basis": "INFERRED — required circulation to serve 4 bedrooms + 2 baths; not itemized in any record"
+      }
+    ]
+  },
+  "verifiedVsInferred": [
+    "VERIFIED (assessor record card, internally reconciled): 2-story Colonial; built 1992; 1,976 sq ft finished living area; 26x38 (988 sq ft) footprint = 24x38 main block ('2S FR+') + 2x38 strip ('2S FR-'); 912 sq ft full unfinished walkout basement; 2 tuck-under (basement) garage bays; 12x16 (192 sq ft) wood deck; 8 total rooms; 4 bedrooms; 2 full + 1 half bath; 1 kitchen; 1 fireplace; wood frame; clapboard siding; asphalt roof; hot-water/oil heat; 0% cooling (no central AC on record); 1.59-acre R-40 lot. The 988 x 2 = 1,976 and 912 basement = main-block footprint reconciliations are exact.",
+    "VERIFIED-CONSISTENT GEOMETRY (assessor sketch + owner facts agree): the main-floor kitchen sits over the 912 sq ft tuck-under-garage level; the deck (192 sq ft) attaches to the right/rear; the chimney/fireplace aligns with the 2-ft '2S FR-' side strip.",
+    "CORROBORATED (archived 2019 MLS #170206327 remarks, recovered via search extraction; direct Trulia/Redfin/Realtor pages were 403-blocked): main floor = eat-in kitchen opening to family room with fireplace, separate formal living + dining rooms, first-floor half bath, French doors to deck; upper floor = front-to-back master suite (own bath + walk-in closet) plus 3 more bedrooms and a full hall bath; lower level = unfinished walkout with laundry.",
+    "OWNER-CONFIRMED (ground truth, honored in program): kitchen is on the main floor directly over the tuck-under garage; an unused room sits on the main level next to the kitchen (most consistent with the formal living room or dining room).",
+    "INFERRED (NOT in any record — derived from the verified envelope): all interior room-by-room DIMENSIONS; the exact subdivision of the 988 sq ft per floor into rooms; garage bay sizing; foyer/stair and upper-hall circulation; roof SHAPE (gable assumed from colonial form); garage-door facing direction; foundation material.",
+    "UNKNOWN / unverifiable from public sources: every interior dimension (no room measurements published anywhere); presence/absence of central air (not in remarks; assessor shows 0% cooling = none on record); exact garage-door orientation; gable-vs-hip roof; whether the '2S FR-' strip is a chimney chase, stair, or bay window."
+  ],
+  "whatWouldMakeItExact": [
+    "The assessor BUILDING SKETCH image itself (embedded base64 PNG on propertyrecordcards.com PrintPage for uniqueid 32090751) at full resolution — it carries the exterior sub-area dimensions and the precise outline of the 2-ft strip and deck attachment point; reading it pixel-accurate would fix the exterior geometry and the deck/strip placement exactly.",
+    "The original MLS #170206327 (SmartMLS/CT) listing's room dimensions table and any floor-plan graphic — the public remarks were recovered but the room-by-room measurement table and a floor plan (Movoto advertised '34 Photos') were never exposed; obtaining the full SmartMLS sheet would give real per-room dimensions.",
+    "Owner-supplied measurements / a tape survey of the four upstairs bedrooms, the kitchen, family room, living and dining rooms, and the two-bay garage — this is the only way to turn the inferred interior dimensions into exact ones.",
+    "The 1992 original building permit / construction drawings on file with the Simsbury building department (none listed on the assessor card) — would give the true interior partition layout, stair locations, and garage-bay dimensions.",
+    "A leaf-off aerial or a Simsbury GIS/AxisGIS building-footprint polygon (the JS map viewers could not be rendered by the fetch tool) — would confirm garage-door facing direction and roof shape (gable vs hip) that tree canopy currently obscures."
+  ],
+  "layoutCues": [
+    "Main mass is a true colonial box: 24 ft front width x 38 ft deep, two full stories stacked over a 912 sq ft basement.",
+    "Place the kitchen at the lower/rear-right of the main floor directly over the tuck-under garage bays (owner-confirmed); the eat-in kitchen opens into the fireplace family room.",
+    "Put the 'unused room' (formal living or dining) immediately adjacent to the kitchen on the main level.",
+    "Fireplace/chimney aligns with the 2-ft full-depth '2S FR-' strip on the right side — a logical chimney chase location.",
+    "Deck (12x16) attaches off the right/rear via French doors, off the casual kitchen/family-room zone.",
+    "All four bedrooms and both full baths are upstairs; the master is front-to-back (full 38 ft depth direction) with ensuite bath + walk-in closet.",
+    "Garage doors face the downhill/driveway (front) side; the lower level is a walkout, so the basement opens at grade on the downhill side.",
+    "Half bath is on the main floor; no central AC on the assessor record."
+  ],
+  "sources": [
+    {
+      "title": "Simsbury Assessor Property Record Card — 2 Clover Lane (uniqueid 32090751), Print View",
+      "url": "https://www.propertyrecordcards.com/PrintPage.aspx?towncode=128&uniqueid=32090751",
+      "note": "PRIMARY/AUTHORITATIVE. Full building detail (2-story Colonial 1992, Living Area 1,976, 8 rooms/4BR/2.5BA, Basement Area 912, Basement Finished 0, Basement Garages 2, Wood Deck 192, wood frame/clapboard/asphalt, hot-water/oil, 0% cooling) plus the embedded base64 footprint SKETCH decoded to 24x38 '2S FR+', 2x38 '2S FR-', 12x16 '1S WD-'. Reconciles exactly: 988 footprint x 2 = 1,976; 912 basement = main block."
+    },
+    {
+      "title": "Simsbury Assessor Property Record Card — Results page (uniqueid 32090751)",
+      "url": "https://www.propertyrecordcards.com/PropertyResults.aspx?towncode=128&uniqueid=32090751",
+      "note": "Same authoritative record (dynamic load; full HTML pulled via curl). Confirms parcel F15 120 003, 1.59 ac, R-40, owner [owner] [owner] & Laura, sales 12/16/2020 $339,000 and 08/11/2000 $236,000. Town data last updated 6/5/2026, 2022 revaluation."
+    },
+    {
+      "title": "US Census Geocoder — 2 Clover Lane location",
+      "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2+Clover+Lane,+Simsbury,+CT+06089&benchmark=Public_AR_Current&format=json",
+      "note": "Verified coordinates 41.844599, -72.822857 (matched 2 CLOVER LN, WEATOGUE, CT 06089) — confirms the Simsbury Weatogue, not the Litchfield County one. Basis for the aerial siting (steep wooded hillside, set-back, curving driveway)."
+    },
+    {
+      "title": "Esri World Imagery (ArcGIS Online) satellite tiles at the property",
+      "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/389856/312176",
+      "note": "Confirms heavily wooded 1.59-ac hillside, curving driveway to a cleared apron on the road-facing side, rectangular roof partly under conifer canopy. Too tree-obscured for precise footprint or garage-door/roof-shape reading; relied on assessor sketch for geometry."
+    },
+    {
+      "title": "2 Clover Ln, Weatogue, CT 06089 — Trulia (archived listing MLS #170206327)",
+      "url": "https://www.trulia.com/home/2-clover-ln-weatogue-ct-06089-174078243",
+      "note": "Direct fetch HTTP 403 BLOCKED; full listing remarks recovered consistently via search-engine extraction across multiple searches. Source of the room-program corroboration: eat-in kitchen opens to family room w/ fireplace, French doors to deck, formal living + dining, first-floor half bath, front-to-back master suite + 3 bedrooms + full bath upstairs, unfinished walkout lower level w/ laundry."
+    },
+    {
+      "title": "2 Clover Ln, Weatogue, CT 06089 | MLS #170206327 — Movoto",
+      "url": "https://www.movoto.com/weatogue-ct/2-clover-ln-weatogue-ct-06089/pid_ik9igeq59g/",
+      "note": "Fetched. Source of MLS #170206327, full price/listing history (listed 6/16/2019 $339,900; reduced 9/12/2019 $329,900; delisted 12/20/2019; sold 12/16/2020 $339,000), 1,976 sqft, 69,260 sqft (1.59 ac) lot, built 1992, 2-car garage, $0 HOA. Did not expose room dimensions or a floor-plan image."
+    },
+    {
+      "title": "Rehold address directory — Clover Ln, Simsbury CT",
+      "url": "https://rehold.com/Simsbury+CT/CLOVER+LN",
+      "note": "Independent corroboration of 2 Clover Ln: 1,976 sqft, built 1992, 4 bed / 2.5 bath, single family."
+    }
+  ]
+}
