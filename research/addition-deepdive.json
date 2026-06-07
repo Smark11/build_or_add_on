@@ -1,0 +1,314 @@
+{
+  "intro": "A house-specific 2026 addition-cost package for 2 Clover Lane, Weatogue (Simsbury), CT — a 1992 two-story colonial, 1,976 sq ft above grade, 4BR/2.5BA, unfinished basement, attached 2-car garage, 1.59-acre R-40 lot on well + septic. The family already has 4 bedrooms, so the real gap is LIVING space (family/great room, playroom, mudroom, primary retreat, optional office). Two hard constraints shape everything: (1) the 40-ft side-yard setback is binding, so feasible expansion is straight off the rear or UP over the existing garage footprint; (2) the Latimer/Weatogue-pocket comp ceiling is ~$650-700K, which caps the defensible all-in spend at roughly $100-125K. Costs below are 2026 Hartford County / Farmington Valley figures, calibrated to HomeBlue Hartford ($149 standard / $298 premium / up to $596 luxury per sq ft), Casali's 2026 CT bands ($80-200 basic / $125-300 standard / $200-400+ complex per sq ft), and a real West Hartford case study (625 sq ft primary suite = $174,500, ~$279/sq ft). Any addition that adds a BEDROOM on this well+septic property triggers a CT Public Health Code 19-13-B100a septic-capacity review — budget $1-3K if the existing system has reserve capacity, or $25-60K+ if the leach field/system must be expanded or replaced. That septic figure is kept OUTSIDE the per-sq-ft and scenario costs and called out separately.",
+  "scenarios": [
+    {
+      "name": "A. Finish the unfinished basement (playroom + flex/office + 1/2 bath)",
+      "type": "Below-grade finish (inside existing footprint)",
+      "whatYouGet": "Frame, insulate, drywall the existing ~1,000 sq ft basement into a large playroom/rec room plus a flex/home-office room and a half bath; LVP/carpet, recessed lighting, dehumidification/light waterproofing as needed. No exterior work, no setback issue. Kept as living space (NOT a legal bedroom) so it does not add to bedroom count.",
+      "sqftAdded": "0 above grade (~900-1,200 finished below grade)",
+      "newTotalSqft": "1,976 above grade (basement now finished)",
+      "roomsAdded": "Playroom/rec room + flex/office + half bath",
+      "costLow": 50000,
+      "costHigh": 80000,
+      "costPerSqft": "$41-76/sq ft (CT basement, HomeBlue Hartford); ~$50-80 all-in with half bath",
+      "recoupPct": "63-71% (best ROI of any new-space project)",
+      "timelineMonths": "2-3",
+      "feasibility": "Highest. No foundation, no roof tie-in, no variance, no septic trigger (keep it a non-bedroom flex space). 1992 platform-framed house is modern enough to finish without code retrofits.",
+      "bestFor": "Closing most of the living-space gap (playroom/office/overflow) for the fewest dollars and lowest risk. The only option that ranks top-3 on BOTH livability-per-dollar and resale-per-dollar.",
+      "risk": "Low. Caveat: finished basement sq ft does NOT count as above-grade sq ft for appraisal, so resale credit is partial (utility outruns appraised value). Watch moisture — budget waterproofing/dehumidification $3,000-$8,000 if the basement is damp.",
+      "recommended": false
+    },
+    {
+      "name": "B. Single-story rear great room + mudroom",
+      "type": "Ground-floor rear addition",
+      "whatYouGet": "Vaulted/open family/great room (~350-450 sq ft) off the rear, plus a mudroom/drop-zone (~80-150 sq ft) tying into the garage/kitchen entry. New 42-in frost-depth perimeter foundation, roof tie-in to the 1992 roofline, HVAC extension, siding/trim matched to the existing colonial. No bath, no bedroom.",
+      "sqftAdded": "~430-600 above grade",
+      "newTotalSqft": "~2,406-2,576 above grade",
+      "roomsAdded": "Family/great room + mudroom (no bedroom)",
+      "costLow": 110000,
+      "costHigh": 175000,
+      "costPerSqft": "$250-375/sq ft mid-finish (HomeBlue Hartford premium $298 anchors the middle)",
+      "recoupPct": "22-40% as new square footage (lifestyle, not investment)",
+      "timelineMonths": "4-6",
+      "feasibility": "High, IF centered on the rear elevation within the 50-ft rear and 40-ft side setbacks — the 1.59-acre lot gives room straight back. Confirm the rear building line with a survey. No variance expected, no septic trigger (no bedroom).",
+      "bestFor": "Directly adding true above-grade living space (the family/great room they actually lack) plus a mudroom for a household of five, with no bedroom-driven septic complications.",
+      "risk": "Medium. Keep finishes mid-grade and the addition centered to avoid the side yard. New foundation + roof tie-in + ice-dam detailing are the cost-heavy New England line items. Watch the all-in budget against the ceiling.",
+      "recommended": false
+    },
+    {
+      "name": "C. Basement finish + modest rear bump-out (value combo)",
+      "type": "Combined below-grade finish + small ground-floor bump-out",
+      "whatYouGet": "Finish the basement (playroom + flex room, half bath) AND add a small single-story rear bump-out (~150-250 sq ft) to enlarge the kitchen/family area. Two scopes done together to share mobilization, design, and one permit cycle.",
+      "sqftAdded": "~150-250 above grade (+ ~900-1,200 finished below grade)",
+      "newTotalSqft": "~2,126-2,226 above grade (basement finished)",
+      "roomsAdded": "Enlarged main-floor living + basement playroom/flex + half bath",
+      "costLow": 110000,
+      "costHigh": 185000,
+      "costPerSqft": "Blended: ~$50-80/sq ft basement + ~$300-400/sq ft bump-out (bump-outs run high per sq ft on fixed costs)",
+      "recoupPct": "Blended ~45-65% (basement 63-71% drags the average up)",
+      "timelineMonths": "4-6",
+      "feasibility": "High. Small rear bump stays within setbacks; basement is interior. No variance, no septic trigger if basement stays a non-bedroom flex space.",
+      "bestFor": "A balanced middle path: big finished play/flex level PLUS meaningful main-floor breathing room, without the cost or septic risk of an over-garage suite. Strong cost-to-value fit under the ceiling.",
+      "risk": "Medium-low. Bump-outs carry a high per-sq-ft because tie-in/roof/mechanical costs spread over little area; if the bump pulls the kitchen into a remodel the number climbs.",
+      "recommended": false
+    },
+    {
+      "name": "D. Over-the-garage primary suite",
+      "type": "Build-up over existing attached garage",
+      "whatYouGet": "New second story over the existing attached 2-car garage: primary bedroom, full bath, walk-in closet, plus stair access. Reinforce garage walls/footings/slab for the new floor + roof load, fire-rated floor/ceiling assembly, HVAC extension, roof tie-in to the colonial. Real analog: West Hartford 625 sq ft primary suite (bed/bath/WIC) = $174,500 (~$279/sq ft).",
+      "sqftAdded": "~500-650 above grade",
+      "newTotalSqft": "~2,476-2,626 above grade",
+      "roomsAdded": "Primary bedroom suite (bed + full bath + WIC); frees the existing primary for a kid room/office",
+      "costLow": 120000,
+      "costHigh": 200000,
+      "costPerSqft": "$275-450/sq ft (build-up runs 20-50% above ground-level; real comp ~$279/sq ft)",
+      "recoupPct": "16-32% (lowest-ROI addition type) — treat as lifestyle, not investment",
+      "timelineMonths": "6-9",
+      "feasibility": "Viable — builds UP over an existing footprint, no new ground coverage, stays within the 35-ft height limit, so no variance needed. BUT a 1992 garage was rarely footed/framed to carry a heated story: REQUIRES a structural engineer and likely new posts/footings ($2K-$40K). Adds a bedroom, so it TRIGGERS the B100a septic review.",
+      "bestFor": "Families who want a true primary retreat as a forever-home lifestyle upgrade and accept that most of the spend is consumption, not recouped.",
+      "risk": "High. Septic B100a review is the main wildcard ($1-3K best case, $25-60K+ if the system must be expanded/replaced). At the high end plus septic, this can brush or exceed the value ceiling. Get a structural eval and a B100a feasibility check BEFORE committing.",
+      "recommended": false
+    },
+    {
+      "name": "E. Two-story rear addition (great room down, primary suite up)",
+      "type": "Full two-story rear addition",
+      "whatYouGet": "Full-height rear addition: family/great room on the main level with a primary suite (bed/bath/WIC) above. New full foundation, two-story tie-in to the existing roofline, stair connection, expanded HVAC. Maximum living space AND a true primary suite in one build.",
+      "sqftAdded": "~800-1,100 above grade",
+      "newTotalSqft": "~2,776-3,076 above grade",
+      "roomsAdded": "Great room + primary suite (adds a bedroom)",
+      "costLow": 300000,
+      "costHigh": 500000,
+      "costPerSqft": "$300-450/sq ft",
+      "recoupPct": "~22-40% on new sq ft; ~16-32% on the suite portion",
+      "timelineMonths": "8-12",
+      "feasibility": "Buildable within the rear envelope (verify side/rear setbacks for a wider footprint), but at ~3,000 sq ft total this is the clearest OVER-IMPROVEMENT case. Adds a bedroom, so the B100a septic review applies (expansion/replacement likely).",
+      "bestFor": "A true forever-home decision where the family wants the most space and a full primary suite and explicitly accepts spending well past what the market returns.",
+      "risk": "Very high (financial). A $300K+ spend on a house topping out at ~$650-700K cannot be recovered; you become the most expensive house on the street. Septic review almost certain to add cost.",
+      "recommended": false
+    },
+    {
+      "name": "F. Do-it-once package (over-garage suite + rear great room + mudroom + basement finish)",
+      "type": "Combined multi-scope (build-up + rear + below-grade)",
+      "whatYouGet": "Combine D + B + A in one design/permit/mobilization: over-garage primary suite, single-story rear great room, mudroom, and a finished basement. Closes every gap at once and saves on repeat mobilization versus phasing.",
+      "sqftAdded": "~930-1,250 above grade (+ ~900-1,200 finished below grade)",
+      "newTotalSqft": "~2,906-3,226 above grade (basement finished)",
+      "roomsAdded": "Primary suite + great room + mudroom + basement playroom/flex",
+      "costLow": 350000,
+      "costHigh": 550000,
+      "costPerSqft": "Blended ~$300-450/sq ft above grade + ~$50-80/sq ft basement",
+      "recoupPct": "Low overall (blends 16-71%); total spend lands far above market return",
+      "timelineMonths": "10-14",
+      "feasibility": "Buildable within the rear/over-garage envelope and 35-ft height (no variance if disciplined), but adds a bedroom so the B100a review applies — this is where a full engineered septic replacement is most likely required.",
+      "bestFor": "A maximal forever-home solution that solves everything in one project, justified only as a lifestyle decision with the overage knowingly unrecouped.",
+      "risk": "Highest. Spend lands well above the ~$650-700K ceiling; clearly over-improves for resale. Confirm septic capacity early.",
+      "recommended": false
+    },
+    {
+      "name": "RECOMMENDED — Basement finish + rear great room + mudroom (phased)",
+      "type": "Below-grade finish + ground-floor rear addition (value-optimized)",
+      "whatYouGet": "Phase 1: finish the basement (~$50-80K) for the playroom/office/flex space — best livability-per-dollar and top-tier recoup. Phase 2 (if budget allows within the ceiling): single-story rear great room + mudroom (~$110-150K) for true main-floor living space. No bedroom added in either phase, so NO septic B100a trigger and no variance. Keep finishes mid-grade to match the block.",
+      "sqftAdded": "~430-600 above grade (+ ~900-1,200 finished below grade)",
+      "newTotalSqft": "~2,406-2,576 above grade (basement finished)",
+      "roomsAdded": "Playroom/office/flex (basement) + family/great room + mudroom",
+      "costLow": 95000,
+      "costHigh": 150000,
+      "costPerSqft": "Blended ~$50-80/sq ft basement + ~$250-375/sq ft rear addition",
+      "recoupPct": "Basement 63-71%; rear great room 22-40% — blended is the best achievable mix for new space",
+      "timelineMonths": "Phase 1: 2-3; Phase 2: 4-6 (or 6-8 combined)",
+      "feasibility": "Highest of the meaningful-space options. No bedroom, so no septic capacity review; no setback intrusion; no variance. Directly closes the family's real gap (living space) without over-improving.",
+      "bestFor": "This family specifically — already 4 bedrooms, gap is living space, value ceiling ~$650-700K. Maximizes usable space and resale safety while staying inside the ~$125K defensible budget.",
+      "risk": "Low-to-medium. Main discipline is keeping the rear addition centered (40-ft side yard) and finishes mid-grade. Doing both phases at the high end can approach the ceiling — phase it and stop if the market softens.",
+      "recommended": true
+    }
+  ],
+  "lineItems": [
+    {
+      "item": "Foundation / footings (42-in frost-depth full perimeter, not slab)",
+      "share": "12-18% (~$16K-$23K)",
+      "note": "Biggest single New England regional premium — dug below the CT frost line"
+    },
+    {
+      "item": "Framing & sheathing",
+      "share": "12-16% (~$16K-$21K)",
+      "note": "Tie into 1992 platform framing"
+    },
+    {
+      "item": "Roof + tie-in to existing 1992 roofline",
+      "share": "8-12% (~$10K-$16K)",
+      "note": "Includes ice-and-water shield and flashing at the new/old roof junction"
+    },
+    {
+      "item": "Windows & exterior doors",
+      "share": "5-8% (~$7K-$10K)",
+      "note": "Match the existing window line"
+    },
+    {
+      "item": "Siding & trim matched to 1992 colonial",
+      "share": "6-10% (~$8K-$13K)",
+      "note": "Matching/blending labor + special-order materials so it does not read as a bolt-on"
+    },
+    {
+      "item": "HVAC extension (tie into / upsize existing system)",
+      "share": "5-10% (~$7K-$13K)",
+      "note": "May need to upsize the existing system to serve added load"
+    },
+    {
+      "item": "Electrical",
+      "share": "6-9% (~$8K-$12K)",
+      "note": "New circuits, panel capacity check"
+    },
+    {
+      "item": "Plumbing",
+      "share": "0-15% (~$0-$13K)",
+      "note": "Low/none for a dry great room; rises sharply with a bath or kitchen"
+    },
+    {
+      "item": "Insulation + air-sealing / ice-dam detailing",
+      "share": "3-6% (~$4K-$8K)",
+      "note": "Heavy R-values and continuous ventilation for CT winters"
+    },
+    {
+      "item": "Drywall & taping",
+      "share": "4-7% (~$5K-$9K)",
+      "note": ""
+    },
+    {
+      "item": "Flooring",
+      "share": "5-10% (~$7K-$13K)",
+      "note": ""
+    },
+    {
+      "item": "Interior doors, trim, paint, finishes",
+      "share": "4-8% (~$5K-$10K)",
+      "note": "Mid-grade to match the block"
+    }
+  ],
+  "softCosts": [
+    "Architect / designer: 5-15% of construction (drawings $2,000-$8,000; a design-build contract folds this in)",
+    "Structural engineer: $1,000-$4,000 — REQUIRED for any over-garage build-up, any second-story load path, and for cutting into the 1992 roof/wall",
+    "Building permit (Simsbury): $16.26 per $1,000 of construction value, effective 7/1/2025, plus $25 zoning compliance review + $5 certificate of occupancy. Examples: $100K job ≈ $1,656; $150K ≈ $2,469; $365K ≈ $5,965. Mechanical/electrical/plumbing sub-permits are additional.",
+    "Contingency: 10-20% of hard cost (30+ year-old house — hidden conditions when tying into 1992 framing/roof)",
+    "GC overhead & profit: 10-25% (often already embedded in the $/sq ft quotes); design-build CM fee ~15-20%",
+    "Perc/soil test + septic design (only if adding a bedroom): perc test $600-$800; septic design/engineering $500-$3,000; B100a permit fee ~$250-$800",
+    "Plan on ~15-25% of hard cost for soft costs combined (excluding any septic system work)"
+  ],
+  "regionalDrivers": [
+    "42-inch frost-depth perimeter footings — full foundations dug below the CT frost line, far costlier than southern slab-on-grade; the single biggest regional premium on any ground-floor addition.",
+    "Matching 1992 colonial construction — siding, window line, roof pitch, and trim profiles must blend or the addition reads as a bolt-on and HURTS resale; matching labor and special-order materials add cost.",
+    "Ice-dam detailing — ice-and-water shield, proper roof tie-in flashing at the new/old junction, continuous ventilation, and heavy insulation/air-sealing to prevent ice dams.",
+    "CT labor ~16% above the national average; strict CT building codes; 30+ year-old framing sometimes needs reinforcement before new work.",
+    "Well + septic — any added bedroom triggers a CT Public Health Code 19-13-B100a capacity review (21-30 day review, soil retest, modified plans by a licensed engineer/installer); this is the single biggest project-specific wildcard and is priced separately from $/sq ft.",
+    "Hartford County / Farmington Valley is mid-tier CT — well above national but below Fairfield County's $300-650/sq ft Gold Coast; use HomeBlue Hartford ($149 standard / $298 premium) and Casali 2026 CT bands, NOT Fairfield-skewed quotes."
+  ],
+  "compCeiling": "The Latimer/Weatogue pocket (ZIP 06089, median sale ~$472K, ~$255/sq ft) caps out around $650-700K for 2,000-2,400 sq ft homes, against this home's ~$575K current value. That leaves only ~$75-125K of appraised headroom — and additions recoup just a fraction of cost (great room 22-40%, primary suite 16-32%, basement finish 63-71%). The maximum DEFENSIBLE all-in spend before the house won't appraise is therefore ~$100-125K, with ~$100K the prudent target and ~$150K an absolute ceiling only if the overage is consciously accepted as lifestyle consumption. Spends above ~$150K (a full over-garage primary suite at the high end, a two-story rear, or the do-it-once package) push the asking price into the $700-750K range in a $480-650K block — they will not appraise and make this the most expensive, hardest-to-sell house on the street. Over-improvement is the dominant financial risk here, which is exactly why the basement finish + rear great room path wins: it adds the space the family needs while keeping the finished home safely inside the pocket ceiling.",
+  "recommendedScenario": "RECOMMENDED — Basement finish + rear great room + mudroom (phased). Finish the unfinished basement first (~$50-80K) for the playroom/office/flex space the family actually needs — it is the only option that ranks top-3 on BOTH livability-per-dollar and resale-per-dollar (63-71% recoup), needs no foundation/roof/variance, and adds no bedroom so it avoids the septic B100a trigger entirely. Then, if budget allows within the ~$125K ceiling, add a single-story rear great room + mudroom (~$110-150K, centered on the rear elevation to clear the 40-ft side yard) for true above-grade living space — still no bedroom, still no septic review. This sequence closes the family's real gap (living space, not bedrooms), keeps total spend defensible against the $650-700K ceiling, and leaves the higher-cost, lower-ROI moves (over-garage suite, two-story rear, do-it-once) as lifestyle-only options to avoid.",
+  "financingNote": "For a renovation in the $50-185K range, the common 2026 paths are a HELOC or home-equity loan against the existing ~$575K value (rates and draw flexibility suit phased work — fund the basement first, draw for the rear addition later), a cash-out refinance if it improves the blended rate, or a renovation loan (e.g., FHA 203(k) or Fannie HomeStyle) that underwrites to the AFTER-improvement value when current equity is thin. Critically, for any bedroom-adding scenario (over-garage suite, two-story rear, do-it-once) carry the CT septic B100a contingency ($1-3K best case up to $25-60K+) as a SEPARATE line in the financing plan, not folded into the construction draw, and require a B100a feasibility check plus a structural eval of the 1992 garage before locking any loan amount. Because additions recoup only a fraction of cost in this pocket, finance to the appraised-value ceiling, not to the project wish list — borrow against what the house will be worth (~$650-700K), not what you could spend.",
+  "bottomLine": "This family already has 4 bedrooms — the gap is LIVING space, not sleeping space — and the street caps value at ~$650-700K, so the smart-money move is to ADD SPACE, not bedrooms, and stay under ~$125K all-in. Finish the unfinished basement first (~$50-80K) for the playroom/office/flex room: it is the cheapest usable square footage, the best ROI of any new-space project (63-71%), needs no variance, and adds no bedroom so it dodges the CT septic B100a review. If budget remains, add a single-story rear great room + mudroom (~$110-150K), centered on the rear to clear the binding 40-ft side yard — still no bedroom, still no septic trigger, and it adds true appraisable square footage. Avoid the over-garage primary suite (16-32% recoup, structural reinforcement, septic trigger), the two-story rear, and the do-it-once package as financial decisions — at $200-550K they over-improve a ~$575K house past what the Weatogue market will ever return, and any of them triggers a $25-60K+ septic wildcard. Get a B100a feasibility check, a structural eval of the 1992 garage (if building up), and 2-3 local Farmington Valley contractor bids before committing dollars.",
+  "sources": [
+    {
+      "title": "How Much Does a Home Addition Cost in Connecticut in 2026? — Casali Companies",
+      "url": "https://casalicompanies.com/blog/how-much-does-a-home-addition-cost-in-connecticut-in-2026",
+      "note": "Verified 2026 CT per-sq-ft bands: basic $80-200, standard $125-300, complex/premium $200-400+; 300 sq ft room $40-90K, 500 sq ft second-story suite $100-200K+"
+    },
+    {
+      "title": "Home Addition Cost in Hartford, CT — HomeBlue",
+      "url": "https://www.homeblue.com/home-addition/hartford-ct-home-addition-cost.htm",
+      "note": "Verified Hartford-specific: $149 standard / $298 premium / up to ~$596 luxury per sq ft; 400 sq ft $60-119K, 600 sq ft $90-179K, 1,000 sq ft $149-298K"
+    },
+    {
+      "title": "West Hartford Dormer Addition (case study) — Fine Home Contracting",
+      "url": "https://finehomecontracting.com/case-study/west-hartford-dormer-addition/",
+      "note": "Verified real Hartford-County primary suite: 625 sq ft (bed/bath/WIC) at $174,500 (~$279/sq ft) — the closest real analog to an over-garage suite"
+    },
+    {
+      "title": "West Hartford Addition (case study) — Fine Home Contracting",
+      "url": "https://finehomecontracting.com/case-study/west-hartford-addition/",
+      "note": "Real first-floor primary suite + office + bath + deck incl. siding + HVAC: $365,000 — illustrates over-improvement on a ~$575K house"
+    },
+    {
+      "title": "How Much Does a Home Addition Cost in Connecticut — Fine Home Contracting",
+      "url": "https://finehomecontracting.com/how-much-does-a-home-addition-cost-in-connecticut/",
+      "note": "High-end CT design-build $450-650/sq ft (~$500/sq ft baseline); used to set the upper bound for high-finish builds (Fairfield-skewed)"
+    },
+    {
+      "title": "Home Addition Cost Per Square Foot: Room Types & Pricing (2026) — Hammer.io",
+      "url": "https://hammerio.com/blog/addition-cost-per-square-foot/",
+      "note": "By-type $/sq ft and the line-item component shares (foundation/framing/roof/etc.); Northeast $150-350/sq ft, NAHB NE baseline ~$282/sq ft"
+    },
+    {
+      "title": "How Much Does a Home Addition Cost? (2026) — HomeGuide",
+      "url": "https://homeguide.com/costs/home-addition-cost",
+      "note": "By-type 2026 baselines: family room $90-180, kitchen bump-out $200-350, 4-season sunroom $150-250, master suite $130-250, second story $200-500 per sq ft"
+    },
+    {
+      "title": "2026 Cost to Add a Room Above Your Garage — Angi",
+      "url": "https://www.angi.com/articles/adding-room-above-garage.htm",
+      "note": "Over-garage: $100-200/sq ft basic bonus room, $200-350/sq ft bedroom+bath; ROI 60-80%; garage foundation reinforcement $2-10K (up to $40K)"
+    },
+    {
+      "title": "Cost to Finish a Basement in Hartford, CT — HomeBlue",
+      "url": "https://www.homeblue.com/basement/hartford-ct-cost-to-finish-a-basement.htm",
+      "note": "Hartford basement finishing $41-76/sq ft; 600 sq ft $25-45K; up to ~$114K with bath/kitchen"
+    },
+    {
+      "title": "Basement Finishing Cost in Connecticut (2026) — RenoVetted",
+      "url": "https://www.renovetted.com/cost/basement/connecticut",
+      "note": "CT basement $29-93/sq ft, avg ~$58; CT labor ~16% above national (page 403-blocked; figure corroborated by HomeBlue Hartford basement page)"
+    },
+    {
+      "title": "Home Addition Cost in Connecticut — HomeAdditionCostCalculator",
+      "url": "https://homeadditioncostcalculator.com/home-addition-cost-connecticut/",
+      "note": "Hartford-specific per-sq-ft ($180-340) and per-type timelines: room 4-6 mo, second story 6-9 mo, garage addition 3-4 mo"
+    },
+    {
+      "title": "How much does an addition cost in CT? — Berkeley Exteriors",
+      "url": "https://www.berkeleyexteriors.com/blog/how-much-does-an-addition-cost-in-ct",
+      "note": "Single-level ~$100/sq ft, second story $150-300/sq ft; 500 sq ft master suite w/ bath $100-180K; full second story 1,000+ sq ft $180-300K+"
+    },
+    {
+      "title": "What the 2025 Cost vs Value Report Says — CustomCraft (cites Zonda/JLC)",
+      "url": "https://customcraftdbr.com/2025-cost-vs-value-report-remodeling/",
+      "note": "Primary suite addition midrange ~27%, upscale ~16%; basement remodel ~63%; bath remodel midrange ~80%; minor kitchen ~107%"
+    },
+    {
+      "title": "Cost vs Value 2025: Top Projects Ranked — Fixr",
+      "url": "https://www.fixr.com/articles/cost-vs-value",
+      "note": "Minor kitchen ~113%, midrange bath ~80%, bathroom addition ~53%, basement ~71%; New England historically #1 ROI region, edged by Pacific in 2025"
+    },
+    {
+      "title": "Building Department / permit fees — Town of Simsbury",
+      "url": "https://www.simsbury-ct.gov/391/Building-Department",
+      "note": "Official Simsbury permit fee: $16.26 per $1,000 construction value (eff. 7/1/2025) + $25 zoning compliance review + $5 certificate of occupancy"
+    },
+    {
+      "title": "08/23/2023 Zoning Board of Appeals Legal Notice of Action — Simsbury, CT",
+      "url": "https://www.simsbury-ct.gov/m/newsflash/home/detail/564",
+      "note": "R-40 variance precedent: side-yard reduction 40'→29' granted for a garage addition under Sec. 3.9; a front-yard reduction denied — variances are case-by-case"
+    },
+    {
+      "title": "19-13-B100a of the Public Health Code — CT DPH",
+      "url": "https://portal.ct.gov/dph/environmental-health/environmental-engineering/19-13-b100a-of-the-public-health-code",
+      "note": "Authoritative CT code: septic capacity review triggered by added bedrooms/plumbing on subsurface systems; ~21-30 day review"
+    },
+    {
+      "title": "How Much Does a Septic Tank Cost in Connecticut? — NeighborJoe",
+      "url": "https://neighborjoe.com/blog/how-much-does-a-septic-tank-cost-in-connecticut-pricing-factors-explained/",
+      "note": "CT septic: 4-5 BR system $10-15K; mound $15-30K; engineered $20-40K; drain field replace $5-15K; permit $500-2,000 — supports the $25-60K+ band"
+    },
+    {
+      "title": "06089 / Weatogue CT Real Estate Market Trends — Realtytrac & Zillow",
+      "url": "https://www.realtytrac.com/market-trends/weatogue-ct-06089/",
+      "note": "06089 median sale ~$472K; Simsbury median list ~$255/sq ft (2026) — corroborates the $650-700K pocket ceiling"
+    },
+    {
+      "title": "Advantage Contracting — Simsbury, CT (areas served)",
+      "url": "https://advantage-contracting.com/areas-served/simsbury-ct/",
+      "note": "Local design-build serving Simsbury/West Simsbury/Weatogue (HIC 0608202); cited for locality/tier, no published prices — get a direct quote"
+    },
+    {
+      "title": "Kehoe Remodeling — Additions",
+      "url": "https://kehoeremodeling.com/additions",
+      "note": "Simsbury-based mid-market GC (CT Lic #0624474), additions/in-law/dormer specialist serving the Farmington Valley; no published prices"
+    }
+  ]
+}

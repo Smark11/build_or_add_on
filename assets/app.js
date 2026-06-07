@@ -105,6 +105,84 @@
     });
   }
 
+  function renderAddition() {
+    const A = DATA.addition;
+    $("#additionIntro").textContent = A.intro;
+    $("#additionCeiling").textContent = A.ceiling;
+    $("#additionSoft").innerHTML = "<b>Soft costs & contingency.</b> " + A.softCosts;
+    $("#additionSeptic").innerHTML = "<b>⚠ The well-and-septic wildcard.</b> " + A.septic;
+    $("#additionBottom").innerHTML = "“" + A.bottomLine + "”<span class=\"by\">— Addition deep-dive · bottom line</span>";
+
+    const rec = A.scenarios.find(s => s.rec);
+    $("#additionRec").innerHTML = `
+      <div>
+        <div class="k">★ Recommended scope for this house</div>
+        <div class="t">Finish the basement, then add a <em>rear great room</em> — living space, no new bedroom.</div>
+        <p>${rec.get} ${rec.note}</p>
+      </div>
+      <div class="price"><div class="n">${moneyK(rec.lo)}–${moneyK(rec.hi)}</div><div class="s">all-in · ${rec.time}</div></div>`;
+
+    const wrap = $("#additionScenarios");
+    A.scenarios.forEach(s => {
+      const over = s.lo >= 150000;
+      const card = el("div", "add-card" + (s.rec ? " is-rec" : "") + (over ? " over" : ""));
+      card.innerHTML = `
+        <div class="add-card__tag">${s.rec ? "★ " : ""}${s.tag}</div>
+        <div class="add-card__name">${s.name}</div>
+        <div class="add-card__cost">${moneyK(s.lo)}–${moneyK(s.hi)}</div>
+        <div class="add-card__get">${s.get}</div>
+        <div class="add-card__meta"><span>${s.sqft}</span><span>recoup ${s.recoup}</span><span>${s.time}</span></div>
+        <div class="add-card__note">${s.note}</div>`;
+      wrap.appendChild(card);
+    });
+
+    const maxPct = Math.max(...A.lineItems.map(x => x.pct));
+    const li = $("#additionLineItems");
+    A.lineItems.forEach(x => {
+      const row = el("div", "lineitem");
+      row.innerHTML = `
+        <div class="lineitem__top"><span class="lineitem__lab">${x.item}</span><span class="lineitem__pct">${x.pct}%</span></div>
+        <div class="lineitem__track"><i class="lineitem__fill" data-w="${Math.round(x.pct / maxPct * 100)}"></i></div>
+        <div class="lineitem__note">${x.note}</div>`;
+      li.appendChild(row);
+    });
+  }
+
+  function buildAdditionChart() {
+    if (!window.Chart) return;
+    const items = DATA.addition.scenarios.slice().sort((a, b) => a.lo - b.lo);
+    const labels = items.map(s => (s.rec ? "★ " : "") + s.name);
+    const data = items.map(s => [s.lo, s.hi]);
+    const colors = items.map(s => s.hi <= 150000 ? "#1F4A3D" : (s.lo >= 150000 ? "#B0461E" : "#C0842B"));
+    const ceiling = {
+      id: "ceil",
+      afterDatasetsDraw(chart) {
+        const x = chart.scales.x.getPixelForValue(150000);
+        const { top, bottom } = chart.chartArea, ctx = chart.ctx;
+        ctx.save(); ctx.strokeStyle = "#B0461E"; ctx.setLineDash([5, 4]); ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, bottom); ctx.stroke();
+        ctx.setLineDash([]); ctx.fillStyle = "#B0461E"; ctx.font = "600 10px 'Spline Sans Mono'";
+        ctx.fillText("~$150K ceiling", x + 5, top + 11); ctx.restore();
+      },
+    };
+    new Chart($("#additionChart"), {
+      type: "bar",
+      data: { labels, datasets: [{ label: "Cost range", data, backgroundColor: colors, borderRadius: 5, barThickness: 17 }] },
+      options: {
+        indexAxis: "y", responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { backgroundColor: "#20201B", callbacks: { label: (c) => ` ${moneyK(c.raw[0])} – ${moneyK(c.raw[1])}` } },
+        },
+        scales: {
+          x: { min: 0, grid: { color: "#E4DCCB" }, ticks: { font: { family: "Spline Sans Mono", size: 10 }, color: "#63604F", callback: (v) => moneyK(v) } },
+          y: { grid: { display: false }, ticks: { font: { family: "Spline Sans Mono", size: 10.5 }, color: "#56544A" } },
+        },
+      },
+      plugins: [ceiling],
+    });
+  }
+
   function renderVerdictExtras() {
     const checklist = [
       ["Pull the actual loan statement", "rate, balance & term — the entire ranking hinges on whether the rate is truly sub-4%"],
@@ -202,19 +280,23 @@
 
   function recompute() {
     const r = computeOptions(state);
-    // verdict bar — these options cluster; frame honestly rather than crown a "winner"
+    // The recommendation is consistent across the whole site: Stay & Add while a low
+    // first-mortgage rate is held; it flips to Move only when that advantage is gone
+    // (the site's core thesis). The dollar spread is context, never the verdict.
     const bar = $("#verdictBar");
-    const tie = r.spreadPct < 10;
-    if (tie) {
-      bar.style.background = "#20201B";
-      $("#verdictText").textContent = "Too close to call";
-      $("#verdictNote").innerHTML = `All three within <b>${r.spreadPct.toFixed(1)}%</b> over 10 years — the financial "winner" flips with your assumptions. So the call rests on what a spreadsheet can't price: the Latimer zone they already own, the low rate they'd keep, and not living through a bidding war. <b>That's why it's Stay &amp; Add.</b>`;
+    const lockedIn = state.currentRate < 4.25;
+    const close = r.spreadPct < 10;
+    const penaltyPerYr = Math.max(0, (state.todayRate - state.currentRate) / 100 * state.currentBalance);
+    if (lockedIn) {
+      bar.style.background = OPT_COLOR.a;
+      $("#verdictText").textContent = "Stay & Add";
+      $("#verdictNote").innerHTML = close
+        ? `The 10-year dollars are about even (within <b>${r.spreadPct.toFixed(1)}%</b>) — so the tiebreakers decide, and at your ${pct(state.currentRate)} rate they favor staying: you keep the Latimer zone and a mortgage worth ~<b>${moneyFull(penaltyPerYr)}/yr</b> vs today's ${pct(state.todayRate)}.`
+        : `Staying leads by <b>${moneyK(r.max - r.min)}</b> over 10 years <i>and</i> keeps the zone and your low ${pct(state.currentRate)} rate.`;
     } else {
-      bar.style.background = OPT_COLOR[r.leader];
-      $("#verdictText").textContent = "Edge: " + OPT_NAME[r.leader];
-      $("#verdictNote").innerHTML = r.leader === "a"
-        ? `Staying leads by <b>${moneyK(r.max - r.min)}</b> over 10 years — and keeps the school zone and the low rate. The case is clear.`
-        : `Leads by <b>${moneyK(r.max - r.min)}</b> on paper — but that's the cue to verify the real rate, and to weigh the zone they already own against a bidding war and a higher tax bill.`;
+      bar.style.background = OPT_COLOR.b;
+      $("#verdictText").textContent = "Move Now";
+      $("#verdictNote").innerHTML = `At ${pct(state.currentRate)} there's no low rate left to protect — the main reason to stay is gone, so buying a larger <i>in-zone</i> home (still Latimer) is the better call. ${close ? `The 10-year dollars stay close (within ${r.spreadPct.toFixed(1)}%), so it comes down to turnkey space vs. a build.` : `It also leads by <b>${moneyK(r.max - r.min)}</b> on the numbers.`}`;
     }
     renderCalcCards(r);
     // assumption note
@@ -369,7 +451,7 @@
     const forceReveal = !("IntersectionObserver" in window) || location.search.indexOf("reveal") > -1 || window.matchMedia("print").matches;
     if (forceReveal) {
       document.querySelectorAll(".r").forEach(n => n.classList.add("in"));
-      document.querySelectorAll(".sbar__fill").forEach(f => { f.style.width = f.dataset.w + "%"; });
+      document.querySelectorAll(".sbar__fill, .lineitem__fill").forEach(f => { f.style.width = f.dataset.w + "%"; });
       if (location.search.indexOf("reveal") > -1) { const h = document.querySelector(".hero"); if (h) h.style.minHeight = "760px"; }
       return;
     }
@@ -378,8 +460,7 @@
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add("in");
-          if (e.target.id === "schoolBars" || e.target.querySelector?.(".sbar__fill"))
-            e.target.querySelectorAll(".sbar__fill").forEach(f => { f.style.width = f.dataset.w + "%"; });
+          e.target.querySelectorAll?.(".sbar__fill, .lineitem__fill").forEach(f => { f.style.width = f.dataset.w + "%"; });
           io.unobserve(e.target);
         }
       });
@@ -391,10 +472,10 @@
 
   /* ===================== INIT ===================== */
   document.addEventListener("DOMContentLoaded", () => {
-    renderProperty(); renderSchools(); renderOptions(); renderExperts();
+    renderProperty(); renderSchools(); renderOptions(); renderAddition(); renderExperts();
     renderListings(); renderForecast(); renderVerdictExtras(); renderMethodology();
     buildControls(); recompute();
-    buildRateChart(); buildScatter(); buildMap();
+    buildRateChart(); buildScatter(); buildAdditionChart(); buildMap();
     motion();
   });
 })();

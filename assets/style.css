@@ -315,6 +315,42 @@ input[type=range]::-moz-range-thumb{ width:18px; height:18px; border-radius:50%;
 .assume-note{ font-family:var(--mono); font-size:.66rem; line-height:1.6; color:var(--muted); background:var(--amber-wash); border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:10px; padding:14px 16px;}
 .assume-note b{ color:var(--ink); }
 
+/* ============================ ADDITION DEEP-DIVE ============================ */
+.rec-addition{ background:var(--pine); color:#EAF0EA; border-radius:18px; padding:clamp(24px,3.5vw,40px); box-shadow:var(--shadow-md); position:relative; overflow:hidden; display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center;}
+@media(max-width:760px){ .rec-addition{ grid-template-columns:1fr; } }
+.rec-addition::after{ content:""; position:absolute; right:-70px; top:-70px; width:260px; height:260px; background:radial-gradient(circle, rgba(242,217,168,.12), transparent 70%);}
+.rec-addition .k{ font-family:var(--mono); font-size:.64rem; letter-spacing:.16em; text-transform:uppercase; color:#A9C6B6;}
+.rec-addition .t{ font-family:var(--serif); font-size:clamp(1.4rem,2.6vw,2rem); font-weight:580; margin-top:8px; line-height:1.08;}
+.rec-addition .t em{ font-style:italic; color:#F2D9A8;}
+.rec-addition p{ color:#CFE0D5; margin-top:12px; max-width:60ch; font-size:.95rem;}
+.rec-addition .price{ text-align:right; flex:none; position:relative; z-index:2;}
+.rec-addition .price .n{ font-family:var(--serif); font-size:clamp(2rem,4.4vw,3rem); font-weight:600; color:#fff; line-height:1; white-space:nowrap;}
+.rec-addition .price .s{ font-family:var(--mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:#A9C6B6; margin-top:8px;}
+@media(max-width:760px){ .rec-addition .price{ text-align:left; } }
+
+.add-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+@media(max-width:920px){ .add-cards{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .add-cards{ grid-template-columns:1fr; } }
+.add-card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; display:flex; flex-direction:column; transition:transform .25s, box-shadow .25s;}
+.add-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-md);}
+.add-card.is-rec{ border-color:var(--pine); box-shadow:0 0 0 1px var(--pine-wash), var(--shadow-sm);}
+.add-card__tag{ font-family:var(--mono); font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted);}
+.add-card.is-rec .add-card__tag{ color:var(--pine); font-weight:600;}
+.add-card__name{ font-family:var(--serif); font-size:1.2rem; font-weight:560; margin-top:6px; line-height:1.1;}
+.add-card__cost{ font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--pine); margin-top:10px; font-variant-numeric:tabular-nums;}
+.add-card.over .add-card__cost{ color:var(--rust);}
+.add-card__get{ font-size:.86rem; color:var(--ink-soft); margin-top:10px; line-height:1.45;}
+.add-card__meta{ display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:12px; font-family:var(--mono); font-size:.62rem; letter-spacing:.03em; color:var(--muted);}
+.add-card__note{ font-size:.8rem; color:var(--ink-soft); margin-top:12px; padding-top:12px; border-top:1px solid var(--line-soft); line-height:1.45;}
+
+.lineitems{ display:flex; flex-direction:column; gap:11px;}
+.lineitem__top{ display:flex; justify-content:space-between; align-items:baseline; gap:10px;}
+.lineitem__lab{ font-size:.84rem; color:var(--ink);}
+.lineitem__pct{ font-family:var(--mono); font-size:.74rem; color:var(--ink-soft); font-variant-numeric:tabular-nums;}
+.lineitem__track{ height:7px; background:var(--paper-3); border-radius:999px; overflow:hidden; margin-top:5px;}
+.lineitem__fill{ height:100%; border-radius:999px; background:linear-gradient(90deg, var(--pine), var(--pine-2)); width:0; transition:width 1s cubic-bezier(.2,.7,.2,1);}
+.lineitem__note{ font-family:var(--mono); font-size:.6rem; color:var(--muted); letter-spacing:.02em; margin-top:3px;}
+
 /* ============================ CHART CARD GENERIC ============================ */
 .chartcard{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding: clamp(20px,2.4vw,30px); box-shadow:var(--shadow-sm);}
 .chartcard h4{ font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;}

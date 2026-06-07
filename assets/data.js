@@ -50,20 +50,20 @@ const DATA = {
       id: "a", cls: "a", k: "Option A · Stay & Add", recommended: true,
       title: "Build a scope-controlled addition",
       score: 7.5,
-      summary: "A focused ~$150–250K bedroom + bath addition financed by a fixed second lien that preserves the sub-4% first mortgage. Keeps the already-secured Latimer zone, dodges a bidding war, and avoids ~$47K of transaction friction — contingent on clearing survey, septic, wetlands and comp-ceiling checks.",
+      summary: "A focused ~$100–150K living-space addition — finish the basement, then add a rear great room + mudroom (no new bedroom, so no septic trigger) — financed by a fixed second lien that preserves the sub-4% first mortgage. Keeps the Latimer zone, dodges a bidding war, and stays under the ~$650–700K street ceiling.",
       pros: [
         "Preserves the pandemic-era sub-4% first mortgage — only the addition is borrowed at today's rates",
         "Keeps the Latimer Lane zone the family already has",
-        "Avoids ~$47K of sunk selling + buying costs",
+        "Adds the living space they actually lack — no new bedroom, no septic review",
         "Fully hedges a #1-hottest, supply-starved market — no bidding war",
       ],
       cons: [
-        "Additions recoup only ~27–53% — money spent on living, not equity",
-        "Highest monthly payment; tight on DTI once childcare is counted",
-        "9–15 month build, disruptive with three kids under six",
-        "Over-improvement risk above the Weatogue comp ceiling",
+        "Even the best new space recoups only part of its cost (~22–71% by type)",
+        "A build means months of disruption with three kids under six",
+        "Bedroom-adding versions trigger a CT septic review ($25–60K+ risk)",
+        "Over-improvement risk — the street caps value near $650–700K",
       ],
-      foot: [ { k: "10-yr cash", v: "≈ tie" }, { k: "Monthly", v: "~$4.3–5.6K" } ],
+      foot: [ { k: "Smart all-in", v: "~$100–150K" }, { k: "10-yr cash", v: "≈ tie" } ],
     },
     {
       id: "b", cls: "b", k: "Option B · Move Now",
@@ -232,6 +232,38 @@ const DATA = {
     { t: "CT active listings down 4.8% YoY — FRED", u: "https://fred.stlouisfed.org/series/ACTLISCOUCT" },
   ],
 
+  // ---- house-specific addition deep-dive (see research/addition-deepdive.json) ----
+  addition: {
+    intro: "The family already has 4 bedrooms — the real gap is living space, not sleeping space. Two facts shape every option: the 40-ft R-40 side-yard setback means you build straight off the rear or up over the garage, and the Weatogue comp ceiling (~$650–700K) caps the defensible all-in spend at roughly $100–150K. All figures are 2026 Hartford-County pricing.",
+    ceiling: "Latimer/Weatogue comps top out near $650–700K against this home's ~$575K value — so the defensible all-in spend is ~$100–125K ($150K absolute). Bars past that line over-improve the street.",
+    septic: "On well + septic, any option that adds a bedroom triggers a CT Public Health Code (19-13-B100a) septic-capacity review — budget $1–3K if the system has reserve capacity, or $25–60K+ if the leach field must be expanded or replaced. This is kept separate from the construction costs.",
+    scenarios: [
+      { key: "REC", name: "Finish basement + rear great room", tag: "Phased · recommended", get: "A finished basement (playroom / office / flex) plus a true family/great room & mudroom off the back. No new bedroom.", lo: 95000, hi: 150000, sqft: "+430–600 above grade, +~1,000 finished below", recoup: "best achievable mix", time: "2–3 mo, then 4–6 mo", note: "No septic trigger, no variance, stays under the ceiling — closes the family's real gap.", rec: true },
+      { key: "A", name: "Finish the basement", tag: "Inside the footprint", get: "Playroom + flex/office + half bath in the existing ~1,000 sqft basement.", lo: 50000, hi: 80000, sqft: "+~900–1,200 below grade", recoup: "63–71%", time: "2–3 mo", note: "Highest feasibility and best ROI; no bedroom = no septic trigger. Below-grade sqft only partly counts at appraisal.", rec: false },
+      { key: "B", name: "Rear great room + mudroom", tag: "Ground-floor rear", get: "Vaulted family/great room + mudroom off the back. No bedroom.", lo: 110000, hi: 175000, sqft: "+430–600 above grade", recoup: "22–40%", time: "4–6 mo", note: "High feasibility if centered to clear the 40-ft side yard. Foundation + roof tie-in are the cost-heavy NE items.", rec: false },
+      { key: "C", name: "Basement + rear bump-out", tag: "Value combo", get: "Finished basement plus a small rear bump-out to enlarge the kitchen/family area.", lo: 110000, hi: 185000, sqft: "+150–250 above grade + finished basement", recoup: "~45–65%", time: "4–6 mo", note: "Balanced middle path; bump-outs run high per sqft on fixed costs.", rec: false },
+      { key: "D", name: "Over-garage primary suite", tag: "Build up over garage", get: "Primary bedroom + bath + walk-in closet above the garage; frees a bedroom for the kids.", lo: 120000, hi: 200000, sqft: "+500–650 above grade", recoup: "16–32%", time: "6–9 mo", note: "Adds a bedroom → septic review; the 1992 garage needs structural reinforcement. Can brush the ceiling.", rec: false },
+      { key: "E", name: "Two-story rear addition", tag: "Great room + suite", get: "Family room below, primary suite above — maximum space in one build.", lo: 300000, hi: 500000, sqft: "+800–1,100 above grade", recoup: "16–40%", time: "8–12 mo", note: "Clear over-improvement on a ~$575K house; adds a bedroom (septic).", rec: false },
+      { key: "F", name: "Do-it-once package", tag: "Everything at once", get: "Over-garage suite + rear great room + mudroom + finished basement.", lo: 350000, hi: 550000, sqft: "+930–1,250 above grade + basement", recoup: "low overall", time: "10–14 mo", note: "Solves everything but lands far above the street ceiling — lifestyle-only.", rec: false },
+    ],
+    lineItems: [
+      { item: "Foundation / footings (42-in frost depth)", pct: 15, note: "~$16–23K · the biggest New England premium" },
+      { item: "Framing & sheathing", pct: 14, note: "~$16–21K · tie into 1992 framing" },
+      { item: "Roof + tie-in to existing roofline", pct: 10, note: "~$10–16K · ice-&-water shield, flashing" },
+      { item: "Siding & trim matched to the colonial", pct: 8, note: "~$8–13K · so it doesn't read as a bolt-on" },
+      { item: "HVAC extension", pct: 7.5, note: "~$7–13K · may need to upsize the system" },
+      { item: "Electrical", pct: 7.5, note: "~$8–12K · new circuits, panel check" },
+      { item: "Plumbing", pct: 7, note: "$0–13K · ~zero for a dry room, rises with a bath" },
+      { item: "Flooring", pct: 7.5, note: "~$7–13K" },
+      { item: "Windows & exterior doors", pct: 6.5, note: "~$7–10K · match the existing line" },
+      { item: "Interior trim, paint, finishes", pct: 6, note: "~$5–10K · mid-grade to match the block" },
+      { item: "Drywall & taping", pct: 5.5, note: "~$5–9K" },
+      { item: "Insulation + ice-dam detailing", pct: 4.5, note: "~$4–8K · heavy R-values for CT winters" },
+    ],
+    softCosts: "On top of construction, budget ~15–25% for soft costs: architect/designer (5–15%), a structural engineer ($1–4K, required for any build-up), the Simsbury permit ($16.26 per $1,000 — about $1,656 on a $100K job), and a 10–20% contingency on a 30-year-old house.",
+    bottomLine: "Add space, not bedrooms — and stay under ~$125K. Finish the basement first (~$50–80K): the cheapest usable square footage, the best ROI, and no septic review. If budget remains, add a rear great room + mudroom (~$110–150K), centered to clear the side yard. Avoid the over-garage suite, two-story rear, and do-it-once package as financial moves — at $200–550K they over-improve a ~$575K house and trigger the septic wildcard.",
+  },
+
   // ---- calculator defaults (the financial engine reads these) ----
   model: {
     currentValue: 575000,
@@ -239,8 +271,8 @@ const DATA = {
     currentRate: 3.25,      // THE swing variable
     currentTermLeft: 24,    // yrs remaining on the original 30
     todayRate: 6.50,
-    additionCost: 200000,
-    additionRecoup: 45,     // % of spend reflected in market value
+    additionCost: 130000,   // recommended living-space scope (basement finish + rear great room)
+    additionRecoup: 50,     // % of spend reflected in market value (basement-weighted)
     heRate: 8.25,
     heTerm: 15,
     newHomePrice: 650000,

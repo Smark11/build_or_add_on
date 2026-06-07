@@ -23,6 +23,7 @@
     <a href="#reframe">The Reframe</a>
     <a href="#money">The Money</a>
     <a href="#paths">Three Paths</a>
+    <a href="#addition">Addition</a>
     <a href="#calculator">Calculator</a>
     <a href="#map">Listings</a>
     <a href="#experts">Experts</a>
@@ -73,8 +74,8 @@
         <div class="stat__src">Zillow, Jan 2026</div>
       </div>
       <div class="stat">
-        <div class="stat__n">≈ tie</div>
-        <div class="stat__l">Once corrected by the experts, all three options cluster financially</div>
+        <div class="stat__n">≈ even</div>
+        <div class="stat__l">On 10-year dollars, adding vs. moving is roughly a wash — so the tiebreakers (zone &amp; rate) decide</div>
         <div class="stat__src">4-expert review, this report</div>
       </div>
     </div>
@@ -212,6 +213,39 @@
   </div>
 </section>
 
+<!-- ============ ADDITION DEEP-DIVE ============ -->
+<section class="section band-2" id="addition">
+  <div class="wrap">
+    <div class="section-head r">
+      <span class="eyebrow">The addition, costed for this house</span>
+      <h2 class="h2">If you add on, here's what it costs — and what you'd build.</h2>
+      <p class="lead" id="additionIntro"></p>
+    </div>
+
+    <div class="rec-addition r" id="additionRec"></div>
+
+    <div class="chartcard r" style="margin-top:24px">
+      <h4>What each option costs — against the ~$150K defensible ceiling</h4>
+      <p class="cap" id="additionCeiling"></p>
+      <div class="chart-box tall"><canvas id="additionChart" role="img" aria-label="Floating bar chart of the cost range of each addition option. The basement finish and the recommended phased basement-plus-rear-great-room stay under the roughly $150,000 over-improvement ceiling; the over-garage suite straddles it, and the two-story rear and do-it-once package run far past it."></canvas></div>
+    </div>
+
+    <div class="add-cards r" id="additionScenarios" style="margin-top:24px"></div>
+
+    <div class="grid cols-2 r" style="margin-top:40px; align-items:start">
+      <div>
+        <div class="subhead-light" style="color:var(--muted)">Where the money goes — a mid-size addition</div>
+        <div class="lineitems" id="additionLineItems"></div>
+        <p class="disclaim" id="additionSoft" style="margin-top:18px"></p>
+      </div>
+      <div>
+        <div class="disclaim" id="additionSeptic" style="border-left-color:var(--rust); background:var(--rust-wash)"></div>
+        <div class="pullquote" id="additionBottom" style="margin-top:26px; font-size:clamp(1.15rem,2.1vw,1.55rem)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CALCULATOR ============ -->
 <section class="section band-3" id="calculator">
   <div class="wrap">
@@ -227,7 +261,7 @@
       </div>
       <div class="calc__out r d1">
         <div class="verdict-bar" id="verdictBar">
-          <div><div class="k">The 10-year financial verdict</div><div class="v" id="verdictText">—</div></div>
+          <div><div class="k">Recommendation</div><div class="v" id="verdictText">—</div></div>
           <div class="note" id="verdictNote"></div>
         </div>
         <div class="calc-cards" id="calcCards"></div>
@@ -339,7 +373,7 @@
     <div class="rec r">
       <span class="eyebrow">The recommendation</span>
       <h2 class="rec__title">Stay and build a <em>modest</em> addition — one that protects a once-in-a-generation mortgage rate and the school zone you already have.</h2>
-      <p class="rec__lead">A focused <strong>~$150–250K</strong> bedroom-and-bath addition, financed by a fixed second lien, is the rate-efficient, school-secure choice — <em>provided</em> a short checklist clears. Option B (buy a turnkey in-zone home like 5 Lawton Dr) is a legitimate co-finalist if disruption is unacceptable, the addition proves infeasible, or the current rate turns out not to be low. Option C — waiting — is not recommended.</p>
+      <p class="rec__lead">A focused <strong>~$100–150K</strong> living-space addition — finish the basement, then a rear great room (no new bedroom, so no septic review) — financed by a fixed second lien, is the rate-efficient, school-secure choice that stays under the street's value ceiling, <em>provided</em> a short checklist clears. Option B (buy a turnkey in-zone home like 5 Lawton Dr) is a legitimate co-finalist if disruption is unacceptable, the addition proves infeasible, or the current rate turns out not to be low. Option C — waiting — is not recommended.</p>
       <div class="rec__grid">
         <div>
           <div class="subhead-light">Before spending a dollar — the checklist</div>
