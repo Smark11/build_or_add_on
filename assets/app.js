@@ -228,8 +228,45 @@
     });
   }
 
+  function renderFinancialModels() {
+    const F = DATA.financialModels; if (!F) return;
+    $("#modelsIntro").textContent = F.intro;
+    $("#modelsBottom").innerHTML = "\u201c" + F.bottomLine + "\u201d<span class=\"by\">\u2014 across all six models</span>";
+    const w = $("#modelCards");
+    F.models.forEach(m => {
+      const c = el("div", "model-card");
+      c.innerHTML = `
+        <div class="model-card__top"><div class="model-card__n">${m.n}</div><span class="model-card__favors">Favors: ${m.favors}</span></div>
+        <div class="model-card__row"><span class="mk">How it works</span><span class="mv">${m.how}</span></div>
+        <div class="model-card__row"><span class="mk">The numbers</span><span class="mv">${m.num}</span></div>
+        <div class="model-card__row"><span class="mk">What it says</span><span class="mv">${m.says}</span></div>
+        <div class="model-card__caveat">Caveat — ${m.caveat}</div>`;
+      w.appendChild(c);
+    });
+  }
+
+  function renderStress() {
+    const S = DATA.stress; if (!S) return;
+    $("#stressIntro").textContent = S.intro;
+    $("#stressVerdict").innerHTML = `<div class="k">Does the recommendation hold?</div><p>${S.verdict}</p>`;
+    const w = $("#stressList");
+    S.assumptions.forEach(x => {
+      const ok = /verif/i.test(x.status);
+      const it = el("div", "stress-item");
+      it.innerHTML = `
+        <div class="stress-item__head"><span class="stress-a">${x.a}</span><span class="stress-badge ${ok ? "ok" : "warn"}">${x.status}</span></div>
+        <div class="stress-meta">Load-bearing: <b>${x.load}</b></div>
+        <p class="stress-ch">${x.challenge}</p>
+        <p class="stress-flip"><b>Flips if:</b> ${x.flip}</p>`;
+      w.appendChild(it);
+    });
+    const v = $("#stressVuln");
+    S.vulnerabilities.forEach(t => v.appendChild(el("li", null, t)));
+  }
+
   function renderVerdictExtras() {
     const checklist = [
+      ["Decide: playroom or bedrooms?", "the make-or-break question — a walkout finish solves a playroom need, but if they want real bedrooms/a primary suite, buying likely wins"],
       ["Pull the actual loan statement", "rate, balance & term — the entire ranking hinges on whether the rate is truly sub-4%"],
       ["Get a survey / plot plan", "the 40-ft R-40 side-yard setback means a rear addition is the only by-right path"],
       ["Confirm the public-sewer hookup", "verified on public water + sewer — confirm the lateral connection & usage fee with Simsbury WPCA"],
@@ -246,6 +283,8 @@
       "The home won't appraise high enough to keep the second lien under ~85% CLTV.",
       "A survey or wetlands review makes a rear addition infeasible or far costlier.",
       "Recent comps top out below the post-addition value — building over-improves the street.",
+      "The family\u2019s real need is bedrooms or a primary suite, not a playroom \u2014 then buying the larger home wins.",
+      "A space-solving scope forces a rate-resetting renovation loan (CLTV) \u2014 staying loses its edge.",
       "The family weights turnkey space and liquidity over preserving the low rate.",
       "Addition bids come back high (~$400K+) while a great in-zone home is available.",
     ];
@@ -532,7 +571,7 @@
 
   /* ===================== INIT ===================== */
   document.addEventListener("DOMContentLoaded", () => {
-    renderProperty(); renderSchools(); renderOptions(); renderAddition(); renderFloorplans(); renderExperts();
+    renderProperty(); renderSchools(); renderOptions(); renderAddition(); renderFloorplans(); renderFinancialModels(); renderStress(); renderExperts();
     renderListings(); renderForecast(); renderVerdictExtras(); renderMethodology();
     buildControls(); recompute();
     buildRateChart(); buildScatter(); buildAdditionChart(); buildMap();

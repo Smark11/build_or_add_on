@@ -138,7 +138,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 540; line-height: 1.04;
 .nav.scrolled { border-color: var(--line); padding-block: 10px; }
 .nav__brand { font-family: var(--mono); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; display: flex; align-items: center; gap: .7em; }
 .nav__brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pine); box-shadow: 0 0 0 3px var(--pine-wash); }
-.nav__links { display: flex; gap: 18px; }
+.nav__links { display: flex; gap: 15px; }
 .nav__links a { font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; color: var(--ink-soft); transition: color .2s; position: relative; }
 .nav__links a:hover { color: var(--pine); }
 .nav__cta { font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 8px 16px; border: 1px solid var(--ink); border-radius: 999px; transition: all .2s; }
@@ -575,3 +575,36 @@ input[type=range]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px var(--
 .ref-item:target{ background:var(--amber-wash); border-radius:8px; box-shadow:0 0 0 2px var(--amber); padding-inline:8px; }
 
 .plan-badge{ font-family:var(--mono); font-size:.58rem; letter-spacing:.08em; text-transform:uppercase; background:var(--ink); color:var(--paper); padding:2px 7px; border-radius:5px; font-weight:600; vertical-align:middle; margin-right:2px; }
+
+
+/* ============================ FINANCIAL MODELS ============================ */
+.model-cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+@media(max-width:820px){ .model-cards{ grid-template-columns:1fr; } }
+.model-card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm); }
+.model-card__top{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; flex-wrap:wrap; }
+.model-card__n{ font-family:var(--serif); font-size:1.25rem; font-weight:560; }
+.model-card__favors{ font-family:var(--mono); font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; background:var(--pine-wash); color:var(--pine); padding:4px 10px; border-radius:999px; white-space:nowrap; }
+.model-card__row{ display:grid; grid-template-columns:92px 1fr; gap:12px; padding:9px 0; border-top:1px solid var(--line-soft); }
+.model-card__row .mk{ font-family:var(--mono); font-size:.56rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding-top:2px; }
+.model-card__row .mv{ font-size:.86rem; color:var(--ink-soft); line-height:1.45; }
+.model-card__caveat{ margin-top:12px; font-size:.76rem; color:var(--rust); background:var(--rust-wash); border-radius:8px; padding:8px 12px; line-height:1.4; }
+
+/* ============================ STRESS TEST ============================ */
+.stress-verdict{ background:var(--ink); color:var(--paper); border-radius:18px; padding:clamp(24px,3.5vw,38px); box-shadow:var(--shadow-md); }
+.stress-verdict .k{ font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--amber); margin-bottom:12px; }
+.stress-verdict p{ color:#dcd8cb; font-size:1.02rem; line-height:1.6; }
+.stress-list{ display:flex; flex-direction:column; }
+.stress-item{ padding:20px 0; border-top:1px solid var(--line); }
+.stress-item:last-child{ border-bottom:1px solid var(--line); }
+.stress-item__head{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; }
+.stress-a{ font-family:var(--serif); font-size:1.08rem; font-weight:560; line-height:1.2; }
+.stress-badge{ font-family:var(--mono); font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; padding:3px 8px; border-radius:5px; white-space:nowrap; flex:none; }
+.stress-badge.warn{ background:var(--rust-wash); color:var(--rust); }
+.stress-badge.ok{ background:var(--pine-wash); color:var(--pine); }
+.stress-meta{ font-family:var(--mono); font-size:.62rem; letter-spacing:.04em; color:var(--muted); margin-top:6px; }
+.stress-ch{ font-size:.92rem; color:var(--ink-soft); line-height:1.5; margin-top:10px; }
+.stress-flip{ font-size:.88rem; color:var(--ink); line-height:1.5; margin-top:8px; background:var(--amber-wash); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:8px 12px; }
+.stress-flip b{ color:var(--amber-text); }
+.vuln-list{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+.vuln-list li{ font-size:.92rem; color:var(--ink-soft); line-height:1.45; padding-left:22px; position:relative; }
+.vuln-list li::before{ content:"\26A0"; position:absolute; left:0; color:var(--rust); }

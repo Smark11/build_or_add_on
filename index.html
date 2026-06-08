@@ -26,8 +26,10 @@
     <a href="#addition">Addition</a>
     <a href="#plans">Plans</a>
     <a href="#calculator">Calc</a>
+    <a href="#models">Models</a>
     <a href="#map">Listings</a>
     <a href="#experts">Experts</a>
+    <a href="#stress">Stress</a>
     <a href="#verdict">Verdict</a>
   </div>
   <a href="#verdict" class="nav__cta">The Recommendation</a>
@@ -43,7 +45,7 @@
       <p class="hero__sub">A family of five — a Fidelity advisor, a public-school speech-language pathologist, and three kids under six — is weighing whether to build onto their home at <strong>2 Clover Lane</strong> or buy a larger house in the Latimer Lane school district. We researched it deeply, modeled the money, and had four industry experts tear it apart.</p>
       <div class="verdict-chip">
         <span class="lbl">The answer</span>
-        <span class="val">Stay & add — at a controlled scope</span>
+        <span class="val">Lean: stay & improve — verify first</span>
       </div>
       <div class="hero__meta">
         <span>3 kids: twins (3) + one (5)</span>
@@ -74,10 +76,10 @@
         <div class="stat__l">Hartford is the hottest U.S. housing market of 2026 — inventory 63% below normal</div>
         <div class="stat__src">Zillow, Jan 2026<sup class="cite" data-cite="hartford"></sup></div>
       </div>
-      <div class="stat">
-        <div class="stat__n">≈ even</div>
-        <div class="stat__l">On 10-year dollars, adding vs. moving is roughly a wash — so the tiebreakers (zone &amp; rate) decide</div>
-        <div class="stat__src">4-expert review, this report</div>
+      <div class="stat stat--pine">
+        <div class="stat__n">~$156K</div>
+        <div class="stat__l">The hurdle a move must clear — round-trip costs + the forfeited cheap mortgage + the tax reset</div>
+        <div class="stat__src">IRR / breakeven model<sup class="cite" data-cite="freddie"></sup></div>
       </div>
     </div>
   </div>
@@ -112,7 +114,7 @@
         <h2 class="h3" style="margin-top:14px">A 4-bed colonial on 1.59 acres — small for five, but on a generous lot.</h2>
         <p class="lead" style="font-size:1.05rem;margin-top:14px">Bought in December 2020 for $339K, now worth an estimated <strong>$546K–$618K</strong>. The house is tight at 1,976 sq ft for a family of five — but the lot is ~1.7× the R-40 minimum, leaving real room to add on.</p>
         <div class="specs" id="specs"></div>
-        <p class="disclaim" style="margin-top:20px">Assessed value <strong>$284,410</strong> · property tax <strong>~$9,954/yr</strong> at the 35.00 mill rate. Figures from the Simsbury assessor; market value is an estimate (estimator portals blocked direct access).<sup class="cite" data-cite="assessor"></sup></p>
+        <p class="disclaim" style="margin-top:20px">Assessed value <strong>$284,410</strong> · property tax <strong>~$9,716/yr</strong> at the 34.16 mill rate. Figures from the Simsbury assessor; market value is an estimate (estimator portals blocked direct access).<sup class="cite" data-cite="assessor"></sup></p>
       </div>
     </div>
   </div>
@@ -292,6 +294,19 @@
   </div>
 </section>
 
+<!-- ============ FINANCIAL MODELS ============ -->
+<section class="section band-3" id="models">
+  <div class="wrap">
+    <div class="section-head r">
+      <span class="eyebrow">Buy vs. sell vs. stay — through six financial lenses</span>
+      <h2 class="h2">The same decision, six financial models.</h2>
+      <p class="lead" id="modelsIntro"></p>
+    </div>
+    <div class="model-cards r" id="modelCards"></div>
+    <div class="pullquote r" id="modelsBottom" style="margin-top:38px; max-width:62ch; font-size:clamp(1.1rem,2vw,1.5rem)"></div>
+  </div>
+</section>
+
 <!-- ============ MARKET & RATES ============ -->
 <section class="section" id="market">
   <div class="wrap">
@@ -374,6 +389,23 @@
       <h3 class="h3" style="color:var(--paper);margin-bottom:8px">Corrections we applied</h3>
       <p style="color:#9a978a;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">The original model said "Option A wins by ~$100K." It doesn't. Here's what changed:</p>
       <ul class="corrections" id="corrections" style="--line:rgba(255,255,255,.14)"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRESS TEST ============ -->
+<section class="section" id="stress">
+  <div class="wrap">
+    <div class="section-head r">
+      <span class="eyebrow">Stress test — challenging our own call</span>
+      <h2 class="h2">Where this could be wrong.</h2>
+      <p class="lead" id="stressIntro"></p>
+    </div>
+    <div class="stress-verdict r" id="stressVerdict"></div>
+    <div class="stress-list r" id="stressList" style="margin-top:32px"></div>
+    <div class="r" style="margin-top:36px">
+      <div class="subhead-light" style="color:var(--muted)">The biggest vulnerabilities</div>
+      <ul class="vuln-list" id="stressVuln"></ul>
     </div>
   </div>
 </section>

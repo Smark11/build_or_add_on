@@ -1,0 +1,271 @@
+{
+  "assumptions": {
+    "assumptions": [
+      {
+        "assumption": "#1 MASTER: Family holds a sub-4% (~3.25%), ~$239K first-lien mortgage from the 12/2020 purchase; protecting that cheap money is the decisive reason to stay.",
+        "status": "UNVERIFIED — inferred from purchase date; spec line 33 says 'Mortgage rate unknown.'",
+        "challenge": "This single number is the literal on/off switch: app.js:347 hardcodes if(currentRate<4.25)->Stay&Add else->Move Now, and app.js:345 admits the spread is 'never the verdict.' Rate is independent of the purchase DATE — refi, cash-out, ARM, or a higher original rate are all possible, and a Fidelity household is exactly the kind to have touched its equity. The thesis was built on the most salient 2020-era fact before it was checked.",
+        "loadBearing": "HIGHEST — the experts concede options 'cluster within noise,' so the rate does ~100% of the tiebreak in the UI; everything downstream inherits it.",
+        "wouldFlipIf": "The Note shows a rate at/above ~4.25% or a cash-out enlarged the balance — the else-branch prints 'Move Now (B).' Caveat: I confirmed the underlying MODEL still ranks A first up to 7.5%, so a rate-driven flip is a stated-policy flip, not a dollars flip — an inconsistency that is itself a vulnerability.",
+        "howToDeRisk": "5-minute task: pull the Note/statement (rate, balance, term, fixed-vs-ARM, any refi/HELOC) BEFORE recommending. Verified asymmetry: Dec 2020 30-yr averaged 2.66% (Freddie Mac record low), so if unrefinanced the true rate is likely below 3.25% and the lock-in is UNDERvalued (strengthens stay)."
+      },
+      {
+        "assumption": "#8: The 10-yr net-worth model shows the three options cluster, so soft tiebreakers (zone + rate) decide and favor staying.",
+        "status": "ESTIMATED — contradicted by the model's own output.",
+        "challenge": "Ran the engine at published defaults: A=$823K / B=$658K / C=$691K — a 20.0% spread, never the <10% the verdict text calls 'about even.' It clusters ONLY equity-only (9.0% spread); the opportunity-cost side-pot, added to HELP B/C, instead hands A its lead (sideA=+$103K, sideB=$0, sideC=+$35K; model.js:99-102). The 'tie' that licenses defaulting to status quo is manufactured by the very mechanic meant to offset A.",
+        "loadBearing": "VERY HIGH — 'they tie, default to staying' is the rhetorical spine; a true tie is exactly when disruption/preferences should decide, and those lean to moving.",
+        "wouldFlipIf": "Rebuilt symmetrically (charge A a CLTV/reset + disruption penalty, credit B/C their freed cash honestly): the 9% equity gap drops inside noise and the honest output is 'financially indifferent, decide on preferences,' not 'stay.'",
+        "howToDeRisk": "Re-run with the verified rate, a recoup % the GC/agent defends in writing, a temp-housing/disruption line for A, and the side-pot computed for all three. If the lead is <5% either way, stop implying the numbers favor staying."
+      },
+      {
+        "assumption": "#3 + #5/#7 reframed as a goal: 'They already have a family room and 4 bedrooms, so the gap is just usable space, not bedrooms — a modest finish solves it.'",
+        "status": "ESTIMATED / motivated — contradicts the client's stated priority.",
+        "challenge": "Spec priority #1 is 'More bedrooms/space for three young kids' with budget 'up to ~$900k a real stretch' (spec lines 18, 23). The analysis substitutes its own square-footage judgment, repeating 'they already have a family room' 4+ times in data.js. The GC point lands: the $50-110K scope finishes a below-grade walkout (NOT counted in appraised GLA) and RENAMES the living room — ZERO above-grade sf, ZERO bedrooms. The model confirms the trap: a real space-solving ~$250K Plan-H makes A the WORST option (A=$811K vs C=$896K / B=$864K). The financeable scope doesn't solve the problem; the solving scope isn't financeable or value-defensible.",
+        "loadBearing": "VERY HIGH — once dollars tie, whoever defines 'what the family needs' picks the winner; the analysis quietly took that power.",
+        "wouldFlipIf": "Elicitation reveals the real need is bedrooms + a true primary suite (current is only ~13x18 with a ~7x9 bath) + a forever layout — then the finish is a six-figure stopgap that leaves them moving in 2-3 years anyway (double transaction costs), and B's turnkey 3,157 sf wins.",
+        "howToDeRisk": "Ask, option-free: When does the house feel too small, WHERE and WHEN? Would all three kids each get a room? Is a basement playroom how they WANT to use space or a consolation prize? Run the endowment test: 'If you had ~$340K cash and no house, would you buy 2 Clover Lane today, or the bigger home?'"
+      },
+      {
+        "assumption": "#5: A ~$650-700K comp/value ceiling caps defensible spend at ~$100-150K.",
+        "status": "ESTIMATED — likely understated; the binding constraint either way.",
+        "challenge": "The broker calls this 'the most wrong number,' citing renovated in-zone solds at $760-775K. I verified the truth is in between: Zillow's May-2026 Simsbury median is $584K at $255/sf, so a renovated ~2,700 sf in-zone home pencils near ~$690K — above the $650K used but below the broker's $730-840K. The ceiling cuts mostly against A: if it really is ~$650-700K, the only scopes that solve the space problem (Plan H ~$175-320K, two-story ~$300-550K) over-improve and can't be recouped — the ceiling FORBIDS the version of A that works and endorses buying a home already built to the ceiling (B).",
+        "loadBearing": "HIGH for sizing the spend and the A-vs-B logic; a 2027 town revaluation will reset assessments upward regardless.",
+        "wouldFlipIf": "A SOLD-comp CMA shows renovated/expanded in-zone colonials clearing $730-840K — then a real $175-300K reconfig is value-defensible AND a $760K move is in-market, and stay-modest collapses with B as front-runner.",
+        "howToDeRisk": "Local-agent CMA off the MLS SOLD book (not Zestimates): (a) renovated ~2,800-3,200 sf in-zone colonials, and (b) the per-sf credit for finished WALKOUT space. Both cheap and decisive."
+      },
+      {
+        "assumption": "Addition is cheap (~$50-110K, 'modest'), high-ROI (~70% recoup), and financeable as a fixed 2nd lien that preserves the cheap first mortgage.",
+        "status": "ESTIMATED — internally inconsistent.",
+        "challenge": "(1) The default additionRecoup is 55% (data.js:457), silently contradicting the '~70%' card; walkout isn't in appraised GLA, so local recoup is plausibly ~40-55%. (2) 2026 Hartford pricing ($180-450/sf) + 1992-house surprises (code deltas, undersized panel/HVAC, the analysis's own $4-12K beam) + 15-25% contingency push any core-touching scope to ~$175-320K, not 'modest.' (3) The mortgage vise: a 2nd lien big enough to matter blows past the 80-85% CLTV cap (~95% at $305K on a $575K home with a $239K first), forcing a HomeStyle FIRST mortgage that RE-PRICES the sub-4% balance — detonating the asset the thesis protects.",
+        "loadBearing": "HIGH — 'cheap, high-ROI, rate-preserving' IS the case for A over B.",
+        "wouldFlipIf": "Lender confirms anything above ~$150K forces a HomeStyle reset, OR fixed-price bids hit $400K+/450-650-per-sf, OR the local below-grade adjustment is ~25-35%. Any one pulls A and B to parity or favors B.",
+        "howToDeRisk": "Two fixed-price (not allowance-laden) GC bids with a written contingency line; a lender quote for max fixed 2nd-lien at their CLTV cap plus the blended HomeStyle rate; an appraiser's market-derived below-grade adjustment from 3-5 local solds."
+      },
+      {
+        "assumption": "Disruption from a multi-month build with twin 3-year-olds + a 5-year-old is a manageable one-line con.",
+        "status": "ESTIMATED — undersold; entirely unpriced in the model.",
+        "challenge": "Asymmetry: the move's $47K transaction cost is dollarized and salient; the build's is waved off. 2026 base rates: ~37-40% blow budget, ~58% report a regret, ~49% found it more stressful than expected. A gut-kitchen build (Plan H = no kitchen for weeks) realistically means rental/extended-stay ~$3-6K/mo = ~$15-40K of hidden cost in no per-sf scenario. Option B is turnkey, zero disruption.",
+        "loadBearing": "MEDIUM-HIGH for the A-vs-B choice — the single biggest UNPRICED factor, and it runs against the recommended option.",
+        "wouldFlipIf": "Pricing +20% contingency and a $15-40K temp-housing line into any core-touching A erases its thin edge — turnkey B wins on behavior and dollars.",
+        "howToDeRisk": "Ask the family's real tolerance for a gut-kitchen build; add a temp-housing line to A's all-in. If tolerance is low, only walls-off scopes are viable — which are either too small to solve the problem or push toward moving."
+      },
+      {
+        "assumption": "#4: ~4%/yr appreciation; rates stay mid-6s through ~2028; Hartford #1 hottest; Wait (C) is weakest.",
+        "status": "VERIFIED directionally (Freddie 6.48% wk 6/4/26; Fannie ~6.3%/MBA ~6.4-6.5%; Hartford #1) but the appreciation rate and the lock-in's rhetorical weight are contestable.",
+        "challenge": "Tension: can't hold 'Hartford #1 hottest, inventory 63% below normal' AND a 'tame 4%.' At 7-9% fading to 4%, appreciation compounds faster on a larger basis — argue to get B's $650-760K basis working now. Conversely Zillow's own Hartford forecast decelerates (~3.9%) and lock-in salience is decaying (sub-4% share 65%->52.5%). On rates the data backfires for STAY: MBA pencils HIKES by 2027, so betting on a future low-rate window to trade up (the case for C) is unsupported.",
+        "loadBearing": "MEDIUM-HIGH — props up both the lock-in's value AND the dismissal of Wait.",
+        "wouldFlipIf": "Re-run at 7-9% appreciation: B's larger basis likely leads (my run at 8% + a $760K move gives A only an 11.9% net edge, and that edge is entirely the questionable side-pot). High appreciation favors B.",
+        "howToDeRisk": "Track Simsbury active 4bd+ listings, DOM, sale-to-list quarterly (FRED ACTLISCOUCT + William Pitt). Re-run with an appreciation slider; if high-appreciation flips B ahead once the side-pot is symmetric, the 'stay to ride the hot market' framing is wrong."
+      },
+      {
+        "assumption": "#7: Moving delivers NO school upgrade (already in Latimer, the #1 zone).",
+        "status": "VERIFIED within Simsbury; PAROCHIAL as framed.",
+        "challenge": "True only across the five Simsbury elementaries — and even there the analysis concedes Tootin' Hills (9/10) ties Latimer, overstating the 'step-down' scare. It's converted into 'no upside anywhere': Farmington HS one town over outranks Simsbury HS, plus Avon/magnets/private. It also assumes 'Latimer non-negotiable' — an assumed, not elicited, preference; nearby 5bd homes list at $624-665K in other strong zones.",
+        "loadBearing": "MEDIUM — removes one of the two strongest external pulls toward moving.",
+        "wouldFlipIf": "Family is open beyond Simsbury, or would trade Latimer for Tootin' Hills (also 9/10) + 1,000 more sf — then B uniquely improves space AND possibly schools and should lead.",
+        "howToDeRisk": "Two questions: How much would you trade school rank for space? Are you open beyond Simsbury? Settles whether this is a constraint or an anchor."
+      },
+      {
+        "assumption": "#10: Family stays in Simsbury/CT long-term, justifying a 10-yr fixed-location model; #6 transaction costs amortize over the decade.",
+        "status": "UNVERIFIED — collides with a dated 2026 employer fact.",
+        "challenge": "On 2026-04-29 Fidelity announced ENDING hybrid work (5 days in-office Sept 2026 for Boston/Merrimack/Covington/Albuquerque + all VP+ managers) amid a reorg (~800 cuts, ~3,300 hires); advisor mobility hit a 4-yr high in 2025. This cuts SURPRISINGLY: it mostly STRENGTHENS stay/do-less, because a modest mostly-cash addition is far more reversible than a 7.5%-round-trip move into a $650K house you might have to dump. Admit a real 3-5 yr leave chance and transaction costs stop amortizing — B (two round-trips, ~15%+ stacked friction ≈ $90-100K) becomes the WORST, not a co-finalist. Mitigant: the likely work site is the West Hartford Investor Center (~15-20 min), NOT a named RTO hub, so the base case holds.",
+        "loadBearing": "MEDIUM-HIGH — props up the 10-yr frame and the 'B is a real co-finalist' claim; both break under a short hold.",
+        "wouldFlipIf": "Husband on a Branch-Leader/Regional/VP track (location-locked promotions) with material 3-5 yr exit probability — objective shifts to flexibility-adjusted, DEMOTING both a large addition AND a $650K move, and rehabilitating a never-priced fourth option: stay put, spend $0-30K cosmetically, bank cash, stay mobile.",
+        "howToDeRisk": "Confirm role/work-site/career intent and the family's honest 3-5 yr leave probability. Re-run the model at 3-yr and 5-yr holds, charging full round-trip costs in the exit year; add a 'leave in 3-5 years' sensitivity row to every option."
+      },
+      {
+        "assumption": "#6 tax mechanics: Current tax ~$9,954 at 35.0 mills; a purchase resets tax to ~70% of price x 35 mills.",
+        "status": "PARTLY WRONG — verified factual error.",
+        "challenge": "Simsbury's actual mill rate (2024 Grand List -> FY2026 bills) is 33.02 town + 1.14 fire = 34.16, NOT 35.0 (confirmed via the Simsbury Tax Collector). The 35.0 overstates current tax and the move's reset by ~2-6% — a small bias against moving. The bigger unmodeled risk is the 2027 town-wide revaluation (last 2022), which resets this home's assessment above $284,410; even revenue-neutral, above-average-appreciating #1-zone homes see above-average bill increases.",
+        "loadBearing": "LOW-MEDIUM — doesn't flip Stay vs Move (level shift, hits both), but material to the dollar figures quoted to a financial-advisor client.",
+        "wouldFlipIf": "Nothing flips on this alone; correcting it marginally helps B (smaller tax reset).",
+        "howToDeRisk": "Correct tax math to 34.16 (or 33.02 town-only as the model treats it); confirm the 2027 revaluation date with the Assessor and add a revaluation sensitivity. Add CT homeowners-insurance creep (~+25% over 3 yrs) to the carrying-cost stack."
+      },
+      {
+        "assumption": "#2: Current home value ~$575K. #9: Floor plan reconstructed from public records, not blueprints.",
+        "status": "ESTIMATED (value, bottom of range) / EXPLICITLY UNVERIFIED (floor plan).",
+        "challenge": "The site headlined $575K — the LOW end of its own $546-618K range (Movoto AVM $618K). ~$43K of phantom-missing equity changes the CLTV gate and the move's loan size. The 'cheap $50-110K scope' rests on a plan inferred from the assessor envelope + a 2019 MLS blurb — guessing the living room is 'unused,' the walkout is cleanly finishable (headroom, egress, moisture on a 1992 foundation), and walls aren't load-bearing (the report itself flags a $4-12K beam).",
+        "loadBearing": "MEDIUM — value feeds CLTV and sale proceeds; plan feasibility feeds whether 'cheap' is real.",
+        "wouldFlipIf": "At ~$615K the CLTV objection to a bigger A dissolves and a sale nets ~$40K more, tightening B vs A. If a measured plan shows the walkout isn't cleanly finishable or the formal room is needed for resale, the cheap scope evaporates and the choice narrows to an expensive addition vs moving — favoring B.",
+        "howToDeRisk": "Order an actual measured plan + contractor walkthrough (egress/headroom/load-bearing/moisture); run the model at $600K and $625K; reconcile value to CMA solds."
+      },
+      {
+        "assumption": "#3 income/DTI: Household income ~$230K and the analysis is a genuine optimization with sound affordability gates.",
+        "status": "ESTIMATED (income) / FALSE (optimization claim).",
+        "challenge": "Income is estimated (advisor ~$160K + 0.6-FTE SLP ~$60K); the spec's own range was lower ($170-220K). The model checks NO DTI and NO CLTV (neither exists in model.js), childcare for three kids under six is never modeled, the verdict is hardcoded, A wins 100% of scenarios I tested, and the correction log shows the conclusion was fixed first then walked back five times — including STRIKING a 'manufactured' headline that 'Option A wins by ~$90-110K.' A model needing five same-direction corrections was biased at construction.",
+        "loadBearing": "HIGH for credibility; MEDIUM for the verdict (income range wide enough both options stay affordable).",
+        "wouldFlipIf": "Adding childcare to DTI breaks the 28% ceiling on the re-priced ~8.25% second lien (the correction log already notes this for the larger scope), killing the financeability of any space-solving A and pushing toward B.",
+        "howToDeRisk": "Verify income and current childcare spend; add explicit DTI and CLTV gates to the model; present A and B symmetrically, not champion-vs-strawman."
+      }
+    ],
+    "doesRecommendationHold": "The STAY DIRECTION holds; the STAY-AND-IMPROVE PACKAGE (spend $50-110K to finish the walkout + reclaim the living room) does NOT hold as currently framed and should be downgraded.\n\nWHAT SURVIVES SCRUTINY: Staying put is defensible as a baseline, but for reasons the analysis underweights, not the ones it leads with. The strongest pro-stay argument is REVERSIBILITY under an uncertain location (Fidelity RTO/reorg + advisor churn), where a move's stacked transaction costs make B the worst option. The lock-in, IF the loan is the original unrefinanced purchase mortgage, is real and likely even cheaper than modeled (Dec 2020 averaged 2.66%). The Latimer zone is verified and decisive. Public water/sewer correctly removes the septic wildcard. Wait (C) is genuinely weak (consensus shows no rate relief; MBA even pencils hikes).\n\nWHAT DOES NOT SURVIVE: (1) The claim that the dollars favor staying — the model's own output is a 20% spread that clusters only via an A-favoring side-pot; honestly marked, A and B are within noise, and a true tie should be decided on preferences and disruption, which lean to B's turnkey space. (2) The specific recommended scope — it adds no bedrooms and no above-grade square footage and therefore does not solve the client's #1 stated priority; it is a basement playroom + a renamed room sold as a space solution. (3) The framing of the walkout as high-ROI — it isn't counted in appraised GLA and the model's own 55% recoup contradicts the 70% card.\n\nRESTATE AS: First verify the Note (gating). Then split on what the family actually needs and how long they will stay. (A) If the real need is a PLAYROOM, they are confident on a long hold, and a low rate is confirmed — do the small, mostly-cash, reversible walkout finish (~$30-60K) and sell it honestly as a LIFESTYLE purchase with a recoup haircut, NOT a value-first investment. (B) If the real need is BEDROOMS / a real primary suite / a forever layout — the math, the financing (CLTV/HomeStyle reset), the disruption, AND the site's own value ceiling all point to BUYING the larger in-zone home (B), not building it; the space-solving addition over-improves the street and inverts to the worst option in the model.\n\nIT FLIPS TO MOVE (B) IF ANY OF: the verified rate is at/above ~4.25% or the balance was cash-out-enlarged; a CMA shows renovated in-zone solds clearing $730K+; fixed-price bids on a space-solving scope come back at $175-320K+ and the lender confirms a HomeStyle rate reset; the family's elicited need is bedrooms not a playroom; or their 3-5 yr leave probability is low AND they weight turnkey space over the rate.\n\nBOTTOM LINE FOR THE ADVISOR: Do not present 'STAY & improve, ~$50-110K' as the answer on current evidence. Present it as 'STAY is the likely baseline, gated on (1) the Note, (2) two fixed-price bids + a lender CLTV/HomeStyle quote, (3) a SOLD-comp CMA, and (4) a direct elicitation of whether the need is a playroom or bedrooms.' Until those four cheap checks are done, the recommendation rests on one unverified boolean and a goal the analysis redefined to fit its answer.</doesRecommendationHold>\n<intro>Honest stress-test of our own \"STAY & improve\" recommendation for 2 Clover Lane, built by reading the actual analysis code (model.js, app.js, data.js), re-running the financial engine under adversarial inputs, reading the original client spec, and verifying load-bearing market facts against real 2026 sources. Headline: the recommendation is largely an artifact of two design choices, not the dollars. (1) The verdict is a hardcoded boolean — app.js:347 sets lockedIn = currentRate < 4.25 and prints \"Stay & Add\" when true, \"Move Now\" otherwise; the spread is explicitly \"context, never the verdict\" (app.js:345). (2) The number it switches on — a sub-4% rate — is UNVERIFIED, inferred from a 12/2020 purchase date. I confirmed every quantitative panel claim by running the engine: at defaults the options do NOT cluster (A=$823K / B=$658K / C=$691K, a 20.0% spread); the model ranks A first at EVERY rate from 3.25% to 7.5% (so model and the 4.25% UI switch disagree); the side-pot hands A +$103K while B gets $0 (equity-only the spread collapses to 9.0%); default additionRecoup is 55%, contradicting the \"~70%\" card; and a ~$250K space-solving Plan-H scope makes A the WORST option (A=$811K vs C=$896K, B=$864K). External facts verified: Dec 2020 30-yr averaged 2.66% (Freddie Mac record low), so IF unrefinanced the rate is conservative, which strengthens stay; and Simsbury's actual mill rate is 34.16 (33.02 town + 1.14 fire), not 35.0.</intro>\n<biggestVulnerabilities>[\"The verdict is a hardcoded boolean, not a result. app.js:347 flips on currentRate<4.25 and app.js:345 states the spread is 'never the verdict' — the recommendation is a policy switch, and its single input (the sub-4% rate) is UNVERIFIED, inferred from a purchase date. Pull the Note before anything else.\",\"The 'they cluster financially' claim is false at defaults. The model returns A=$823K / B=$658K / C=$691K, a 20.0% spread. It clusters only equity-only (9.0%); the side-pot meant to help B/C hands A +$103K (B gets $0). The 'tie' that licenses defaulting to status quo is an artifact.\",\"The recommended scope does not solve the stated problem. Client priority #1 is 'more bedrooms/space'; the $50-110K scope adds ZERO above-grade sf and ZERO bedrooms (below-grade walkout not in appraised GLA + a renamed living room). 'They already have a family room' (repeated 4+ times) is the analyst overriding the family's revealed preference.\",\"The financing vise is real and self-defeating. A second lien big enough to solve the space need (~$175-320K) breaks the 80-85% CLTV cap (~95% at $305K) and forces a HomeStyle FIRST mortgage that RE-PRICES the sub-4% balance — destroying the asset the thesis protects. Financeable scope is too small; big-enough scope kills the rate.\",\"When A is scoped to actually work, the model itself makes A the WORST option: a ~$250K Plan-H yields A=$811K vs C=$896K and B=$864K. The site's own $650-700K ceiling FORBIDS the only version of A that solves the problem — the strongest internal argument for buying the larger in-zone home (B).\",\"Costs are charged asymmetrically. The move's $47K transaction cost and tax reset are dollarized; the build's overrun risk (37-40% blow budget) and ~$15-40K temp-housing for a gut build with three kids under six are unpriced. Price them and A's thin edge over B vanishes.\",\"A verified factual error and a low-balled anchor undermine precision: the mill rate is 34.16, not 35.0, and the value is headlined at the BOTTOM ($575K) of its own $546-618K range — both feed the CLTV gate and the figures shown to a financial-advisor client.\",\"The 10-year fixed-location frame is undefended against a dated, live employer shock (Fidelity ending hybrid work Sept 2026 + reorg). Under a realistic 3-5 yr leave probability, transaction costs stop amortizing and B becomes the WORST option — strengthening 'stay/do-less' but exposing a never-priced fourth option: spend minimal, bank cash, stay mobile.\"]"
+  },
+  "models": {
+    "intro": "Six rigorous financial lenses applied to 2 Clover Lane (Simsbury, CT), comparing STAY-and-improve vs BUY/move vs SELL (with sell-and-rent and keep-as-rental sub-cases). All market anchors are verified to real June 2026 sources: Freddie Mac 30-yr at 6.48% (June 4, 2026), Hartford = Zillow's #1 hottest 2026 market (+4.6% realized / +3.9% forecast appreciation). The single load-bearing input across most models is the UNVERIFIED ~3.25% / ~$239K first mortgage (Assumption #1) — confirm it from the loan statement before relying on any conclusion. Every model is most sensitive to that one figure.",
+    "models": [
+      {
+        "name": "1. Mortgage-as-an-Asset (negative-bond / rate-subsidy PV)",
+        "lens": "A below-market fixed-rate mortgage is an asset to the borrower — a short position in a bond that has moved in their favor. Selling forfeits it; refinancing or porting cannot recreate it.",
+        "howItWorks": "Two equivalent methods. (1) Mark-to-market: value the loan as the PV of its contractual P&I discounted at today's market rate; the borrower's gain = par balance − PV-of-liability. (2) Subsidy stream: PV of [Balance × (r_market − r_note)] over the remaining term. PMT = B·(i/12)/(1−(1+i/12)^−n); PV = PMT·(1−(1+d/12)^−n)/(d/12).",
+        "theNumbers": "$239K at 3.25%, ~288 months remaining; note P&I = $1,196/mo. At today's 6.48% (Freddie Mac, 6/4/26) the same balance/term costs $1,638/mo — a $442/mo ($5,300/yr) cash gap. PV of the rate subsidy: ~$64,400 at 6.48%, ~$61,600 at 6.30% (Fannie YE-2026). First-year interest subsidy ~$7,720/yr (6.48% vs 3.25%).",
+        "whatItSays": "Keeping the loan is worth roughly $60–65K as an off-balance-sheet asset. A move extinguishes it — so book ~$64K as an explicit cost of BUY (or a credit to STAY). The asset decays as the balance amortizes and (if rates fall) as the spread compresses, which is precisely why WAIT is the weakest option.",
+        "favors": "STAY (and KEEP-as-rental, which preserves positive leverage)",
+        "caveat": "Entirely dependent on the unverified 3.25%/$239K. At 3.5% the asset is ~$59K; at 3.0% ~$70K. Use the pre-tax discount rate as the realistic case — with only ~$8K/yr interest the household is near the standard-deduction boundary and likely gets no incremental itemized benefit."
+      },
+      {
+        "name": "2. Opportunity Cost / Invest-the-Difference (terminal net worth)",
+        "lens": "Every dollar of equity locked in the house — and every incremental dollar in a renovation or a bigger home — is a dollar not compounding in the market. Compare total household net worth at horizon T, investing the period-by-period cash-flow difference at the opportunity return.",
+        "howItWorks": "Parallel balance sheets at T = 5 and 10 yrs. Home equity E_T = V₀(1+g)^T − B_T − s·V_T. Side-pocket S_T = Σ[(CF_optionX,t − CF_baseline,t)·(1+k)^(T−t)]. Terminal NW = E_T + S_T − one-time frictions. Equity drag = Equity·(k − g).",
+        "theNumbers": "g = 4%/yr (Hartford realized +4.6%, Zillow forecast +3.9%); k = 7% base, 5.3% conservative (Schwab/Vanguard 2026 forecasts). STAY home equity at yr 10 ≈ $690K ($851K appreciated value − $161K amortized balance). The k−g spread is ~3% at k=7%, but it applies to the base home under ALL options, so it nets out. What does NOT net out: a move-up locks ~$75–150K of additional dead equity into a $650K house, plus the renovation outlay.",
+        "whatItSays": "Because 2026 conservative equity forecasts (~5.3–6%) are unusually close to Hartford appreciation (~4%), the textbook 'invest-instead' penalty for holding CT real estate is smaller than the historical norm — strengthening the case to leave equity in the home rather than chase the spread.",
+        "favors": "STAY (slightly); options cluster tighter at the conservative k=5.3%",
+        "caveat": "Highly sensitive to the k-vs-g spread. Use ONE discount rate consistently across all models (7% base, 5.3% conservative); mixing rates invalidates cross-option comparison. Income (~$230K) is an estimate."
+      },
+      {
+        "name": "3. Sell & Rent (free the equity, rent a comparable, invest the rest)",
+        "lens": "Does liquidating ~$300K of equity, renting an equivalent 4BR, and investing the proceeds beat continued ownership? The classic rent-vs-own test, applied to THIS household's actual cost structure.",
+        "howItWorks": "Net equity freed = sale − selling costs − mortgage payoff. Compare 10-yr terminal wealth: invested portfolio (grown at k, drained each year by any cash-cost disadvantage of renting) vs STAY home equity. Cross-check against the 5% rule breakeven rent and CT price-to-rent.",
+        "theNumbers": "Sale $575K − 5.5% costs ($31,625) − $239K payoff = ~$304K freed. Comparable 06089 4BR rents $3,200–$3,700/mo; base $3,500 = $42K/yr. Critical finding: owning this home costs only ~$32K/yr all-in (P&I $14,352 + tax $9,954 + ins $2,000 + 1% maint $5,750) — so renting actually costs ~$9,944/yr MORE in cash because the sub-4% mortgage makes ownership unusually cheap. 10-yr net worth: SELL&RENT ≈ $342K (k=5.3%) to $418K (k=7%) vs STAY equity ≈ $690K.",
+        "whatItSays": "Sell-and-rent loses badly here — it inverts the national 'renting is cheaper' narrative (Axios/Bankrate: owners pay ~37% more nationally; Hartford ~$678/mo gap) because that comparison assumes a market-rate mortgage. With a 3.25% loan, ownership is the cheap option AND captures ~4%/yr appreciation in a low-inventory #1-hottest market. The $300K portfolio cannot out-compound the forfeited cheap housing plus appreciation.",
+        "favors": "STAY decisively; SELL&RENT is the weakest of all paths for this family",
+        "caveat": "If the mortgage assumption is wrong (e.g., a market-rate loan or much higher balance), renting's cash disadvantage shrinks or reverses and this flips toward rent-favorable. Rent estimate ($3,500) is triangulated from comps + HUD FMR ($2,425 4BR floor) — get a local PM's BPO. Ignores the lifestyle cost of giving up a stable family home with twins/5-yr-old."
+      },
+      {
+        "name": "4. Keep & Rent It Out (move up, become a landlord on 2 Clover Lane)",
+        "lens": "Move to the larger home but retain 2 Clover Lane as a rental — does the cheap mortgage plus appreciation make it an attractive hold, or is it a mediocre arm's-length rental dressed up by a personal cost basis?",
+        "howItWorks": "NOI = gross rent − tax − insurance − management − vacancy/maintenance reserve. Cap rate = NOI / market value. Cash flow = NOI − debt service. Compare to Hartford investor benchmarks (1% rule; 7–9% multifamily cap).",
+        "theNumbers": "Gross rent $42K/yr. NOI after $9,954 tax, $2,000 ins, 8% mgmt ($3,360), 10% vac/maint ($4,200) ≈ $22,486. Cap rate on $575K market value = 3.9% — well BELOW Hartford's 7–9% benchmark; rent-to-price 0.61% fails the 1% rule (GRM 13.7x vs 7–8x). BUT gross yield on the $339K basis ≈ 12.4%. Cash flow after $14,352 debt service: ~$8,100/yr (pro-managed) to ~$11,500/yr (self-managed). Positive leverage: borrowing at 3.25% against a 3.9% net / ~7.3% gross asset.",
+        "whatItSays": "As a fresh arm's-length investment it's mediocre — sub-benchmark cap rate, fails the 1% rule. It is rescued ONLY by (a) the low basis, (b) the sub-4% mortgage (positive leverage vs 6.5% today), and (c) ~4% appreciation. The return is appreciation- and paydown-driven, not yield-driven. It can make sense as a 'keep the cheap mortgage working' play IF the family can still afford the $650K purchase's down payment and PITI without the trapped equity.",
+        "favors": "A conditional middle path — better than SELL&RENT, but requires capital to buy the new home without the $300K equity; only attractive because of the legacy mortgage",
+        "caveat": "CT 2026 landlord-regulation risk: Gov. Lamont's proposed 5% rent cap (for property bought within the prior year) + expanding fair-rent commissions (CT Mirror, Apr 2026). Converting to rental starts the Sec. 121 clock — lose the $500K exclusion if rented >3 of the next 5 yrs. Depreciation recapture on eventual sale. Net-cap inputs (ins, vacancy, mgmt) are estimates."
+      },
+      {
+        "name": "5. Tax Lens (Sec. 121 exclusion, SALT cap, interest deductibility, conveyance + property-tax reset)",
+        "lens": "Quantify the tax frictions and shields that each path triggers under 2026 law (post-OBBBA), MFJ, ~$230K income.",
+        "howItWorks": "Map the sale and the financing choices onto: IRC §121 gain exclusion; the OBBBA SALT cap and its phasedown; §163(h) acquisition-vs-home-equity interest rules; CT conveyance tax tiers; and the assessment reset formula (70% × price × mill rate).",
+        "theNumbers": "§121: gain ≈ $575K − $339K = $236K, minus selling costs and improvements → well under the $500K MFJ exclusion. Projected federal cap-gains tax on a sale = $0; cushion lasts ~15+ yrs at 4% growth. SALT: full ~$40,400 cap in 2026 ($230K income is far below the $505K phasedown), but property tax + CT income tax already exceed it, so a higher trade-up tax bill is largely NON-deductible at the margin — and the cap reverts to $10K in 2030. Mortgage interest: existing $239K and a $50–110K HELOC for the walkout finish are BOTH fully deductible (substantial-improvement test; combined debt ~$290–350K << $750K cap) — but a small balance + ~$32,200 standard deduction means modest marginal benefit. CT conveyance tax on a $575K sale = 1.0% = $5,750 (Simsbury is not a targeted-investment community). Property-tax reset on $650K purchase: 70% × $650K × 35 mills = $15,925/yr vs $9,954 = +$5,971/yr, mostly non-deductible.",
+        "whatItSays": "Cap-gains tax is a NON-issue — do NOT let it deter a move. The real tax frictions of moving are the ~$5,750 CT conveyance tax and the ~$6K/yr property-tax reset that the SALT cap renders largely non-deductible. Financing the stay-and-improve via HELOC/cash-out is tax-efficient and preserves the first mortgage.",
+        "favors": "STAY (lower property tax, deductible improvement financing); the §121 result removes tax as a barrier to moving but is neutral, not a pro-move factor",
+        "caveat": "Whether they itemize at all is marginal given the small loan; don't over-credit the interest deduction in the model. Renting 2 Clover Lane (Model 4) jeopardizes the §121 exclusion. The 2030 SALT cliff makes a permanently higher trade-up tax bill progressively less deductible."
+      },
+      {
+        "name": "6. IRR / Breakeven (renovation payback vs the transaction cost of moving)",
+        "lens": "Treat each option as a capital project. The decisive output is the asymmetry between the renovation outlay and the total hurdle a move must clear before it breaks even.",
+        "howItWorks": "NPV = −C₀ + Σ CF_t/(1+d)^t; IRR sets NPV = 0; payback = years to recover outlay. Renovation recoup ratio = resale value added / cost. Move hurdle = sell% ·V_sell + buy% ·V_buy + PV(property-tax reset) + forfeited mortgage subsidy. Also the 5% rule: unrecoverable cost ≈ 5% × value (Felix/PWL).",
+        "theNumbers": "Renovation $50–110K to finish ~384 sf walkout + reclaim the formal living room; at ~50–70% resale recoup the value added is ~$25–77K, so net use-cost is ~$15–55K (and stays under the ~$700K comp ceiling). Move hurdle: round-trip friction $44,625 (5.5% sell on $575K = $31,625 + 2% buy on $650K = $13,000) + forfeited mortgage subsidy ~$64K + PV of tax reset ~$47,426 (12 yrs @7%) = ~$156K. 5% rule: current home ~$28,750/yr unrecoverable ($2,396/mo breakeven rent) vs move-up ~$32,500/yr ($2,708/mo) — but the family's true cost of debt (3.25%) is far below the rule's embedded ~3% cost-of-capital term, so their actual unrecoverable cost is BELOW 5%.",
+        "whatItSays": "The move must out-deliver ~$156K of friction + forfeited subsidy + tax reset in extra value/utility before it breaks even — and Assumption #7 means there is NO school upgrade, so the move's only payoff is incremental space. The renovation's hurdle (~$50–110K, much of it recovered) is a fraction of the move's. With no schooling premium, the move's breakeven horizon runs many years.",
+        "favors": "STAY-and-improve — the renovation clears its hurdle far more easily than the move clears its ~$156K hurdle",
+        "caveat": "Renovation is roughly value-neutral-to-slightly-negative on RESALE; its return is mostly USE value for a long-hold family — legitimate, but don't overstate resale recovery. Cap spend at the ~$700K comp ceiling; dollars that push value past it are unrecoverable regardless of use. Report IRR/NPV at both 7% and 5.3% to bracket."
+      }
+    ],
+    "bottomLine": "All six lenses converge on STAY-and-improve, and they cluster on raw net worth precisely because the decisive items are the frictions a move incurs and the cheap-mortgage asset it forfeits. The mortgage-as-asset lens books ~$64K of value in keeping the 3.25% loan; the IRR/breakeven lens shows a move must clear a ~$156K hurdle (transaction friction + forfeited subsidy + PV of the ~$6K/yr tax reset) with NO offsetting school upgrade; the opportunity-cost lens shows the invest-instead penalty for holding CT real estate is unusually small in 2026 because Hartford's ~4% appreciation nearly matches conservative ~5.3% equity forecasts; the tax lens removes cap-gains as a barrier (Sec. 121 fully shelters the gain) but identifies the conveyance tax and the largely non-deductible property-tax reset as the real costs of moving; sell-and-rent loses outright (renting costs ~$10K/yr MORE than owning here, and 10-yr wealth is ~$690K staying vs ~$342–418K selling-and-renting); and keep-as-rental is a conditional middle path that only works because of the legacy mortgage and basis, not yield. The financial case for STAY is robust — but its entire foundation is the single UNVERIFIED input: the ~3.25% / ~$239K first mortgage. Confirm it from the loan statement first. If that rate is materially higher or the balance much larger, the mortgage-as-asset value collapses, the move hurdle shrinks, and sell-and-rent stops losing — so verify the linchpin before acting, and run every model at both the 7% and 5.3% discount rates to show the family how tightly (or not) the options cluster.",
+    "inputs": {
+      "verified_market_anchors_june_2026": {
+        "freddie_mac_30yr": "6.48% (6/4/2026)",
+        "fannie_mae_forecast": "6.3% YE2026",
+        "mba_forecast": "6.4-6.5% rest of 2026",
+        "hartford_ranking": "Zillow #1 hottest 2026 market",
+        "hartford_appreciation": "+4.6% realized / +3.9% Zillow forecast",
+        "inventory": "~63% below pre-pandemic; homes sell ~6 days; 66% sold above list"
+      },
+      "household": {
+        "family": "5 (parents + twin 3yo + 5yo)",
+        "income_est": "~$230K (Fidelity advisor ~$160K + SLP 0.6 FTE ~$60K)",
+        "filing": "MFJ"
+      },
+      "property": {
+        "address": "2 Clover Lane, Weatogue (Simsbury) CT 06089",
+        "specs": "1992 colonial, 1,976 sf, 4bd/2.5ba, 1.59-acre R-40",
+        "value_est": "$575K (range $546-618K)",
+        "basis": "$339K (12/2020)",
+        "tax": "$9,954/yr at 35.0 mills",
+        "school": "Latimer Lane (town #1) zone — already in it"
+      },
+      "load_bearing_unverified": {
+        "mortgage": "~3.25% / ~$239K first lien (Assumption #1 — confirm from loan statement; drives Models 1,2,3,4,6)"
+      },
+      "key_model_inputs": {
+        "opportunity_return_k": "7% base / 5.3% conservative",
+        "appreciation_g": "4%/yr",
+        "achievable_rent": "$3,300-3,700/mo, $3,500 base (ESTIMATE — get local PM BPO)",
+        "sell_cost": "5.5%",
+        "buy_cost": "2%",
+        "reno_spend": "$50-110K",
+        "comp_ceiling": "$650-700K",
+        "moveup_target": "$650K (e.g., 5 Lawton Dr, 4bd/3,157sf)"
+      }
+    },
+    "sources": [
+      {
+        "title": "Freddie Mac PMMS — Mortgage Rates Decrease to 6.48% (June 4, 2026)",
+        "url": "https://www.freddiemac.com/pmms",
+        "note": "Verified current 30-yr fixed = 6.48% (6/4/26), down from 6.53%, vs 6.85% a year ago — the market discount rate for the mortgage-as-asset PV."
+      },
+      {
+        "title": "Zillow Research / Fox Business — Hartford tops Zillow's hottest housing markets 2026",
+        "url": "https://www.foxbusiness.com/lifestyle/capital-city-now-hottest-housing-market-us-2026",
+        "note": "Hartford #1 for 2026; +4.6% realized appreciation, +3.9% forecast; 66% of homes sold above list — grounds g=4% and the low-inventory re-entry risk."
+      },
+      {
+        "title": "Fannie Mae May 2026 forecast — 6.3% 30-yr through 2026/2027 (Inman)",
+        "url": "https://www.inman.com/2026/05/19/mortgage-rate-forecast/",
+        "note": "Anchors the 6.3% lower-bound discount rate and the 'mid-6s through 2028' assumption."
+      },
+      {
+        "title": "Bankrate — 30-year mortgage rates; MBA 6.4-6.5% rest of 2026",
+        "url": "https://www.bankrate.com/mortgages/30-year-mortgage-rates/",
+        "note": "Upper-bound (6.5%) for the mortgage-as-asset sensitivity."
+      },
+      {
+        "title": "26 U.S. Code § 121 — Exclusion of gain on sale of principal residence (Cornell LII)",
+        "url": "https://www.law.cornell.edu/uscode/text/26/121",
+        "note": "$500K MFJ exclusion, 2-of-5-year ownership/use tests — fully shelters the ~$236K gain; tax lens."
+      },
+      {
+        "title": "Bipartisan Policy Center — SALT Deduction Changes in the OBBBA",
+        "url": "https://bipartisanpolicy.org/explainer/salt-deduction-changes-in-the-one-big-beautiful-bill-act/",
+        "note": "SALT cap ~$40,400 in 2026, phasedown above $505K MAGI, reverts to $10K in 2030 — property-tax reset deductibility."
+      },
+      {
+        "title": "IRS Publication 936 — Home Mortgage Interest Deduction",
+        "url": "https://www.irs.gov/publications/p936",
+        "note": "$750K acquisition-debt cap; home-equity interest deductible only for substantial improvement — supports the deductible HELOC for the walkout finish."
+      },
+      {
+        "title": "CT OLR Report 2020-R-0020 — Real Estate Conveyance Tax tiers & targeted-investment-community list",
+        "url": "https://www.cga.ct.gov/2020/rpt/pdf/2020-R-0020.pdf",
+        "note": "0.75% state + 0.25% municipal = 1.0% on a sub-$800K sale; Simsbury not a targeted community → $5,750 on $575K."
+      },
+      {
+        "title": "PWL Capital (Ben Felix) — Rent or Own: the 5% Rule",
+        "url": "https://pwlcapital.com/rent-or-own-your-home-5-rule/",
+        "note": "Method for Model 6's 5% unrecoverable-cost / breakeven-rent test; the 3.25% note puts this family below the generic 5%."
+      },
+      {
+        "title": "Schwab 2026 Long-Term Capital Market Expectations (Vanguard/Morningstar corroboration)",
+        "url": "https://www.schwab.com/learn/story/schwabs-long-term-capital-market-expectations",
+        "note": "Justifies opportunity return k = 7% historical anchor vs ~5.3-6% conservative 2026 equity forecasts."
+      },
+      {
+        "title": "HUD USER — FY2026 Fair Market Rents, Hartford County",
+        "url": "https://www.huduser.gov/portal/datasets/fmr.html",
+        "note": "4BR Hartford County FMR $2,425/mo — the floor for the subject's rent estimate in Models 3 & 4."
+      },
+      {
+        "title": "Connecticut Real Estate — Multifamily Investing CT 2026: Cap Rates",
+        "url": "https://connecticutrealestate.online/multifamily-investing-connecticut-2026-cap-rates-opportunities/",
+        "note": "Hartford 1% rule 1.0-1.15%; cap rates 7.0-9.2% — benchmark the subject's 3.9% net cap (Model 4) against."
+      },
+      {
+        "title": "NBC Connecticut — Renting can be cheaper than buying short-term (Bankrate)",
+        "url": "https://www.nbcconnecticut.com/news/local/study-finds-renting-can-be-cheaper-than-buying-in-short-term/3564768/",
+        "note": "Greater Hartford avg rent ~$1,880 vs mortgage ~$2,558 (~$678/mo gap) — the national narrative that the cheap mortgage inverts for this household."
+      },
+      {
+        "title": "CT Mirror — Lamont rent-cap proposal (Apr 2026)",
+        "url": "https://ctmirror.org/2026/04/06/rent-cap-ct-ned-lamont/",
+        "note": "Proposed 5% rent cap + expanded fair-rent commissions — regulatory risk for the keep-as-rental model."
+      }
+    ]
+  }
+}
