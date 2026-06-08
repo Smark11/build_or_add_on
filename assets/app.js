@@ -117,7 +117,7 @@
     $("#additionRec").innerHTML = `
       <div>
         <div class="k">★ Recommended scope for this house</div>
-        <div class="t">Finish the basement, then add a <em>rear great room</em> — living space, no new bedroom.</div>
+        <div class="t">${rec.name}</div>
         <p>${rec.get} ${rec.note}</p>
       </div>
       <div class="price"><div class="n">${moneyK(rec.lo)}–${moneyK(rec.hi)}</div><div class="s">all-in · ${rec.time}</div></div>`;
@@ -256,10 +256,25 @@
   function renderMethodology() {
     const a = $("#assumptions");
     DATA.assumptions.forEach(x => a.appendChild(el("li", null, `<span class="k">${x.k}</span><span class="v">${x.v}</span>`)));
-    const s = $("#sources");
-    DATA.sources.forEach(src => {
-      if (src.cat) s.appendChild(el("div", "src-cat", src.cat));
-      else { const link = el("a"); link.href = src.u; link.target = "_blank"; link.rel = "noopener"; link.textContent = src.t; s.appendChild(link); }
+    // full references + footnote-key map
+    const wrap = $("#references");
+    window.__refmap = {};
+    if (wrap && DATA.references) {
+      let n = 0;
+      DATA.references.forEach(r => {
+        n++;
+        if (r.key) window.__refmap[r.key] = n;
+        const it = el("div", "ref-item"); it.id = "ref-" + n;
+        it.innerHTML = `<span class="ref-n">${n}.</span><span class="ref-body"><a href="${r.u}" target="_blank" rel="noopener">${r.t}</a><span class="ref-tag">${r.cat}</span></span>`;
+        wrap.appendChild(it);
+      });
+      const rc = $("#refCount"); if (rc) rc.textContent = n + " sources";
+    }
+    // resolve footnote citations into superscript links
+    document.querySelectorAll("[data-cite]").forEach(c => {
+      const nums = c.getAttribute("data-cite").split(",").map(k => window.__refmap[k.trim()]).filter(Boolean);
+      if (!nums.length) { c.style.display = "none"; return; }
+      c.innerHTML = nums.map(nn => `<a href="#ref-${nn}">${nn}</a>`).join(",");
     });
   }
 

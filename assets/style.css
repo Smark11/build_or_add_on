@@ -554,3 +554,22 @@ input[type=range]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px var(--
   .nav__links a{ white-space:nowrap; }
 }
 @media (max-width: 540px){ .nav__cta{ display:none; } .nav__brand{ white-space:nowrap; } }
+
+
+/* ============================ FOOTNOTES & REFERENCES ============================ */
+.cite{ font-family:var(--mono); font-size:.62em; vertical-align:super; line-height:0; white-space:nowrap; }
+.cite a{ color:var(--pine); text-decoration:none; padding:0 1px; font-weight:600; }
+.cite a:hover{ text-decoration:underline; }
+.band-ink .cite a, .reveal-card .cite a, .rec .cite a{ color:#F2D9A8; }
+.howbuilt{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:11px; }
+.howbuilt li{ font-size:.9rem; color:var(--ink-soft); line-height:1.45; padding-left:18px; position:relative; }
+.howbuilt li::before{ content:"▸"; color:var(--amber-text); position:absolute; left:0; }
+.references{ columns: 2; column-gap:36px; margin-top:6px; }
+@media(max-width:760px){ .references{ columns:1; } }
+.ref-item{ break-inside:avoid; display:flex; gap:8px; padding:8px 0; border-bottom:1px solid var(--line-soft); scroll-margin-top:80px; }
+.ref-item .ref-n{ font-family:var(--mono); font-size:.72rem; color:var(--muted); flex:none; min-width:26px; text-align:right; padding-top:1px; }
+.ref-body{ display:block; font-size:.82rem; line-height:1.4; }
+.ref-body a{ color:var(--pine); text-decoration:none; }
+.ref-body a:hover{ text-decoration:underline; }
+.ref-tag{ display:block; font-family:var(--mono); font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:3px; }
+.ref-item:target{ background:var(--amber-wash); border-radius:8px; box-shadow:0 0 0 2px var(--amber); padding-inline:8px; }
