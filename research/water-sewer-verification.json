@@ -1,0 +1,59 @@
+{
+  "verdict": "PUBLIC water and PUBLIC sewer. 2 Clover Lane, Weatogue (Simsbury), CT 06089 is served by public water (Aquarion Water Company of CT, Simsbury system) and public sanitary sewer (Simsbury WPCA / regional MDC system). The prior analysis's assumption of a private well + septic — inferred only from the 1.59-acre R-40 lot size — is INCORRECT and should be discarded.",
+  "confidence": "HIGH for water (very high). HIGH for sewer that a public main runs along the frontage and the street is fully sewered; MODERATE-to-HIGH that #2 is physically connected (GIS proves an active main at the curb and active laterals tagged to neighbors 1/3/5/6 Clover Ln, but GIS does not record the individual #2 connection itself). One residual conflict: Redfin's county/public-records facts block lists \"Sewer Type: Septic\" for the subject — assessed as stale/defaulted data, contradicted by the authoritative town GIS and by every same-street neighbor's MLS listing.",
+  "reasoning": "Three independent layers of evidence point to public/public, and I re-verified the two strongest myself against the live Town of Simsbury ArcGIS REST services.\n\n1) PARCEL IDENTITY (independently re-confirmed). Town GIS Parcels layer for UNIQUE_ID 32090751 returned exactly one feature: LOCATION \"2 CLOVER LANE\", MBL \"F15 120 003\", ZONING R-40, ACRES 1.59, YR_BLT 1992, owner \"[owner] [owner] & LAURA\", centroid LAT 41.84418 / LON -72.82232 (X 980295, Y 868330, EPSG:2234). Exact match to the target.\n\n2) PUBLIC SEWER (independently re-confirmed). Town GIS \"Sanitary\" pipe layer (Active/MapServer/21) queried for LOCATION LIKE '%CLOVER%' returned 8 sewer mains, ALL Enabled=1 (active): segments tagged \"1 CLOVER LANE\", \"3 CLOVER LANE\", \"5 CLOVER LANE\", \"6 CLOVER LANE\" (x2), and three \"CLOVER LN\" segments. The subject #2 sits directly between #1 and #3/#5, so an active public sewer main runs across its frontage and the entire street is sewered. The connecting manholes (7-244/245/246, type \"MDC\", STATUS Active, PVC, GPS-surveyed 2009) tie Clover Lane into the regional MDC sewer system that Simsbury's WPCA collects to. This is the authoritative municipal source and it directly contradicts the lone \"Septic\" data point.\n\n3) PUBLIC WATER (independently re-confirmed). Town GIS \"Fire Hydrants\" layer (Active/MapServer/69) returned 2 hydrants on Clover Ln (IDs 0524, 0525), BOTH OWNER \"AQUARION\". Hydrants are fed by public water mains, so an Aquarion public water main runs along Clover Lane. The companion \"Avon Water Mains\" layer returned zero features here, ruling out Avon Water and confirming Aquarion (Simsbury system, PWS CT1280021) territory. No source anywhere indicates a private well.\n\n4) CORROBORATION. Every same-street neighbor's current MLS listing (1, 8, 10, 14 Clover Ln per Redfin \"Utility Information\") states \"Public Water Connected\" plus \"Public Sewer Connected\"; 8 Clover Ln's remarks explicitly advertise \"public water/sewer,\" and 1 Clover Ln lists a \"Sewer Usage Fee Annual: $375\" (a hallmark of a metered public-sewer account, not septic). The Simsbury assessor card itself records NO water/sewer/well/septic field at all (only Heating: Hot Water, Fuel: Oil), so it neither supports nor refutes — meaning the prior well+septic claim never had an assessor basis.\n\n5) THE LONE DISSENT, EXPLAINED. The only \"Septic\" reference is \"Sewer Type: Septic\" on Redfin's subject page, and it sits inside Redfin's county/public-records facts block (next to Land Sq Ft 69,260 / Municipality SIMSBURY / Zoning R-40), not in the 2019 MLS listing fields. Aggregator public-records blocks frequently carry a stale or defaulted \"Septic\" value. Weighed against the live municipal GIS sewer network and four neighbor MLS listings, this single stale field does not survive.",
+  "implication": "This materially changes an addition analysis. Because 2 Clover Lane is on PUBLIC SEWER (not septic), the Connecticut septic-capacity / B100a review (the engineering check of whether an existing septic system's design flow can support added bedrooms) DOES NOT APPLY, and the associated $25,000-$60,000 wildcard cost for septic upgrades/expansion to enable bedroom-adding options DISAPPEARS. Adding bedrooms is not gated by septic design flow; the relevant gates instead become local zoning (R-40 setbacks, lot coverage, FAR) and building permits, plus a modest WPCA sewer-connection/usage consideration (neighbors show a sewer usage fee on the order of ~$375/yr, and any added flow is handled by the municipal system, not an on-site field). Likewise, public water (Aquarion) removes any private-well yield/quality concerns from the analysis. Net effect: the addition pro forma should drop the septic B100a contingency line and the $25-60K septic wildcard entirely, and should not carry well-related risk. CAVEAT: if a definitive sewer-connection confirmation (below) ever came back as \"not connected / on septic,\" the B100a review and septic wildcard would snap back into scope — but the current weight of evidence makes that outcome unlikely.",
+  "howToConfirm": "Single best definitive confirmation: call the Simsbury Water Pollution Control Authority (WPCA) facility at (860) 658-1380 and ask whether 2 Clover Lane (MBL F15 120 003) is connected to public sanitary sewer and has an active sewer-usage account. The WPCA is the authority of record for actual parcel connection (GIS proves the main at the curb but not the individual lateral hookup). Equally definitive and even faster from the buyer side: obtain the current owner's most recent water bill (an Aquarion bill confirms public water) and sewer-usage/WPCA bill (an annual sewer usage fee confirms a live public-sewer connection) — the absence of any septic-pumping records and presence of a sewer-usage charge is conclusive. Secondary confirmation: have a Realtor with MLS access pull the full archived MLS #170206327 agent sheet for the subject's own water/sewer fields.",
+  "sources": [
+    {
+      "title": "Town of Simsbury GIS (Parcels layer) — UNIQUE_ID 32090751 = 2 CLOVER LANE, F15 120 003, R-40, 1.59 ac, built 1992 (re-queried live)",
+      "url": "https://server1.mapxpress.net/arcgis/rest/services/Simsbury/Parcels/MapServer/0",
+      "note": "Independently re-fetched. Returned one feature: LOCATION '2 CLOVER LANE', MBL 'F15 120 003', ZONING R-40, ACRES 1.59, YR_BLT 1992, owner [owner] [owner] & LAURA, centroid LAT 41.84418 LON -72.82232. Confirms exact parcel identity."
+    },
+    {
+      "title": "Town of Simsbury GIS (Sanitary sewer layer 21) — 8 active sewer mains along Clover Lane (1/3/5/6 Clover Ln + Clover Ln), all Enabled=1 (re-queried live)",
+      "url": "https://server1.mapxpress.net/arcgis/rest/services/Simsbury/Active/MapServer/21",
+      "note": "Independently re-fetched: query LOCATION LIKE '%CLOVER%' returned 8 active sanitary mains tagged 1/3/5/6 CLOVER LANE and CLOVER LN, manholes type MDC, STATUS Active. Authoritative municipal source confirming PUBLIC SEWER along the subject's frontage. Directly contradicts the lone 'Septic' record."
+    },
+    {
+      "title": "Town of Simsbury GIS (Fire Hydrants layer 69) — 2 Aquarion-owned hydrants on Clover Ln (IDs 0524, 0525) (re-queried live)",
+      "url": "https://server1.mapxpress.net/arcgis/rest/services/Simsbury/Active/MapServer/69",
+      "note": "Independently re-fetched: query STREET LIKE '%CLOVER%' returned 2 hydrants, both OWNER 'AQUARION'. Indicates an Aquarion public water main along Clover Lane. Companion Avon Water mains layer returns 0 here, ruling out Avon Water and a private well. Confirms PUBLIC WATER (Aquarion)."
+    },
+    {
+      "title": "Town of Simsbury GIS public viewer (MapXpress) — Sanitary, Fire Hydrants, Avon Water layers",
+      "url": "https://simsbury.mapxpress.net/ags_map/",
+      "note": "Public front-end for the ArcGIS REST services queried above."
+    },
+    {
+      "title": "Simsbury Water Pollution Control Authority (WPCA)",
+      "url": "https://www.simsbury-ct.gov/water-pollution-control-authority",
+      "note": "WPCA serves ~half the town's populated area (87 miles of sewer line). Authority of record to confirm whether 2 Clover Lane is connected to public sewer; facility phone (860) 658-1380. THIS is the single best definitive confirmation."
+    },
+    {
+      "title": "Redfin — 2 Clover Ln, Weatogue, CT 06089 (subject; MLS #170206327)",
+      "url": "https://www.redfin.com/CT/Weatogue/2-Clover-Ln-06089/home/54003119",
+      "note": "Per prior pull: only utility line is 'Sewer Type: Septic' inside the county/public-records facts block (stale/defaulted; no water-source field). Sold $339,000 on 2020-12-16, 1.59 ac, 1,976 sqft, 1992. Page returned HTTP 403 to my automated re-fetch; content per prior pull only. This is the lone source supporting 'septic' and is outweighed by the live town GIS."
+    },
+    {
+      "title": "Redfin — 8 Clover Ln, Weatogue, CT 06089 (same-street neighbor)",
+      "url": "https://www.redfin.com/CT/Weatogue/8-Clover-Ln-06089/home/54000746",
+      "note": "Per prior pull: 'Water Source: Public Water Connected', 'Sewage System: Public Sewer Connected'; remarks advertise 'public water/sewer.' Corroborates street-wide public/public service."
+    },
+    {
+      "title": "Redfin — 1 Clover Ln, Weatogue, CT 06089 (same-street neighbor)",
+      "url": "https://www.redfin.com/CT/Weatogue/1-Clover-Ln-06089/home/54003116",
+      "note": "Per prior pull: 'Public Water Connected', 'Sewer Connected', plus 'Sewer Usage Fee Annual: $375' — a hallmark of a metered public-sewer account, not septic."
+    },
+    {
+      "title": "Simsbury Assessor Property Record Card — 2 Clover Lane (uniqueid 32090751)",
+      "url": "https://www.propertyrecordcards.com/PropertyResults.aspx?towncode=128&uniqueid=32090751",
+      "note": "Per prior pull: the card has NO water/sewer/well/septic/utilities field (only Heating: Hot Water, Fuel: Oil). Confirms the prior well+septic assumption had no assessor basis."
+    },
+    {
+      "title": "Aquarion Water Company — Simsbury regional water system (public water utility, PWS CT1280021)",
+      "url": "https://www.aquarionwater.com/community/newsroom/2025/03/27/aquarion-water-company-to-improve-water-mains-in-the-simsbury-regional-system",
+      "note": "Confirms Aquarion is the public water provider for the Simsbury/Weatogue system, consistent with the Aquarion-owned hydrants on Clover Lane."
+    }
+  ]
+}

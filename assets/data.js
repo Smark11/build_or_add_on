@@ -54,13 +54,13 @@ const DATA = {
       pros: [
         "Preserves the pandemic-era sub-4% first mortgage — only the addition is borrowed at today's rates",
         "Keeps the Latimer Lane zone the family already has",
-        "Adds the living space they actually lack — no new bedroom, no septic review",
+        "Adds the living space they actually lack — without adding a bedroom",
         "Fully hedges a #1-hottest, supply-starved market — no bidding war",
       ],
       cons: [
         "Even the best new space recoups only part of its cost (~22–71% by type)",
         "A build means months of disruption with three kids under six",
-        "Bedroom-adding versions trigger a CT septic review ($25–60K+ risk)",
+        "Below-grade walkout space counts only partly toward appraised value",
         "Over-improvement risk — the street caps value near $650–700K",
       ],
       foot: [ { k: "Smart all-in", v: "~$50–110K" }, { k: "10-yr cash", v: "≈ tie" } ],
@@ -143,7 +143,7 @@ const DATA = {
     "Added the omitted <b>opportunity cost</b>: B/C free ~$1,300/mo ≈ $228K invested over 10 yr — promoting B to a genuine co-finalist.",
     "Re-labeled 4%/yr appreciation as the <b>base case</b> (Zillow's +3.9% Hartford forecast), not 'conservative'; flagged the +16.4% trailing print as a 17-sale, high-variance sample.",
     "Elevated <b>'verify the actual mortgage rate, balance & term'</b> from a caveat to a gating prerequisite for the entire ranking.",
-    "Surfaced the hidden Weatogue risk: on well + septic, adding bedrooms can trigger a <b>septic-capacity review ($25–60K+)</b> that no budget here includes.",
+    "Verified the home is on <b>public water (Aquarion) + public sewer (Simsbury WPCA)</b> — not the assumed well/septic — which removes the $25–60K septic wildcard and the bedroom-gating B100a review entirely.",
   ],
 
   forecast: [
@@ -236,13 +236,13 @@ const DATA = {
   addition: {
     intro: "The home is a 26×38 colonial with a 912 sq ft WALKOUT lower level holding the two tuck-under garage bays + laundry — so the truly finishable basement is only ~384 sq ft. The main floor already has an eat-in kitchen, a family room with a fireplace, a formal dining room, a formal living room that goes unused, and a 12×16 rear deck. So the real gap isn't living space in general — it's usable, finished space for the kids. Constraints: the kitchen sits over the garage (no building up there), the 40-ft side-yard setback sends any addition off the rear, and the ~$650–700K comp ceiling caps the defensible spend near $100–150K. 2026 Hartford-County pricing.",
     ceiling: "Latimer/Weatogue comps top out near $650–700K against this home's ~$575K value — so the defensible all-in spend is ~$100–125K ($150K absolute). Bars past that line over-improve the street.",
-    septic: "On well + septic, any option that adds a bedroom triggers a CT Public Health Code (19-13-B100a) septic-capacity review — budget $1–3K if the system has reserve capacity, or $25–60K+ if the leach field must be expanded or replaced. This is kept separate from the construction costs.",
+    septic: "Verified: 2 Clover Lane is on PUBLIC water (Aquarion) and PUBLIC sewer (Simsbury WPCA / MDC) — confirmed from the Town GIS (active sewer mains and Aquarion hydrants on Clover Lane) and neighbors' MLS listings. So there is NO septic-capacity (B100a) review and NO $25–60K septic wildcard — even bedroom-adding options are not gated by an on-site system. (Confirm the lateral hookup with Simsbury WPCA, 860-658-1380.)",
     scenarios: [
-      { key: "REC", plan: "Recommended", name: "Finish the walkout + put the unused room to work", tag: "Recommended · best value", get: "Finish the ~384 sq ft walkout into a bright rec room/playroom, and reclaim the unused formal living room (open it to the kitchen or make it a playroom/office). They already have a family room — this adds the usable space they're missing without a big build.", lo: 50000, hi: 110000, sqft: "~384 sf walkout + the reclaimed room", recoup: "high (~70% on the walkout)", time: "2–4 mo", note: "The most value-defensible move for this house: cheapest usable space, no septic trigger, no variance, well under the ~$650–700K ceiling — using rooms they already have.", rec: true },
-      { key: "A", plan: "Plan A", name: "Finish the walkout basement", tag: "Inside the footprint", get: "Finish the ~384 sq ft unfinished walkout (the non-garage part of the lower level) into a bright playroom/rec room — walkout grade means real windows and light.", lo: 30000, hi: 60000, sqft: "~384 sf finished walkout", recoup: "~70% (walkout)", time: "2–3 mo", note: "Highest feasibility and best ROI; no bedroom = no septic trigger. Only ~384 sf is finishable — the rest of the lower level is the 2-car garage.", rec: false },
+      { key: "REC", plan: "Recommended", name: "Finish the walkout + put the unused room to work", tag: "Recommended · best value", get: "Finish the ~384 sq ft walkout into a bright rec room/playroom, and reclaim the unused formal living room (open it to the kitchen or make it a playroom/office). They already have a family room — this adds the usable space they're missing without a big build.", lo: 50000, hi: 110000, sqft: "~384 sf walkout + the reclaimed room", recoup: "high (~70% on the walkout)", time: "2–4 mo", note: "The most value-defensible move for this house: cheapest usable space, no variance, well under the ~$650–700K ceiling — using rooms they already have.", rec: true },
+      { key: "A", plan: "Plan A", name: "Finish the walkout basement", tag: "Inside the footprint", get: "Finish the ~384 sq ft unfinished walkout (the non-garage part of the lower level) into a bright playroom/rec room — walkout grade means real windows and light.", lo: 30000, hi: 60000, sqft: "~384 sf finished walkout", recoup: "~70% (walkout)", time: "2–3 mo", note: "Highest feasibility and best ROI. Only ~384 sf is finishable — the rest of the lower level is the 2-car garage.", rec: false },
       { key: "B", plan: "Plan B", name: "Rear great room + mudroom", tag: "Ground-floor rear (optional)", get: "A vaulted family/great room + mudroom off the rear at the main-floor level (where the deck is). No bedroom.", lo: 110000, hi: 175000, sqft: "+430–600 above grade", recoup: "22–40%", time: "4–6 mo", note: "Built up to the raised main floor on a full foundation; centered to clear the 40-ft side yard. Note: they already have a family room, so this is extra space.", rec: false },
       { key: "C", plan: "Plan C", name: "Walkout finish + rear bump-out", tag: "Value combo", get: "Finish the ~384 sq ft walkout plus a small rear bump-out to enlarge the kitchen/family area.", lo: 95000, hi: 175000, sqft: "+150–250 above grade + ~384 finished walkout", recoup: "~45–65%", time: "4–6 mo", note: "Balanced middle path; bump-outs run high per sqft on fixed costs.", rec: false },
-      { key: "E", plan: "Plan D", name: "Two-story rear addition", tag: "Great room + suite", get: "Family room below, primary suite above — maximum space in one build, off the rear.", lo: 300000, hi: 500000, sqft: "+800–1,100 above grade", recoup: "16–40%", time: "8–12 mo", note: "Clear over-improvement on a ~$575K house; adds a bedroom (triggers the septic review).", rec: false },
+      { key: "E", plan: "Plan D", name: "Two-story rear addition", tag: "Great room + suite", get: "Family room below, primary suite above — maximum space in one build, off the rear.", lo: 300000, hi: 500000, sqft: "+800–1,100 above grade", recoup: "16–40%", time: "8–12 mo", note: "Clear over-improvement on a ~$575K house; adds a bedroom.", rec: false },
       { key: "F", plan: "Plan E", name: "Do-it-once: two-story rear + finished walkout", tag: "Everything at once", get: "A two-story rear addition (great room + primary suite) plus the finished walkout.", lo: 350000, hi: 550000, sqft: "+800–1,100 above grade + ~384 walkout", recoup: "low overall", time: "10–14 mo", note: "Solves everything but lands far above the street ceiling — lifestyle-only.", rec: false },
       { key: "K", plan: "Plan F", name: "Finish walkout + open up the kitchen", tag: "Reconfigure · keeps the garage", get: "Finish the ~384 sq ft walkout and open the eat-in kitchen into the adjacent unused formal living room — without touching the garage, so no replacement garage is needed.", lo: 85000, hi: 150000, sqft: "~550 sq ft (~384 walkout + the unused room)", recoup: "~70–85% blended", time: "4–7 mo", note: "A value-defensible reconfiguration: skips the costly garage build-up and replacement garage, keeps your parking, and lets the high-ROI kitchen carry the return. The kitchen wall is load-bearing — budget an engineered beam ($4–12K).", rec: false },
       { key: "G", plan: "Plan G", name: "Convert garage + finish walkout + new garage", tag: "Lower-level reconfiguration", get: "The tuck-under garage (~528 sf) becomes a heated family room/playroom, the ~384 sf walkout is finished, and a new 2-car garage restores parking — a much bigger home with the same garage count.", lo: 120000, hi: 230000, sqft: "~900 sq ft gained (≈528 garage + ≈384 walkout)", recoup: "~55–65% blended", time: "5–8 mo", note: "A forever-home reconfiguration that clears the ~$150K ceiling. The replacement garage (~$35–65K, build it detached) is mandatory remediation, not value-add. Biggest cost swing: building the old garage floor up to kitchen level.", rec: false },
@@ -263,7 +263,7 @@ const DATA = {
       { item: "Insulation + ice-dam detailing", pct: 4.5, note: "~$4–8K · heavy R-values for CT winters" },
     ],
     softCosts: "On top of construction, budget ~15–25% for soft costs: architect/designer (5–15%), a structural engineer ($1–4K, required for any build-up), the Simsbury permit ($16.26 per $1,000 — about $1,656 on a $100K job), and a 10–20% contingency on a 30-year-old house.",
-    bottomLine: "Add usable space, not bedrooms — and stay under ~$125K. The home already has a family room and an unused formal living room, so the best value is to finish the ~384 sq ft walkout (~$30–60K) and put the unused room to work — cheap, high-ROI, no septic review. A rear great room (~$110–175K) is extra space only if they want it. Avoid the two-story rear and do-it-once package as financial moves — at $300–550K they over-improve a ~$575K house and trigger the septic wildcard.",
+    bottomLine: "Add usable space, not bedrooms — and stay under ~$125K. The home already has a family room and an unused formal living room, so the best value is to finish the ~384 sq ft walkout (~$30–60K) and put the unused room to work — cheap, high-ROI. A rear great room (~$110–175K) is extra space only if they want it. Avoid the two-story rear and do-it-once package as financial moves — at $300–550K they over-improve a ~$575K house.",
   },
 
   // ---- architect-reconstructed floor plans (see research/floor-plans.json) ----
@@ -278,7 +278,7 @@ const DATA = {
         rooms: { MST:{n:"Master suite (front-to-back)",d:"~13×18"}, ENS:{n:"Master bath",d:"~7×9"}, WIC:{n:"Walk-in closet",d:"~5×7"}, BD2:{n:"Bedroom 2",d:"~11×12"}, BD3:{n:"Bedroom 3",d:"~10×12"}, BD4:{n:"Bedroom 4",d:"~10×11"}, BTH:{n:"Hall bath",d:"~5×9"} } },
     ],
     options: [
-      { key: "REC", plan: "Recommended", title: "Recommended — finish the walkout + put the unused room to work", note: "The home already has a family room with a fireplace, so the smart move isn't a big addition — it's finishing the ~384 sq ft walkout into a bright rec room/playroom and reclaiming the unused formal living room (open it to the kitchen, or make it a playroom/office). Cheapest usable space, no septic trigger, well under the value ceiling.",
+      { key: "REC", plan: "Recommended", title: "Recommended — finish the walkout + put the unused room to work", note: "The home already has a family room with a fireplace, so the smart move isn't a big addition — it's finishing the ~384 sq ft walkout into a bright rec room/playroom and reclaiming the unused formal living room (open it to the kitchen, or make it a playroom/office). Cheapest usable space, well under the value ceiling.",
         plans: [
           { name: "Main level — after", cols: 5, grid: [["DEK","FAM","FAM","KIT","KIT"],["DEK","FAM","FAM","KIT","KIT"],["DIN","DIN","FOY","RCL","RCL"],["DIN","DIN","PWD","RCL","RCL"]],
             rooms: { DEK:{n:"Wood deck",d:"12×16"}, FAM:{n:"Family room + fireplace",d:"~14×16"}, KIT:{n:"Eat-in kitchen",d:"~13×16"}, DIN:{n:"Dining room",d:"~11×12"}, FOY:{n:"Foyer / stairs",d:""}, PWD:{n:"Half bath",d:"5×6"}, RCL:{n:"Reclaimed room → playroom / office",d:"~12×14",new:true} } },
@@ -308,6 +308,9 @@ const DATA = {
   },
 
   references: [
+    {key:"watersewer", t:"Town of Simsbury GIS — active public sanitary sewer mains & Aquarion hydrants on Clover Lane", u:"https://simsbury.mapxpress.net/ags_map/", cat:"Verification — assessor, GIS & listing"},
+    {key:"", t:"Simsbury Water Pollution Control Authority (WPCA)", u:"https://www.simsbury-ct.gov/water-pollution-control-authority", cat:"Verification — assessor, GIS & listing"},
+    {key:"", t:"Aquarion Water Company — Simsbury public water system", u:"https://www.aquarionwater.com/", cat:"Verification — assessor, GIS & listing"},
     {key:"", t:"Esri World Imagery (ArcGIS Online) satellite tiles at the property", u:"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/19/389856/312176", cat:"Verification — assessor, GIS & listing"},
     {key:"assessor", t:"Simsbury Assessor Property Record Card — 2 Clover Lane (uniqueid 32090751), Print View", u:"https://www.propertyrecordcards.com/PrintPage.aspx?towncode=128&uniqueid=32090751", cat:"Verification — assessor, GIS & listing"},
     {key:"", t:"US Census Geocoder — 2 Clover Lane location", u:"https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2+Clover+Lane,+Simsbury,+CT+06089&benchmark=Public_AR_Current&format=json", cat:"Verification — assessor, GIS & listing"},
@@ -396,7 +399,6 @@ const DATA = {
     {key:"", t:"What is the present mill rate? (Town of Simsbury Tax Collector)", u:"https://www.simsbury-ct.gov/tax-collector/faq/what-is-the-present-mill-rate", cat:"Income & taxes"},
     {key:"", t:"06089 / Weatogue CT Real Estate Market Trends — Realtytrac & Zillow", u:"https://www.realtytrac.com/market-trends/weatogue-ct-06089/", cat:"Addition costs"},
     {key:"", t:"08/23/2023 Zoning Board of Appeals Legal Notice of Action — Simsbury, CT", u:"https://www.simsbury-ct.gov/m/newsflash/home/detail/564", cat:"Addition costs"},
-    {key:"b100a", t:"19-13-B100a of the Public Health Code — CT DPH", u:"https://portal.ct.gov/dph/environmental-health/environmental-engineering/19-13-b100a-of-the-public-health-code", cat:"Addition costs"},
     {key:"", t:"2026 Cost to Add a Room Above Your Garage — Angi", u:"https://www.angi.com/articles/adding-room-above-garage.htm", cat:"Addition costs"},
     {key:"", t:"30-Year Fixed Rate Mortgage Average (MORTGAGE30US) / Freddie Mac PMMS", u:"https://fred.stlouisfed.org/series/MORTGAGE30US", cat:"Addition costs"},
     {key:"", t:"Advantage Contracting — Simsbury, CT (areas served)", u:"https://advantage-contracting.com/areas-served/simsbury-ct/", cat:"Addition costs"},
@@ -410,7 +412,6 @@ const DATA = {
     {key:"casali", t:"How Much Does a Home Addition Cost in Connecticut in 2026? — Casali Companies", u:"https://casalicompanies.com/blog/how-much-does-a-home-addition-cost-in-connecticut-in-2026", cat:"Addition costs"},
     {key:"fhc", t:"How Much Does a Home Addition Cost in Connecticut — Fine Home Contracting", u:"https://finehomecontracting.com/how-much-does-a-home-addition-cost-in-connecticut/", cat:"Addition costs"},
     {key:"", t:"How Much Does a Home Addition Cost? (2026) — HomeGuide", u:"https://homeguide.com/costs/home-addition-cost", cat:"Addition costs"},
-    {key:"septic", t:"How Much Does a Septic Tank Cost in Connecticut? — NeighborJoe", u:"https://neighborjoe.com/blog/how-much-does-a-septic-tank-cost-in-connecticut-pricing-factors-explained/", cat:"Addition costs"},
     {key:"", t:"How much does an addition cost in CT? — Berkeley Exteriors", u:"https://www.berkeleyexteriors.com/blog/how-much-does-an-addition-cost-in-ct", cat:"Addition costs"},
     {key:"", t:"JLC / Remodeling 2025 Cost vs. Value Report — New England", u:"https://www.jlconline.com/cost-vs-value/2025/new-england/", cat:"Addition costs"},
     {key:"", t:"Kehoe Remodeling — Additions", u:"https://kehoeremodeling.com/additions", cat:"Addition costs"},

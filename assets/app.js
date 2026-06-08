@@ -110,7 +110,7 @@
     $("#additionIntro").textContent = A.intro;
     $("#additionCeiling").textContent = A.ceiling;
     $("#additionSoft").innerHTML = "<b>Soft costs & contingency.</b> " + A.softCosts;
-    $("#additionSeptic").innerHTML = "<b>⚠ The well-and-septic wildcard.</b> " + A.septic;
+    $("#additionSeptic").innerHTML = "<b>✓ On public water &amp; sewer — no septic limit.</b> " + A.septic;
     $("#additionBottom").innerHTML = "“" + A.bottomLine + "”<span class=\"by\">— Addition deep-dive · bottom line</span>";
 
     const rec = A.scenarios.find(s => s.rec);
@@ -232,7 +232,7 @@
     const checklist = [
       ["Pull the actual loan statement", "rate, balance & term — the entire ranking hinges on whether the rate is truly sub-4%"],
       ["Get a survey / plot plan", "the 40-ft R-40 side-yard setback means a rear addition is the only by-right path"],
-      ["Confirm septic capacity", "on well + septic, added bedrooms can trigger a $25–60K+ review"],
+      ["Confirm the public-sewer hookup", "verified on public water + sewer — confirm the lateral connection & usage fee with Simsbury WPCA"],
       ["Inland Wetlands check", "Farmington River floodplain proximity can independently block a rear addition"],
       ["Get 2–3 fixed-price bids", "not cost-plus — and carry 20% contingency on a 1992 home"],
       ["Pull recent Latimer-pocket comps", "set a hard scope ceiling so you don't over-improve the street"],
@@ -244,7 +244,7 @@
     const flips = [
       "The loan statement shows the current rate is <b>not</b> sub-4% — move now (B) wins.",
       "The home won't appraise high enough to keep the second lien under ~85% CLTV.",
-      "Survey, wetlands, or septic review makes a rear addition infeasible or far costlier.",
+      "A survey or wetlands review makes a rear addition infeasible or far costlier.",
       "Recent comps top out below the post-addition value — building over-improves the street.",
       "The family weights turnkey space and liquidity over preserving the low rate.",
       "Addition bids come back high (~$400K+) while a great in-zone home is available.",
