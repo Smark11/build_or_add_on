@@ -127,7 +127,7 @@
       const over = s.lo >= 150000;
       const card = el("div", "add-card" + (s.rec ? " is-rec" : "") + (over ? " over" : ""));
       card.innerHTML = `
-        <div class="add-card__tag">${s.rec ? "★ " : ""}${s.tag}</div>
+        <div class="add-card__tag">${s.plan && s.plan.indexOf("Plan")===0 ? '<span class="plan-badge">'+s.plan+'</span> ' : ""}${s.rec ? "★ " : ""}${s.tag}</div>
         <div class="add-card__name">${s.name}</div>
         <div class="add-card__cost">${moneyK(s.lo)}–${moneyK(s.hi)}</div>
         <div class="add-card__get">${s.get}</div>
@@ -151,7 +151,7 @@
   function buildAdditionChart() {
     if (!window.Chart) return;
     const items = DATA.addition.scenarios.slice().sort((a, b) => a.lo - b.lo);
-    const labels = items.map(s => (s.rec ? "★ " : "") + s.name);
+    const labels = items.map(s => (s.rec ? "★ " : "") + (s.plan && s.plan.indexOf("Plan")===0 ? s.plan.replace("Plan ","")+" · " : "") + s.name);
     const data = items.map(s => [s.lo, s.hi]);
     const colors = items.map(s => s.hi <= 150000 ? "#1F4A3D" : (s.lo >= 150000 ? "#B0461E" : "#C0842B"));
     const ceiling = {
@@ -212,7 +212,7 @@
     const wrap = $("#plansOptions");
     F.options.forEach(op => {
       const block = el("div", "optplan r");
-      block.innerHTML = `<h3 class="optplan__h">${op.title}${op.key === "REC" ? '<span class="tag pine" style="margin-left:10px;vertical-align:middle">Recommended</span>' : ""}</h3><p class="optplan__note">${op.note}</p>`;
+      block.innerHTML = `<h3 class="optplan__h">${op.plan && op.plan.indexOf("Plan")===0 ? '<span class="plan-badge">'+op.plan+'</span> ' : ""}${op.title}${op.key === "REC" ? '<span class="tag pine" style="margin-left:10px;vertical-align:middle">Recommended</span>' : ""}</h3><p class="optplan__note">${op.note}</p>`;
       const body = el("div", "optplan__body");
       const plansCol = el("div", "optplan__plans");
       op.plans.forEach(p => plansCol.appendChild(fpCard(p)));

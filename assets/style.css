@@ -573,3 +573,5 @@ input[type=range]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px var(--
 .ref-body a:hover{ text-decoration:underline; }
 .ref-tag{ display:block; font-family:var(--mono); font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:3px; }
 .ref-item:target{ background:var(--amber-wash); border-radius:8px; box-shadow:0 0 0 2px var(--amber); padding-inline:8px; }
+
+.plan-badge{ font-family:var(--mono); font-size:.58rem; letter-spacing:.08em; text-transform:uppercase; background:var(--ink); color:var(--paper); padding:2px 7px; border-radius:5px; font-weight:600; vertical-align:middle; margin-right:2px; }
